@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DigitalMango — [Project Name] Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
+  ul { padding: 0; margin: 0; }
+  a { color: inherit; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  const S = window.SHARED;
+
+  // ── EDIT THESE FOR EACH NEW CASE STUDY ─────────────────────────
+  const POST = {
+    title: "Project Name",
+    italicWord: "tagline",
+    afterItalic: "here.",
+    intro: "One-sentence summary of what we made and why it matters. Keep it human.",
+    tags: ["category", "city", "shipped 2026"],
+    kicker: "case · 02",
+    showcaseFG: "fresh\\nfrom\\nthe oven.",
+    showcaseLabel: "PROJECT / HOME",
+    showcaseStat: "+42% ↗",
+    stats: [
+      { n: "10", u: "days", l: "Kickoff to launch" },
+      { n: "5", u: "pages", l: "EN + TH bilingual" },
+      { n: "+42%", u: "", l: "Sign-ups, month 1" },
+      { n: "1.4s", u: "", l: "Lighthouse FCP" },
+    ],
+    story: [
+      { num: "01", h: "The brief", body: "Replace this with the real story of the brief — who came to me, what they had, and what they actually needed (not what they thought they needed)." },
+      { num: "02", h: "The approach", body: "Three or four sentences on how we framed the work. What did I steer toward? What did we throw out? What were the non-negotiables?" },
+      { num: "03", h: "The result", body: "What shipped and what happened. Real numbers if you have them, real moments if you don't (a customer reaction, a Line message, a small thing that mattered)." },
+    ],
+    quote: "Replace this with a real testimonial — short, italic, 1–2 sentences max, in their voice not yours.",
+    quoteAuthor: "Khun [Name] · [Company]",
+    nextLink: "case-sundara.html",
+    nextTitle: "Sundara Bakery",
+    nextSubtitle: "A small, kind shop online.",
+  };
+  // ──────────────────────────────────────────────────────────────
+
+  const Hero = () => (
+    <div style={{ padding: "60px 56px 40px" }}>
+      <a href="work.html" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .7, marginBottom: 32 }}>← Back to all work</a>
+
+      <div style={{ display: "flex", gap: 12, marginBottom: 32, flexWrap: "wrap" }}>
+        {POST.tags.map((t, i) => (
+          <span key={i} style={{ background: i === 0 ? S.honey : i === 1 ? S.mango : S.leaf, color: i === 2 ? S.cream : S.ink, padding: "8px 14px", borderRadius: 999, border: `2px solid ${S.ink}`, fontWeight: 700, fontSize: 12, letterSpacing: ".04em", boxShadow: `0 3px 0 ${S.ink}`, transform: `rotate(${i % 2 === 0 ? -2 : 2}deg)` }}>{t}</span>
+        ))}
+      </div>
+
+      <h1 style={{ fontSize: 132, lineHeight: 0.9, letterSpacing: "-0.045em", fontWeight: 800, margin: 0 }}>
+        {POST.title} —<br/>
+        <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>{POST.italicWord}</span><br/>
+        {POST.afterItalic}
+      </h1>
+
+      <p style={{ marginTop: 32, fontSize: 22, lineHeight: 1.5, color: S.ink2, maxWidth: "60ch" }}>{POST.intro}</p>
+    </div>
+  );
+
+  const Showcase = () => (
+    <div style={{ padding: "20px 56px 80px" }}>
+      <div style={{ aspectRatio: "16/9", borderRadius: 24, border: `3px solid ${S.ink}`, boxShadow: `0 14px 0 ${S.ink}`,
+        background: `radial-gradient(circle at 30% 25%, ${S.honey}, transparent 55%), linear-gradient(160deg, ${S.mango} 0%, #D9892A 70%)`,
+        position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 24, borderRadius: 14, background: S.cream, padding: 32, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>
+            <span>{POST.showcaseLabel}</span><span>desktop · 1440</span>
+          </div>
+          <div style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 96, lineHeight: 0.95, color: S.ink, maxWidth: "10ch", whiteSpace: "pre-line" }}>"{POST.showcaseFG.replace(/\\n/g, "\n")}"</div>
+          <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", opacity: .6 }}>
+            <span>HERO PLACEHOLDER · DROP REAL SCREENSHOT HERE</span>
+            <span>{POST.showcaseStat}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const Stats = () => (
+    <div style={{ padding: "60px 56px", background: S.ink, color: S.cream, borderTop: `4px solid ${S.ink}` }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 28 }}>
+        {POST.stats.map((s, i) => (
+          <div key={i}>
+            <div style={{ fontWeight: 800, fontSize: 72, letterSpacing: "-0.04em", lineHeight: 1 }}>
+              {s.n}
+              {s.u && <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 32, color: S.mango, marginLeft: 6 }}>{s.u}</span>}
+            </div>
+            <div style={{ marginTop: 8, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .65, fontWeight: 700 }}>{s.l}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const Story = () => (
+    <div style={{ padding: "100px 56px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 56 }}>
+        <div style={{ position: "sticky", top: 100, alignSelf: "start" }}>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>The story</span>
+          <h2 style={{ fontWeight: 800, fontSize: 56, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
+            How we<br/><span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>shipped it.</span>
+          </h2>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+          {POST.story.map((b, i) => (
+            <div key={i} style={{ background: S.cream2, border: `2.5px solid ${S.ink}`, borderRadius: 24, padding: 32, boxShadow: `0 8px 0 ${S.ink}` }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ background: S.mango, color: S.ink, padding: "6px 12px", borderRadius: 999, border: `2px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".14em", fontWeight: 700 }}>NO. {b.num}</span>
+                <h3 style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>{b.h}</h3>
+              </div>
+              <p style={{ marginTop: 14, fontSize: 16.5, lineHeight: 1.65, color: S.ink2 }}>{b.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const Quote = () => (
+    <div style={{ padding: "100px 56px", background: S.leaf, color: S.cream, borderTop: `4px solid ${S.ink}` }}>
+      <div style={{ maxWidth: 980, margin: "0 auto", textAlign: "center" }}>
+        <span style={{ fontSize: 80, fontFamily: "'Instrument Serif', serif", color: S.honey }}>"</span>
+        <p style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 60, lineHeight: 1.15, letterSpacing: "-0.02em", margin: 0 }}>
+          {POST.quote}
+        </p>
+        <div style={{ marginTop: 36, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: ".18em", textTransform: "uppercase", opacity: .85, fontWeight: 700 }}>
+          ★★★★★ &nbsp; {POST.quoteAuthor}
+        </div>
+      </div>
+    </div>
+  );
+
+  const NextProject = () => (
+    <a href={POST.nextLink} style={{ textDecoration: "none", color: "inherit", display: "block",
+      padding: "100px 56px", background: S.cream2, borderTop: `4px solid ${S.ink}`,
+      transition: "background .2s ease"
+    }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = S.honey; }}
+    onMouseLeave={(e) => { e.currentTarget.style.background = S.cream2; }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24 }}>
+        <div>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Next project</span>
+          <h2 style={{ fontWeight: 800, fontSize: 72, lineHeight: 1, letterSpacing: "-0.04em", marginTop: 12 }}>
+            {POST.nextTitle} — <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>{POST.nextSubtitle}</span>
+          </h2>
+        </div>
+        <span style={{ fontSize: 64 }}>→</span>
+      </div>
+    </a>
+  );
+
+  const App = () => (
+    <div data-screen-label="Work · Single Post Template">
+      <window.Nav />
+      <Hero />
+      <Showcase />
+      <Stats />
+      <Story />
+      <Quote />
+      <NextProject />
+      <window.Footer />
+    </div>
+  );
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

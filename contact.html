@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DigitalMango — Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
+  ul { padding: 0; margin: 0; }
+  a { color: inherit; }
+  input, textarea, select { font-family: inherit; }
+  input:focus, textarea:focus, select:focus { outline: 3px solid #E8A02A; outline-offset: 1px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  const S = window.SHARED;
+  const { useState } = React;
+
+  const HeroContact = () => (
+    <div style={{ padding: "80px 56px 40px", position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute", top: 100, right: 80, zIndex: 5 }}>
+        <div style={{ background: S.honey, color: S.ink, border: `2.5px solid ${S.ink}`, borderRadius: 999, padding: "10px 16px", fontWeight: 700, fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", boxShadow: `0 4px 0 ${S.ink}`, transform: "rotate(-6deg)" }}>★ booking jul–sep 2026</div>
+      </div>
+      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Contact</span>
+      <h1 style={{ fontSize: 156, lineHeight: 0.86, letterSpacing: "-0.05em", fontWeight: 800, margin: "16px 0 0" }}>
+        Let's make<br/>something<br/>
+        <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>tasty</span>.
+      </h1>
+      <p style={{ marginTop: 32, fontSize: 22, lineHeight: 1.5, color: S.ink2, maxWidth: "60ch", fontWeight: 500 }}>
+        Tell me about your brand. I'll reply within 24 hours with honest thoughts, a free 30-min call link, and zero pressure.
+      </p>
+    </div>
+  );
+
+  const Channels = () => {
+    const items = [
+      { label: "Email", value: "hello@digitalmango.biz", note: "Reply within 24 hours, always", icon: "✉", bg: S.cream2, href: "mailto:hello@digitalmango.biz" },
+      { label: "Line", value: "@digitalmango", note: "Fastest for quick questions", icon: "💬", bg: S.honey, href: "#" },
+      { label: "Calendar", value: "Book a 30-min chat", note: "Free, no pitch deck, just talk", icon: "📅", bg: S.mango, href: "#" },
+      { label: "Studio", value: "Bangkok · Thailand", note: "GMT+7 · in-person on request", icon: "📍", bg: S.leaf, color: S.cream, href: "#" },
+    ];
+    return (
+      <div style={{ padding: "20px 56px 80px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 18 }}>
+          {items.map((c, i) => (
+            <a key={i} href={c.href} style={{
+              textDecoration: "none",
+              background: c.bg, color: c.color || S.ink,
+              border: `2.5px solid ${S.ink}`, borderRadius: 22, padding: 24,
+              boxShadow: `0 6px 0 ${S.ink}`, display: "flex", flexDirection: "column", justifyContent: "space-between",
+              minHeight: 200, transition: "transform .15s ease, box-shadow .15s ease"
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = `0 9px 0 ${S.ink}`; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = `0 6px 0 ${S.ink}`; }}>
+              <div>
+                <span style={{ fontSize: 26 }}>{c.icon}</span>
+                <div style={{ marginTop: 14, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, opacity: .65, textTransform: "uppercase" }}>{c.label}</div>
+                <div style={{ marginTop: 6, fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em" }}>{c.value}</div>
+              </div>
+              <div style={{ marginTop: 14, fontSize: 13, lineHeight: 1.5, opacity: c.color ? .85 : .7, fontWeight: 500 }}>{c.note}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const Form = () => {
+    const [tab, setTab] = useState("New site");
+    const [budget, setBudget] = useState("฿35–60k");
+    const types = ["New site", "Refresh", "Care", "Not sure yet"];
+    const budgets = ["under ฿20k", "฿20–35k", "฿35–60k", "฿60k+", "I'd rather chat"];
+    const inputBase = {
+      width: "100%", background: S.cream, border: `2px solid ${S.ink}`, borderRadius: 14,
+      padding: "14px 16px", fontSize: 16, color: S.ink, fontWeight: 500
+    };
+    const labelBase = { fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".16em", fontWeight: 700, opacity: .65, textTransform: "uppercase", marginBottom: 8, display: "block" };
+
+    return (
+      <div style={{ padding: "100px 56px", background: S.ink, color: S.cream, borderTop: `4px solid ${S.ink}`, position: "relative", overflow: "hidden" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 1.1fr", gap: 64, alignItems: "start" }}>
+          <div style={{ position: "sticky", top: 100 }}>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>02 — Project form</span>
+            <h2 style={{ fontWeight: 800, fontSize: 80, lineHeight: 0.95, letterSpacing: "-0.04em", marginTop: 14 }}>
+              Tell me a<br/><span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>little.</span>
+            </h2>
+            <p style={{ marginTop: 24, fontSize: 17, lineHeight: 1.6, opacity: .85, maxWidth: "40ch" }}>
+              Two minutes. Real questions. I'll reply within 24 hours with honest thoughts and a calendar link — no boilerplate, no funnels.
+            </p>
+            <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 14 }}>
+              {[
+                ["No spam, no list — just one human reading."],
+                ["I'll tell you if we're not a fit (and refer you to a friend who is)."],
+                ["Fixed price quoted in writing before you commit."]
+              ].map(([t], i) => (
+                <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                  <span style={{ width: 22, height: 22, background: S.mango, color: S.ink, borderRadius: "50%", border: `1.5px solid ${S.cream}`, display: "grid", placeItems: "center", fontSize: 12, fontWeight: 800, flexShrink: 0, marginTop: 2 }}>✓</span>
+                  <span style={{ fontSize: 15, opacity: .9, fontWeight: 500 }}>{t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{
+            background: S.cream, color: S.ink, borderRadius: 28, padding: 36,
+            boxShadow: `0 12px 0 ${S.mango}`,
+            transform: "rotate(0.6deg)"
+          }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 22 }}>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", fontWeight: 700, color: S.mango }}>NEW PROJECT FORM</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, opacity: .55 }}>~ 2 MIN</span>
+            </div>
+
+            <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+              <div>
+                <label style={labelBase}>Your name</label>
+                <input style={inputBase} placeholder="Mai Suriyajan" />
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                <div>
+                  <label style={labelBase}>Email</label>
+                  <input style={inputBase} type="email" placeholder="you@brand.co" />
+                </div>
+                <div>
+                  <label style={labelBase}>Brand / company</label>
+                  <input style={inputBase} placeholder="Sundara Bakery" />
+                </div>
+              </div>
+              <div>
+                <label style={labelBase}>What do you do?</label>
+                <input style={inputBase} placeholder="A small bakery in Sukhumvit since 2017" />
+              </div>
+
+              <div>
+                <label style={labelBase}>What do you need?</label>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {types.map((t) => (
+                    <button key={t} type="button" onClick={() => setTab(t)} style={{
+                      background: tab === t ? S.mango : S.cream2, color: S.ink,
+                      border: `2px solid ${S.ink}`, borderRadius: 999,
+                      padding: "10px 16px", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                      boxShadow: tab === t ? `0 4px 0 ${S.ink}` : "none",
+                      fontFamily: "inherit"
+                    }}>{t}</button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label style={labelBase}>Budget range (no judgment)</label>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {budgets.map((b) => (
+                    <button key={b} type="button" onClick={() => setBudget(b)} style={{
+                      background: budget === b ? S.honey : S.cream2, color: S.ink,
+                      border: `2px solid ${S.ink}`, borderRadius: 999,
+                      padding: "10px 16px", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                      boxShadow: budget === b ? `0 4px 0 ${S.ink}` : "none",
+                      fontFamily: "inherit"
+                    }}>{b}</button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label style={labelBase}>When would you like to launch?</label>
+                <select style={{...inputBase, appearance: "none", backgroundImage: "none", paddingRight: 40}}>
+                  <option>ASAP — within a month</option>
+                  <option>Next 2–3 months</option>
+                  <option>Later this year</option>
+                  <option>Just exploring</option>
+                </select>
+              </div>
+
+              <div>
+                <label style={labelBase}>Tell me more (the fun part)</label>
+                <textarea style={{...inputBase, minHeight: 120, resize: "vertical", fontFamily: "inherit"}} placeholder="What does your brand feel like? What's the site for? Who's it for? Anything else I should know — link to current site, references you love, dreams, fears..."/>
+              </div>
+
+              <div style={{
+                background: S.cream2, border: `2px dashed ${S.ink}40`, borderRadius: 14,
+                padding: "14px 16px", fontSize: 13, color: S.ink2, fontWeight: 500, lineHeight: 1.5
+              }}>
+                ◐ &nbsp; By sending this you agree to me reading it and replying within 24h. That's it. No newsletter list, no CRM follow-ups.
+              </div>
+
+              <button type="submit" style={{
+                background: S.ink, color: S.cream, border: `2px solid ${S.ink}`,
+                padding: "18px 24px", borderRadius: 999, fontSize: 16, fontWeight: 800,
+                boxShadow: `0 5px 0 ${S.mango}`, cursor: "pointer", fontFamily: "inherit",
+                transition: "transform .12s ease, box-shadow .12s ease"
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = `0 7px 0 ${S.mango}`; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = `0 5px 0 ${S.mango}`; }}>
+                Send it →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const QuickFAQ = () => {
+    const items = [
+      { q: "How fast will you reply?", a: "Within 24 hours, always. Usually faster — I treat my inbox like a real conversation, not a ticketing system." },
+      { q: "Do I need to know what I want?", a: "Nope. The form's there to start a conversation, not lock you in. Even \"I have a feeling my site is broken\" is a great first message." },
+      { q: "What if we're not a fit?", a: "I'll tell you, kindly, and refer you to a freelancer or studio I trust. Most of my best client relationships started with a 'no' from someone else." },
+      { q: "Can we just hop on a call?", a: "Please. The 30-min intro is free, no slides. Pick a time on my calendar — or send me a Line message and we'll find one." },
+    ];
+    return (
+      <div style={{ padding: "100px 56px" }}>
+        <div style={{ textAlign: "center", marginBottom: 48 }}>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>03 — Quick answers</span>
+          <h2 style={{ fontWeight: 800, fontSize: 56, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
+            Before you <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>hit send.</span>
+          </h2>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, maxWidth: 1100, margin: "0 auto" }}>
+          {items.map((f, i) => (
+            <div key={i} style={{ background: S.cream2, border: `2.5px solid ${S.ink}`, borderRadius: 22, padding: 26, boxShadow: `0 6px 0 ${S.ink}` }}>
+              <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                <span style={{ background: S.mango, color: S.ink, padding: "5px 11px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".14em" }}>0{i+1}</span>
+                <h3 style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-0.02em" }}>{f.q}</h3>
+              </div>
+              <p style={{ marginTop: 12, fontSize: 14.5, lineHeight: 1.6, color: S.ink2 }}>{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const App = () => (
+    <div data-screen-label="Contact">
+      <window.Nav />
+      <HeroContact />
+      <Channels />
+      <Form />
+      <QuickFAQ />
+      <window.Footer />
+    </div>
+  );
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
