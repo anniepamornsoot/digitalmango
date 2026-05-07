@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DigitalMango — Pricing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
+  ul { padding: 0; margin: 0; }
+  a { color: inherit; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::marker { display: none; }
+  details[open] summary > span:last-child { transform: rotate(45deg); display: inline-block; }
+  details summary > span:last-child { transition: transform .2s ease; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  const S = window.SHARED;
+
+  const HeroP = () => (
+    <div style={{ padding: "80px 56px 40px" }}>
+      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Pricing</span>
+      <h1 style={{ fontSize: 156, lineHeight: 0.86, letterSpacing: "-0.05em", fontWeight: 800, margin: "16px 0 0" }}>
+        Honest prices,<br/>
+        <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>fixed</span> upfront.
+      </h1>
+      <p style={{ marginTop: 32, fontSize: 22, lineHeight: 1.5, color: S.ink2, maxWidth: "60ch", fontWeight: 500 }}>
+        Every quote is fixed in writing before we start. No surprise invoices, no scope-creep panic, no "a little extra" emails three weeks in.
+      </p>
+    </div>
+  );
+
+  const Tiers = () => {
+    const tiers = [
+      { name: "Refresh", from: "฿18,000", per: "one-time", time: "2–3 weeks", body: "For sites that work but feel tired. A focused sprint, no rebuild.",
+        bg: S.cream2, color: S.ink, accent: S.honey,
+        feats: ["Visual audit", "New design system", "Page-by-page polish", "New hero & key sections", "Speed pass", "Mobile cleanup", "2 weeks free tweaks"], cta: "Refresh my site →" },
+      { name: "New site", from: "฿35,000", per: "one-time", time: "4–6 weeks", body: "Strategy, design, build. Hand-coded end-to-end by one person.",
+        bg: S.mango, color: S.ink, accent: S.cream2, featured: true,
+        feats: ["Strategy & sitemap", "2 design directions in Figma", "Hand-coded build", "Bilingual EN / TH", "Speed & SEO pass", "Mobile + tablet polish", "1 month free care", "Founder handover call"], cta: "Start a new site →" },
+      { name: "Care", from: "฿6,000", per: "/month", time: "Ongoing · 3-mo min", body: "A friendly hand on your site every month. Updates, tweaks, growth.",
+        bg: S.ink, color: S.cream, accent: S.mango,
+        feats: ["Up to 4 hours of changes/mo", "Content & copy updates", "New sections & small pages", "Monthly speed & SEO check", "Priority replies (< 4h)", "Monthly written report", "Hours roll over 1 month"], cta: "Get on Care →" },
+    ];
+
+    return (
+      <div style={{ padding: "60px 56px 100px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 22, alignItems: "stretch" }}>
+          {tiers.map((t, i) => {
+            const isDark = t.color === S.cream;
+            return (
+              <div key={i} style={{
+                background: t.bg, color: t.color,
+                border: `3px solid ${S.ink}`, borderRadius: 28, padding: 32,
+                boxShadow: t.featured ? `0 12px 0 ${S.ink}, 0 18px 36px -16px ${S.ink}88` : `0 8px 0 ${S.ink}`,
+                transform: t.featured ? "translateY(-12px)" : "none",
+                position: "relative",
+                display: "flex", flexDirection: "column"
+              }}>
+                {t.featured && (
+                  <div style={{
+                    position: "absolute", top: -16, left: "50%", transform: "translateX(-50%) rotate(-3deg)",
+                    background: S.honey, color: S.ink, border: `2.5px solid ${S.ink}`, borderRadius: 999,
+                    padding: "8px 16px", fontWeight: 800, fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase",
+                    boxShadow: `0 4px 0 ${S.ink}`
+                  }}>★ MOST PICKED</div>
+                )}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span style={{ background: S.cream, color: S.ink, padding: "6px 12px", borderRadius: 999, border: `2px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".14em", fontWeight: 700 }}>NO. {String(i+1).padStart(2, "0")}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, opacity: .7 }}>{t.time}</span>
+                </div>
+                <h3 style={{ marginTop: 28, fontSize: 44, fontWeight: 800, letterSpacing: "-0.03em" }}>{t.name}</h3>
+                <p style={{ marginTop: 8, fontSize: 15, lineHeight: 1.55, opacity: isDark ? .85 : .8, fontWeight: 500 }}>{t.body}</p>
+                <div style={{ marginTop: 22, paddingTop: 20, borderTop: `2px dashed ${isDark ? S.cream + "44" : S.ink + "33"}`, display: "flex", alignItems: "baseline", gap: 8 }}>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", opacity: .65, fontWeight: 700 }}>FROM</span>
+                  <span style={{ fontWeight: 800, fontSize: 48, letterSpacing: "-0.03em", lineHeight: 1 }}>{t.from}</span>
+                  <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 22, opacity: .8 }}>{t.per}</span>
+                </div>
+                <ul style={{ listStyle: "none", marginTop: 22, display: "flex", flexDirection: "column", gap: 10 }}>
+                  {t.feats.map((f, j) => (
+                    <li key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14.5, fontWeight: 500 }}>
+                      <span style={{ flexShrink: 0, marginTop: 2, width: 20, height: 20, borderRadius: "50%", background: t.accent, color: S.ink, border: `1.5px solid ${S.ink}`, display: "grid", placeItems: "center", fontSize: 11, fontWeight: 800 }}>✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ marginTop: "auto", paddingTop: 28 }}>
+                  <a href="contact.html" style={{
+                    display: "block", textAlign: "center", textDecoration: "none",
+                    background: isDark ? S.mango : S.ink, color: isDark ? S.ink : S.cream,
+                    border: `2px solid ${S.ink}`, padding: "14px 22px", borderRadius: 999,
+                    fontSize: 14, fontWeight: 700,
+                    boxShadow: `0 4px 0 ${isDark ? S.cream : S.ink}`
+                  }}>{t.cta}</a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  const Includes = () => {
+    const groups = [
+      { t: "Always included", items: ["Fixed price in writing", "Free 30-min intro call", "2 design directions to pick from", "Hand-coded build (no template farms)", "Mobile + tablet polish", "Speed & on-page SEO pass", "Founder handover call"] },
+      { t: "You always own", items: ["The full source code", "All design files (Figma)", "Hosting & domain accounts", "Analytics & tag manager", "Brand assets I create", "Right to walk away anytime"] },
+      { t: "Never charged for", items: ["The first call", "Quote revisions before signing", "Small fixes in the first month after launch", "Replies and questions", "Pep talks", "Pointing you to a friend if we're not a fit"] },
+    ];
+    return (
+      <div style={{ padding: "100px 56px", background: S.cream2, borderTop: `4px solid ${S.ink}` }}>
+        <div style={{ textAlign: "center", marginBottom: 48 }}>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>02 — In every project</span>
+          <h2 style={{ fontWeight: 800, fontSize: 64, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
+            What's <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>baked in.</span>
+          </h2>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
+          {groups.map((g, i) => (
+            <div key={i} style={{ background: S.cream, border: `2.5px solid ${S.ink}`, borderRadius: 22, padding: 28, boxShadow: `0 6px 0 ${S.ink}` }}>
+              <h3 style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", fontWeight: 700, color: i === 0 ? S.leaf : i === 1 ? S.mango : S.clay }}>{g.t}</h3>
+              <ul style={{ listStyle: "none", marginTop: 18, display: "flex", flexDirection: "column", gap: 10 }}>
+                {g.items.map((it, j) => (
+                  <li key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 15, fontWeight: 500 }}>
+                    <span style={{ flexShrink: 0, marginTop: 2, width: 20, height: 20, borderRadius: "50%", background: S.mango, color: S.ink, border: `1.5px solid ${S.ink}`, display: "grid", placeItems: "center", fontSize: 11, fontWeight: 800 }}>✓</span>
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const Add = () => {
+    const items = [
+      { t: "Extra page", price: "฿4,500/page" },
+      { t: "Copywriting pass", price: "฿8,000+" },
+      { t: "Photo direction", price: "฿6,000" },
+      { t: "Booking integration", price: "฿4,000" },
+      { t: "E-commerce light", price: "฿12,000+" },
+      { t: "Animation polish", price: "฿5,000" },
+      { t: "Logo refresh (light)", price: "฿7,000" },
+      { t: "Email template (1)", price: "฿3,500" },
+    ];
+    return (
+      <div style={{ padding: "100px 56px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2.2fr", gap: 56, alignItems: "start", marginBottom: 40 }}>
+          <div>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>03 — A la carte</span>
+            <h2 style={{ fontWeight: 800, fontSize: 56, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
+              Add a side.
+            </h2>
+          </div>
+          <p style={{ fontSize: 18, lineHeight: 1.6, color: S.ink2, maxWidth: "60ch" }}>
+            Bolt these onto any package, or quote them on their own. Same fixed-price rule applies — quoted up-front, no surprises.
+          </p>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+          {items.map((a, i) => (
+            <div key={i} style={{ background: S.cream2, border: `2.5px solid ${S.ink}`, borderRadius: 18, padding: "20px 22px", boxShadow: `0 4px 0 ${S.ink}`, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <h3 style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-0.01em" }}>{a.t}</h3>
+              <span style={{ background: S.mango, color: S.ink, padding: "5px 11px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".06em", whiteSpace: "nowrap" }}>{a.price}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const Promise = () => (
+    <div style={{ padding: "100px 56px", background: S.leaf, color: S.cream, borderTop: `4px solid ${S.ink}` }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }}>
+        <div>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .7 }}>04 — The promise</span>
+          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, fontSize: 80, lineHeight: 0.95, letterSpacing: "-0.02em", marginTop: 14 }}>
+            One quote.<br/>One price.<br/><span style={{ color: S.honey }}>One person.</span>
+          </h2>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          {[
+            ["No hourly billing.", "I quote a project, not my time. You know the cost before we start."],
+            ["No surprise invoices.", "If scope grows, we re-quote together — in writing — before any extra work happens."],
+            ["50/50 payment.", "Half to start, half to ship. No 'final 10%' games."],
+            ["Money-back if I disappear.", "I won't. But if I ever ghost you, you get every baht back. In writing."],
+          ].map(([t, body], i) => (
+            <div key={i} style={{ background: S.cream + "12", border: `2px solid ${S.cream}33`, borderRadius: 18, padding: 22 }}>
+              <h3 style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-0.02em" }}>{t}</h3>
+              <p style={{ marginTop: 6, fontSize: 14.5, lineHeight: 1.55, opacity: .85, fontWeight: 500 }}>{body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const FinalCTA = () => (
+    <div style={{ padding: "120px 56px", textAlign: "center" }}>
+      <h2 style={{ fontWeight: 800, fontSize: 88, lineHeight: 1, letterSpacing: "-0.04em", margin: 0 }}>
+        Ready to <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>pick</span>?
+      </h2>
+      <p style={{ marginTop: 24, fontSize: 19, color: S.ink2, maxWidth: "44ch", margin: "24px auto 0" }}>
+        The first call is free. Bring your questions, your messy ideas, your old site if you have one. I'll bring honest answers.
+      </p>
+      <div style={{ marginTop: 36, display: "flex", justifyContent: "center", gap: 14 }}>
+        <a href="contact.html" style={{
+          textDecoration: "none", background: S.ink, color: S.cream, border: `2px solid ${S.ink}`,
+          padding: "16px 26px", borderRadius: 999, fontSize: 15, fontWeight: 700,
+          boxShadow: `0 4px 0 ${S.ink}`
+        }}>Start a project →</a>
+        <a href="services.html" style={{
+          textDecoration: "none", background: S.cream2, color: S.ink, border: `2px solid ${S.ink}`,
+          padding: "16px 26px", borderRadius: 999, fontSize: 15, fontWeight: 700,
+          boxShadow: `0 4px 0 ${S.ink}`
+        }}>See services →</a>
+      </div>
+    </div>
+  );
+
+  const App = () => (
+    <div data-screen-label="Pricing">
+      <window.Nav />
+      <HeroP />
+      <Tiers />
+      <Includes />
+      <Add />
+      <Promise />
+      <window.FAQ />
+      <FinalCTA />
+      <window.Footer />
+    </div>
+  );
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

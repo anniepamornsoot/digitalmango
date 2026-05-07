@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DigitalMango — Two clients at a time, no more</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
+  ul { padding: 0; margin: 0; }
+  a { color: inherit; }
+  .prose p { font-size: 18px; line-height: 1.75; color: #2D4A45; margin: 0 0 22px; }
+  .prose h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.025em; margin: 56px 0 18px; line-height: 1.1; }
+  .prose h3 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin: 36px 0 14px; }
+  .prose ul { margin: 0 0 22px 0; padding: 0 0 0 22px; }
+  .prose ul li { font-size: 18px; line-height: 1.7; color: #2D4A45; margin-bottom: 8px; list-style: disc; }
+  .prose blockquote { margin: 32px 0; padding: 24px 28px; background: #EFE3CE; border-left: 4px solid #E8A02A; border-radius: 14px; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 24px; line-height: 1.4; color: #1F3B36; }
+  .prose code { background: #1F3B361a; padding: 2px 8px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 15px; }
+  .prose strong { color: #1F3B36; font-weight: 700; }
+  .prose a { color: #E8A02A; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; font-weight: 600; }
+  .prose hr { border: none; border-top: 2px dashed #1F3B3633; margin: 48px 0; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  const S = window.SHARED;
+
+  // ── EDIT THESE FOR EACH BLOG POST ─────────────────────────────
+  const POST = {
+    cat: "studio life",
+    title: "Two clients at a time,",
+    italicWord: "no more.",
+    excerpt: "I tried three. I tried four. Here's why two is the magic number for a studio of one — what breaks at three, and the kind way I say no.",
+    date: "02 March 2026",
+    read: "3 min read",
+    author: "DigitalMango",
+    nextLink: "blog.html",
+    nextTitle: "Why I quote a fixed price.",
+  };
+  // ──────────────────────────────────────────────────────────────
+
+  const Hero = () => (
+    <div style={{ padding: "60px 56px 40px", maxWidth: 980, margin: "0 auto" }}>
+      <a href="blog.html" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .7, marginBottom: 32 }}>← Back to journal</a>
+      <div style={{ display: "flex", gap: 12, marginBottom: 26 }}>
+        <span style={{ background: S.mango, color: S.ink, padding: "6px 14px", borderRadius: 999, border: `2px solid ${S.ink}`, fontWeight: 700, fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", boxShadow: `0 3px 0 ${S.ink}` }}>{POST.cat}</span>
+        <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", fontWeight: 700, opacity: .65, alignSelf: "center" }}>{POST.date} · {POST.read}</span>
+      </div>
+      <h1 style={{ fontSize: 88, lineHeight: 1, letterSpacing: "-0.04em", fontWeight: 800, margin: 0 }}>
+        {POST.title} <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>{POST.italicWord}</span>
+      </h1>
+      <p style={{ marginTop: 24, fontSize: 22, lineHeight: 1.5, color: S.ink2, fontWeight: 500 }}>{POST.excerpt}</p>
+      <div style={{ marginTop: 36, display: "flex", alignItems: "center", gap: 14, paddingBottom: 28, borderBottom: `2px dashed ${S.ink}33` }}>
+        <span style={{ width: 44, height: 44, borderRadius: "50%", background: S.mango, border: `2.5px solid ${S.ink}`, display: "grid", placeItems: "center", fontSize: 20 }}>◐</span>
+        <div>
+          <div style={{ fontWeight: 700, fontSize: 15 }}>{POST.author}</div>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", fontWeight: 700, opacity: .55, textTransform: "uppercase" }}>One-person web studio · Bangkok</div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const Cover = () => (
+    <div style={{ padding: "0 56px 60px", maxWidth: 1200, margin: "0 auto" }}>
+      <div style={{
+        aspectRatio: "16/8",
+        borderRadius: 24, border: `3px solid ${S.ink}`, boxShadow: `0 12px 0 ${S.ink}`,
+        background: `radial-gradient(circle at 30% 30%, ${S.honey}, ${S.mango} 70%)`,
+        position: "relative", overflow: "hidden", display: "grid", placeItems: "center"
+      }}>
+        <div style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 120, lineHeight: 0.9, color: S.ink, transform: "rotate(-3deg)" }}>"two."</div>
+        <div style={{ position: "absolute", bottom: 16, left: 20, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, opacity: .55, textTransform: "uppercase" }}>COVER PLACEHOLDER · DROP REAL IMAGE</div>
+      </div>
+    </div>
+  );
+
+  const Body = () => (
+    <div style={{ padding: "0 56px 80px" }}>
+      <div className="prose" style={{ maxWidth: 780, margin: "0 auto" }}>
+        <p>For my first six months as a one-person studio, I said yes to everyone.</p>
+        <p>Three projects became four. Four became five. By month seven I was working from 7am to midnight, replying to clients half-asleep, and shipping work I wasn't proud of. The studio I started to escape agency burnout had become <strong>a worse version of an agency</strong> — just with one employee.</p>
+
+        <h2>What broke at three</h2>
+        <p>Two clients fit in my head. I can hold both projects' shape at once — the brand, the brief, the half-finished section, the question I owe them. At three, something always fell through. Usually whichever one was quietest that week.</p>
+        <p>And the quiet ones aren't the easy ones. They're the ones politely waiting because <em>they trust me</em>. The trust I was burning to keep up with the loud ones.</p>
+
+        <blockquote>
+          The thing about being a one-person studio is — there's only one person.
+        </blockquote>
+
+        <h2>Why two works</h2>
+        <p>Two clients at a time means:</p>
+        <ul>
+          <li><strong>One in design, one in build.</strong> They never compete for the same headspace.</li>
+          <li><strong>I reply within 24 hours, always.</strong> Not because I'm disciplined — because there are only two inboxes.</li>
+          <li><strong>I can take a Wednesday off.</strong> Without anything catching fire. Without anyone noticing.</li>
+          <li><strong>I do the work I'd hire myself for.</strong> Slow, hand-coded, one person paying attention.</li>
+        </ul>
+
+        <h2>How I say no, kindly</h2>
+        <p>Roughly half my inquiries land while I'm full. The reply is the same every time, and I'm proud of it:</p>
+        <blockquote>
+          "Thank you for thinking of me — I'd love to help, but I'm full until [month]. If your timeline is flexible, I'd be honored to talk in [later month]. If it's not, here are two studios I'd send my own family to: [name], [name]."
+        </blockquote>
+        <p>The referral matters. It tells them I'm <em>actually</em> full, not playing hard to get. And it tells the studios I'm referring to: this person was kind enough to come to me first. Treat them well.</p>
+
+        <hr/>
+
+        <h3>If you're considering going solo</h3>
+        <p>Pick a number before you start. Two, three, whatever — but pick. The hardest part of running a small studio isn't getting clients. It's saying no to the wrong number of them.</p>
+        <p>Want to chat about pricing, scope, or just commiserate about being one person doing everything? <a href="contact.html">Find me on Line.</a> I reply within 24 hours.</p>
+      </div>
+    </div>
+  );
+
+  const TagBar = () => (
+    <div style={{ padding: "20px 56px", textAlign: "center", borderTop: `2px dashed ${S.ink}33`, borderBottom: `2px dashed ${S.ink}33` }}>
+      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", fontWeight: 700, opacity: .55, marginRight: 16 }}>FILED UNDER:</span>
+      {["pricing", "process", "freelance", "small-studio"].map((t, i) => (
+        <span key={i} style={{ display: "inline-block", margin: "0 4px", background: S.cream2, color: S.ink, padding: "5px 12px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, letterSpacing: ".06em" }}>#{t}</span>
+      ))}
+    </div>
+  );
+
+  const Author = () => (
+    <div style={{ padding: "80px 56px", background: S.cream2, borderTop: `4px solid ${S.ink}` }}>
+      <div style={{ maxWidth: 780, margin: "0 auto", display: "flex", gap: 28, alignItems: "center" }}>
+        <div style={{ width: 100, height: 100, borderRadius: "50%", background: `radial-gradient(circle at 35% 30%, ${S.honey}, ${S.mango})`, border: `3px solid ${S.ink}`, display: "grid", placeItems: "center", fontSize: 48, flexShrink: 0, boxShadow: `0 6px 0 ${S.ink}` }}>🥭</div>
+        <div>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", fontWeight: 700, opacity: .55, textTransform: "uppercase" }}>Written by</span>
+          <h3 style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-0.025em", marginTop: 6 }}>DigitalMango</h3>
+          <p style={{ marginTop: 8, fontSize: 15.5, lineHeight: 1.6, color: S.ink2, fontWeight: 500 }}>
+            A one-person web studio in Bangkok, building warm, hand-coded websites for small &amp; medium brands. Find me on <a href="#" style={{ color: S.ink, fontWeight: 700 }}>Line</a> or <a href="contact.html" style={{ color: S.ink, fontWeight: 700 }}>email</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
+  const NextPost = () => (
+    <a href={POST.nextLink} style={{ textDecoration: "none", color: "inherit", display: "block",
+      padding: "80px 56px", background: S.cream, borderTop: `4px solid ${S.ink}`,
+      transition: "background .2s ease"
+    }}
+    onMouseEnter={(e) => { e.currentTarget.style.background = S.honey; }}
+    onMouseLeave={(e) => { e.currentTarget.style.background = S.cream; }}>
+      <div style={{ maxWidth: 980, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24 }}>
+        <div>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Next post</span>
+          <h2 style={{ fontWeight: 800, fontSize: 48, lineHeight: 1.05, letterSpacing: "-0.035em", marginTop: 12 }}>
+            <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>{POST.nextTitle}</span>
+          </h2>
+        </div>
+        <span style={{ fontSize: 56 }}>→</span>
+      </div>
+    </a>
+  );
+
+  const App = () => (
+    <div data-screen-label="Blog · Single Post Template">
+      <window.Nav />
+      <Hero />
+      <Cover />
+      <Body />
+      <TagBar />
+      <Author />
+      <NextPost />
+      <window.Footer />
+    </div>
+  );
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

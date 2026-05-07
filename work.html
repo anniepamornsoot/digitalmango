@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DigitalMango — Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
+  ul { padding: 0; margin: 0; }
+  a { color: inherit; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
+<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  const S = window.SHARED;
+  const { useState } = React;
+
+  const HeroWork = () => (
+    <div style={{ padding: "80px 56px 40px", position: "relative" }}>
+      <div style={{ position: "absolute", top: 100, right: 80 }}>
+        <div style={{ background: S.honey, color: S.ink, border: `2.5px solid ${S.ink}`, borderRadius: 999, padding: "10px 16px", fontWeight: 700, fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", boxShadow: `0 4px 0 ${S.ink}`, transform: "rotate(-6deg)" }}>★ early projects</div>
+      </div>
+      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Work</span>
+      <h1 style={{ fontSize: 156, lineHeight: 0.86, letterSpacing: "-0.05em", fontWeight: 800, margin: "16px 0 0" }}>
+        A small,<br/>
+        <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>growing</span><br/>
+        orchard.
+      </h1>
+      <p style={{ marginTop: 32, fontSize: 22, lineHeight: 1.5, color: S.ink2, maxWidth: "60ch", fontWeight: 500 }}>
+        A handful of early projects, a few in-progress, and room for a few more. Click any tile for the full story — or scroll for the in-progress notes.
+      </p>
+    </div>
+  );
+
+  const Filters = ({ active, setActive, all }) => (
+    <div style={{ padding: "0 56px 24px", display: "flex", gap: 10, flexWrap: "wrap" }}>
+      {all.map((t) => (
+        <button key={t} type="button" onClick={() => setActive(t)} style={{
+          background: active === t ? S.ink : S.cream2, color: active === t ? S.cream : S.ink,
+          border: `2px solid ${S.ink}`, borderRadius: 999,
+          padding: "10px 18px", fontSize: 13, fontWeight: 700, cursor: "pointer",
+          boxShadow: active === t ? `0 4px 0 ${S.mango}` : "none",
+          fontFamily: "inherit", textTransform: "lowercase"
+        }}>{t}</button>
+      ))}
+    </div>
+  );
+
+  const Card = ({ p }) => {
+    const Wrapper = p.href ? "a" : "div";
+    const cur = p.status === "in progress";
+    return (
+      <Wrapper href={p.href || "#"} style={{
+        textDecoration: "none", color: "inherit",
+        display: "block",
+        background: S.cream, border: `3px solid ${S.ink}`, borderRadius: 22,
+        boxShadow: `0 8px 0 ${S.ink}`, overflow: "hidden",
+        transform: `rotate(${p.tilt}deg)`,
+        transition: "transform .18s ease, box-shadow .18s ease",
+        cursor: p.href ? "pointer" : "default"
+      }}
+      onMouseEnter={(e) => { if (p.href) { e.currentTarget.style.transform = `rotate(${p.tilt}deg) translateY(-4px)`; e.currentTarget.style.boxShadow = `0 12px 0 ${S.ink}`; } }}
+      onMouseLeave={(e) => { if (p.href) { e.currentTarget.style.transform = `rotate(${p.tilt}deg)`; e.currentTarget.style.boxShadow = `0 8px 0 ${S.ink}`; } }}>
+        <div style={{
+          aspectRatio: "5/3.4",
+          background: p.bg,
+          position: "relative",
+          borderBottom: `3px solid ${S.ink}`,
+        }}>
+          <div style={{ position: "absolute", inset: 16, borderRadius: 8, background: p.inner, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 18 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, color: p.fg, opacity: .7, textTransform: "uppercase" }}>
+              <span>{p.label}</span>
+              <span>{p.year}</span>
+            </div>
+            <div style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 56, lineHeight: 0.95, color: p.fg, maxWidth: "8ch", whiteSpace: "pre-line" }}>{p.bigText}</div>
+          </div>
+          {cur && (
+            <div style={{ position: "absolute", top: 12, right: 12, background: S.honey, color: S.ink, padding: "5px 12px", borderRadius: 999, border: `2px solid ${S.ink}`, fontSize: 10, fontWeight: 700, letterSpacing: ".14em", fontFamily: "'JetBrains Mono', monospace", boxShadow: `0 3px 0 ${S.ink}` }}>★ IN PROGRESS</div>
+          )}
+        </div>
+        <div style={{ padding: 22 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <h3 style={{ fontSize: 24, fontWeight: 700, letterSpacing: "-0.025em" }}>{p.t}</h3>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".14em", fontWeight: 700, opacity: .55, textTransform: "uppercase" }}>{p.tag}</span>
+          </div>
+          <p style={{ marginTop: 8, fontSize: 14.5, lineHeight: 1.55, color: S.ink2, fontWeight: 500 }}>{p.body}</p>
+          {p.href ? (
+            <div style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", fontWeight: 700, color: S.ink }}>READ THE STORY →</div>
+          ) : (
+            <div style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", fontWeight: 700, color: S.ink2 }}>CASE STUDY · COMING SOON</div>
+          )}
+        </div>
+      </Wrapper>
+    );
+  };
+
+  const Grid = () => {
+    const [active, setActive] = useState("all");
+    const projects = [
+      { id: 1, t: "Sundara Bakery", tag: "F&B", status: "shipped", year: "2025", label: "BAKERY · BANGKOK", bigText: '"ripe."', body: "A 6-page bilingual site for a Sukhumvit bakery. Same warmth as the shop, online — built in 12 days.", bg: `radial-gradient(circle at 30% 25%, ${S.honey}, transparent 55%), linear-gradient(160deg, ${S.mango} 0%, #D9892A 70%)`, inner: S.cream + "00", fg: S.ink, tilt: -1.2, href: "case-sundara.html" },
+      { id: 2, t: "Mai Wellness", tag: "Wellness", status: "in progress", year: "2026", label: "STUDIO · CHIANG MAI", bigText: 'quiet.', body: "Single-page site for a slow-living wellness studio. Bookable classes, gentle gradients, and copy that breathes.", bg: `linear-gradient(160deg, ${S.leaf} 0%, ${S.honey} 130%)`, inner: S.cream + "1a", fg: S.cream, tilt: 0.8 },
+      { id: 3, t: "Baan Somtam", tag: "F&B", status: "in progress", year: "2026", label: "RESTAURANT · NONTHABURI", bigText: 'spicy.\nhot.', body: "A neighborhood Isan kitchen wanted a site that smells like grilled lime. Bilingual menu, photo-led, no fluff.", bg: `linear-gradient(160deg, ${S.clay} 0%, ${S.honey} 100%)`, inner: S.cream + "12", fg: S.cream, tilt: -0.6 },
+      { id: 4, t: "Krua Yaai", tag: "F&B", status: "shipped", year: "2025", label: "CATERING · BANGKOK", bigText: 'family\nstyle.', body: "Catering site for a beloved family kitchen — order forms, gallery, and a story page that made the founder cry (good way).", bg: `linear-gradient(160deg, ${S.mango} 0%, ${S.clay} 100%)`, inner: S.cream + "10", fg: S.cream, tilt: 1.4 },
+      { id: 5, t: "Studio Lamphu", tag: "Studio", status: "shipped", year: "2024", label: "DESIGN · BANGKOK", bigText: 'made\nslow.', body: "Portfolio site for a 2-person ceramics studio. Earthy palette, tactile photo grid, monthly journal.", bg: `linear-gradient(160deg, ${S.cream2} 0%, ${S.honey} 100%)`, inner: S.cream + "00", fg: S.ink, tilt: -1.5 },
+      { id: 6, t: "Sano Tea Bar", tag: "F&B", status: "in progress", year: "2026", label: "CAFÉ · PHUKET", bigText: 'pour\nover.', body: "A specialty matcha bar wanted their site to feel as quiet as the shop. Calm grid, slow scroll, real photography.", bg: `linear-gradient(160deg, ${S.leaf} 0%, ${S.cream2} 100%)`, inner: S.cream + "30", fg: S.ink, tilt: 0.4 },
+    ];
+    const filtered = active === "all" ? projects : projects.filter((p) => p.tag.toLowerCase() === active || p.status === active);
+    const filters = ["all", "shipped", "in progress", "F&B", "Wellness", "Studio"];
+    return (
+      <>
+        <Filters active={active} setActive={setActive} all={filters} />
+        <div style={{ padding: "12px 56px 100px", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 28 }}>
+          {filtered.map((p) => <Card key={p.id} p={p} />)}
+        </div>
+      </>
+    );
+  };
+
+  const ProcessStrip = () => (
+    <div style={{ padding: "100px 56px", background: S.leaf, color: S.cream, borderTop: `4px solid ${S.ink}` }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: 56, alignItems: "start" }}>
+        <div>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .7 }}>How I work</span>
+          <h2 style={{ fontWeight: 800, fontSize: 64, lineHeight: 1, letterSpacing: "-0.04em", marginTop: 14 }}>
+            A small, kind <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.honey }}>process.</span>
+          </h2>
+          <p style={{ marginTop: 24, fontSize: 17, lineHeight: 1.6, opacity: .85, maxWidth: "44ch" }}>
+            Most of my projects ship in 4–6 weeks. Same shape every time — fixed price, two design directions, you pick, I build.
+          </p>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+          {[
+            { n: "01", t: "Free chat" },
+            { n: "02", t: "Tasting menu" },
+            { n: "03", t: "Sketch & taste" },
+            { n: "04", t: "Build & ship" },
+          ].map((s, i) => (
+            <div key={i} style={{ background: S.cream, color: S.ink, border: `3px solid ${S.ink}`, borderRadius: 22, padding: 20, boxShadow: `0 6px 0 ${S.ink}` }}>
+              <span style={{ background: S.mango, color: S.ink, padding: "5px 11px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".14em" }}>STEP {s.n}</span>
+              <h3 style={{ marginTop: 18, fontSize: 20, fontWeight: 700, letterSpacing: "-0.02em" }}>{s.t}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const CTA = () => (
+    <div style={{ padding: "120px 56px", textAlign: "center", borderTop: `4px solid ${S.ink}` }}>
+      <div style={{ display: "inline-block", background: S.honey, color: S.ink, border: `2.5px solid ${S.ink}`, padding: "8px 16px", borderRadius: 999, fontWeight: 700, fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", boxShadow: `0 4px 0 ${S.ink}`, transform: "rotate(-3deg)", marginBottom: 24 }}>★ 2 spots open · jul</div>
+      <h2 style={{ fontWeight: 800, fontSize: 88, lineHeight: 1, letterSpacing: "-0.04em", margin: 0 }}>
+        Want to be the<br/>next <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>tile</span>?
+      </h2>
+      <div style={{ marginTop: 40 }}>
+        <a href="contact.html" style={{
+          display: "inline-block", background: S.ink, color: S.cream, padding: "18px 30px",
+          borderRadius: 999, fontWeight: 800, fontSize: 16, textDecoration: "none",
+          boxShadow: `0 6px 0 ${S.mango}`, border: `2px solid ${S.ink}`
+        }}>Start a project →</a>
+      </div>
+    </div>
+  );
+
+  const App = () => (
+    <div data-screen-label="Work">
+      <window.Nav />
+      <HeroWork />
+      <Grid />
+      <ProcessStrip />
+      <CTA />
+      <window.Footer />
+    </div>
+  );
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
