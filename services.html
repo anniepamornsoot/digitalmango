@@ -1,251 +1,838 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>DigitalMango — Services</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
-  ul { padding: 0; margin: 0; }
-  a { color: inherit; }
-  details summary::-webkit-details-marker { display: none; }
-  details summary::marker { display: none; }
-  details[open] summary > span:last-child { transform: rotate(45deg); display: inline-block; }
-  details summary > span:last-child { transition: transform .2s ease; }
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — DigitalMango</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/a04fc7ed18a8.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/6ee678c33f38.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/a8c4bd7cd707.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/60c06664b5a9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 </style>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>/* ───────────────────────────────────────────
+   DigitalMango — shared site styles
+   ─────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:  #F6EFE3;
+  --forest: #1F3B36;
+  --mango:  #E8A02A;
+  --honey:  #F2C56B;
+  --leaf:   #6B8A4E;
+  --clay:   #C8643D;
+  --muted:  #7a7060;
+  --ink:    #1a1a18;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--forest);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: linear-gradient(90deg, var(--mango), var(--clay), var(--leaf));
+  width: 0%; z-index: 200; transition: width .08s linear;
+  box-shadow: 0 0 12px rgba(232,160,42,0.6);
+}
+
+/* ── CURSOR SPOTLIGHT ── */
+.spotlight {
+  position: fixed; pointer-events: none; z-index: 5;
+  width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,160,42,0.18) 0%, rgba(232,160,42,0) 65%);
+  transform: translate(-50%,-50%);
+  transition: opacity .4s; opacity: 0;
+  mix-blend-mode: multiply;
+}
+.spotlight.on { opacity: 1; }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .hero-badge, .hero-headline, .hero-bottom, .hero-right { opacity: 1 !important; animation: none !important; }
+  .now-widget { transform: none !important; opacity: 1 !important; }
+}
+
+/* ── NOW WIDGET ── */
+.now-widget {
+  position: fixed; bottom: 22px; left: 22px; z-index: 90;
+  background: var(--forest); color: var(--cream);
+  border-radius: 18px; padding: 12px 16px 12px 14px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 12px 40px rgba(31,59,54,0.25);
+  font-size: 12px; max-width: 280px;
+  transform: translateY(140%); opacity: 0;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.now-widget.up { transform: translateY(0); opacity: 1; }
+.now-disc {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--mango);
+  display: grid; place-items: center;
+  position: relative; flex-shrink: 0;
+  animation: spin 8s linear infinite;
+}
+.now-disc::before { content:''; width: 8px; height: 8px; border-radius: 50%; background: var(--forest); }
+.now-disc::after { content:''; position:absolute; inset: 4px; border-radius: 50%; border: 1px dashed rgba(31,59,54,0.35); }
+@keyframes spin { to { transform: rotate(360deg); } }
+.now-label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,239,227,0.45); margin-bottom: 2px; }
+.now-line { font-family:'Instrument Serif', serif; font-style: italic; font-size: 14px; color: var(--honey); line-height: 1.25; }
+.now-close { background:none; border:none; color: rgba(246,239,227,0.4); cursor:pointer; font-size: 14px; padding: 0 0 0 4px; }
+.now-close:hover { color: var(--honey); }
+
+/* ── FLOATING PIPS ── */
+.pip-float {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; z-index: 0;
+  animation: bob 7s ease-in-out infinite;
+}
+@keyframes bob {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-22px) rotate(8deg); }
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 48px;
+  background: rgba(246,239,227,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(31,59,54,0.07);
+}
+.logo {
+  font-size: 15px; font-weight: 700; letter-spacing: -0.4px;
+  color: var(--forest); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.logo-pip {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--mango);
+  position: relative; flex-shrink: 0;
+}
+.logo-pip::after {
+  content: ''; position: absolute; top: -1px; right: -1px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--leaf);
+}
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: 13px; font-weight: 500;
+  color: var(--muted); text-decoration: none; transition: color .2s;
+  position: relative;
+}
+.nav-links a:hover { color: var(--forest); }
+.nav-links a.active { color: var(--forest); }
+.nav-links a.active::after {
+  content:''; position:absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: var(--mango);
+}
+.nav-cta {
+  background: var(--forest) !important; color: var(--cream) !important;
+  padding: 10px 22px; border-radius: 100px;
+  font-weight: 600 !important; letter-spacing: -0.2px;
+  transition: transform .15s, background .2s !important;
+}
+.nav-cta:hover { transform: translateY(-1px); background: #2c5048 !important; }
+.nav-cta.active::after { display: none; }
+
+/* ── BUTTONS ── */
+.btn-primary {
+  background: var(--forest); color: var(--cream);
+  padding: 15px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform .2s, background .2s; white-space: nowrap;
+  border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-primary:hover { transform: translateY(-2px); background: #2c5048; }
+.btn-ghost {
+  color: var(--forest); padding: 15px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  border: 2px solid rgba(31,59,54,0.18);
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform .2s, border-color .2s; white-space: nowrap;
+}
+.btn-ghost:hover { transform: translateY(-2px); border-color: var(--forest); }
+.btn-mango {
+  background: var(--mango); color: var(--forest);
+  padding: 15px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform .2s, background .2s; white-space: nowrap;
+  border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-mango:hover { transform: translateY(-2px); background: var(--honey); }
+
+/* ── MARQUEE ── */
+.marquee-strip {
+  background: var(--forest); padding: 13px 0;
+  overflow: hidden; white-space: nowrap; position: relative;
+}
+.marquee-strip + .marquee-strip {
+  background: var(--mango); border-top: 1px solid rgba(31,59,54,0.15);
+  padding: 10px 0;
+}
+.marquee-strip.reverse .marquee-inner { animation: marquee-rev 28s linear infinite; }
+.marquee-strip.reverse .marquee-inner span { color: rgba(31,59,54,0.65); font-size: 10.5px; }
+.marquee-strip.reverse .marquee-inner .accent { color: var(--forest); }
+@keyframes marquee-rev { from{transform:translateX(-50%)} to{transform:translateX(0)} }
+.marquee-inner { display: inline-flex; gap: 40px; animation: marquee 24s linear infinite; }
+.marquee-inner span {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(246,239,227,0.55); flex-shrink: 0;
+}
+.marquee-inner .accent { color: var(--mango); opacity: 1; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ── SECTIONS ── */
+section { padding: 108px 48px; }
+.eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+}
+.section-title {
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 700; line-height: 1.08; letter-spacing: -0.03em;
+  color: var(--forest);
+}
+.section-title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400; color: var(--mango);
+}
+@keyframes fadeUp { from { opacity:0; transform:translateY(18px) } to { opacity:1; transform:translateY(0) } }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+
+/* ── PAGE HEADER (used on inner pages) ── */
+.page-header {
+  padding: 160px 48px 80px;
+  position: relative; overflow: hidden;
+  background: var(--cream);
+}
+.page-header .hero-blob { position: absolute; }
+.page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.page-header h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  font-weight: 700; line-height: 1; letter-spacing: -0.04em;
+  color: var(--forest); margin-top: 12px;
+}
+.page-header h1 em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400; color: var(--mango);
+}
+.page-header .lead {
+  margin-top: 28px; font-size: 18px; font-weight: 300;
+  color: var(--muted); max-width: 580px; line-height: 1.75;
+}
+.crumbs {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; color: var(--muted); letter-spacing: 0.08em;
+  text-transform: uppercase; font-weight: 600;
+}
+.crumbs a { color: var(--muted); text-decoration: none; transition: color .2s; }
+.crumbs a:hover { color: var(--forest); }
+.crumbs span.sep { opacity: .4; }
+
+/* ── HERO blobs (reusable) ── */
+.hero-blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); pointer-events: none; z-index: 0;
+}
+.blob-1 { width: 600px; height: 600px; right: -100px; top: -60px; background: rgba(232,160,42,0.18); }
+.blob-2 { width: 400px; height: 400px; right: 200px; bottom: 0px; background: rgba(107,138,78,0.12); }
+.blob-3 { width: 300px; height: 300px; left: -80px; bottom: 100px; background: rgba(242,197,107,0.15); }
+
+/* ── FAQ ── */
+.faq-cols { display: grid; grid-template-columns: 1fr 560px; gap: 80px; align-items: start; }
+.faq-sticky { position: sticky; top: 120px; }
+.faq-sticky .section-title { margin-bottom: 20px; }
+.faq-sticky p { font-size: 16px; font-weight: 300; color: var(--muted); line-height: 1.75; }
+.faq-sticky .btn-primary { margin-top: 32px; display: inline-flex; }
+
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid rgba(31,59,54,0.1); }
+.faq-q {
+  width:100%; background:none; border:none; cursor:pointer;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 22px 0; text-align:left; gap:20px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:16px; font-weight:600; color:var(--forest);
+  transition:color .2s;
+}
+.faq-q:hover { color: var(--mango); }
+.faq-chevron {
+  width:30px; height:30px; border-radius:50%;
+  background: rgba(31,59,54,0.07); border:none;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; transition: background .2s, transform .3s;
+  font-size:14px; color:var(--forest); cursor:pointer;
+}
+.faq-item.open .faq-chevron { background:var(--mango); transform:rotate(180deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.faq-item.open .faq-a { max-height:320px; }
+.faq-a p { padding-bottom:22px; font-size:15px; font-weight:300; color:var(--muted); line-height:1.75; }
+
+/* ── CONTACT ── */
+.contact-section { background: var(--forest); }
+.contact-section .eyebrow { color: rgba(246,239,227,.4); }
+.contact-section .section-title { color: var(--cream); }
+.contact-section .section-title em { color: var(--honey); }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-top:64px; }
+.contact-left p { font-size:17px; font-weight:300; color:rgba(246,239,227,.7); line-height:1.8; margin-bottom:32px; }
+.contact-link {
+  display:flex; align-items:center; gap:14px;
+  font-size:15px; font-weight:400; color:rgba(246,239,227,.6);
+  text-decoration:none; margin-bottom:16px; transition:color .2s;
+}
+.contact-link:hover { color:var(--honey); }
+.link-icon {
+  width:40px; height:40px; border-radius:12px;
+  background:rgba(255,255,255,0.07);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; flex-shrink:0;
+}
+.contact-form { display:flex; flex-direction:column; gap:14px; }
+.field-label { font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(246,239,227,.4); display:block; margin-bottom:6px; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.field { display:flex; flex-direction:column; }
+.f-input, .f-textarea {
+  background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.1);
+  border-radius:14px; padding:14px 18px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px; font-weight:300; color:var(--cream);
+  outline:none; transition:border-color .2s, background .2s; resize:none;
+}
+.f-input::placeholder, .f-textarea::placeholder { color:rgba(246,239,227,.2); }
+.f-input:focus, .f-textarea:focus { border-color:var(--mango); background:rgba(255,255,255,0.09); }
+.f-textarea { min-height:130px; }
+.budget-pills { display:flex; flex-wrap:wrap; gap:8px; }
+.pill {
+  padding:9px 18px; border-radius:100px; font-size:13px; font-weight:500;
+  border:1.5px solid rgba(255,255,255,0.12); color:rgba(246,239,227,.6);
+  cursor:pointer; transition:all .2s; background:transparent;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+.pill:hover, .pill.active { background:var(--mango); border-color:var(--mango); color:var(--forest); }
+.f-submit {
+  background:var(--mango); color:var(--forest);
+  border:none; border-radius:100px;
+  padding:17px 36px; font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px; font-weight:700; cursor:pointer;
+  transition:background .2s, transform .15s;
+  align-self:flex-start; margin-top:8px; letter-spacing:-0.01em;
+}
+.f-submit:hover { background:var(--honey); transform:translateY(-2px); }
+
+/* ── NEWSLETTER CTA (reused) ── */
+.newsletter { background: var(--forest); padding: 110px 48px; position: relative; overflow: hidden; }
+.newsletter::before {
+  content:''; position: absolute;
+  width: 380px; height: 380px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--mango), var(--clay));
+  left: -120px; top: -120px; opacity: .18; filter: blur(2px);
+  animation: blobDrift 16s ease-in-out infinite;
+}
+.newsletter::after {
+  content:''; position: absolute;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: var(--leaf);
+  right: -60px; bottom: -90px; opacity: .14; filter: blur(2px);
+  animation: blobDrift 20s ease-in-out infinite -6s;
+}
+@keyframes blobDrift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(30px,-20px) scale(1.05); }
+}
+.news-inner { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 72px; }
+.news-left .eyebrow { color: var(--mango); display: inline-flex; align-items: center; gap: 10px; }
+.news-left .eyebrow::before { content:''; width: 22px; height: 1.5px; background: var(--mango); }
+.news-headline { font-size: clamp(40px, 4.6vw, 64px); font-weight: 700; line-height: 1.04; letter-spacing: -0.03em; color: var(--cream); margin-top: 16px; }
+.news-headline em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--honey); }
+.news-sub { font-size: 16px; font-weight: 300; color: rgba(246,239,227,0.65); line-height: 1.75; margin-top: 24px; max-width: 460px; }
+.news-perks { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.news-perks li { list-style: none; display: flex; align-items: center; gap: 12px; font-size: 13px; color: rgba(246,239,227,0.7); }
+.news-perks li::before { content: '◐'; color: var(--mango); font-size: 13px; flex-shrink: 0; }
+.news-card { background: var(--cream); border-radius: 26px; padding: 36px 32px 32px; position: relative; box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35); transform: rotate(2deg); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.news-card:hover { transform: rotate(0deg) translateY(-4px); }
+.news-card::before { content: 'no spam'; position: absolute; top: -16px; left: 28px; background: var(--mango); color: var(--forest); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; padding: 6px 14px; border-radius: 4px; text-transform: uppercase; transform: rotate(-4deg); box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+.news-card::after { content:''; position: absolute; top: -22px; right: 40px; width: 78px; height: 22px; background: rgba(232,160,42,0.45); transform: rotate(8deg); border: 1px dashed rgba(31,59,54,0.25); }
+.news-card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.news-card-label::after { content:''; flex: 1; height: 1px; background: rgba(31,59,54,0.12); }
+.news-card-title { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 28px; color: var(--forest); margin-top: 14px; line-height: 1.1; }
+.news-form { margin-top: 22px; display: flex; gap: 8px; background: white; border: 1.5px solid rgba(31,59,54,0.12); border-radius: 100px; padding: 6px 6px 6px 18px; transition: border-color .2s, box-shadow .2s; }
+.news-form:focus-within { border-color: var(--mango); box-shadow: 0 0 0 4px rgba(232,160,42,0.18); }
+.news-form input { flex: 1; border: none; outline: none; background: transparent; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: var(--forest); min-width: 0; }
+.news-form input::placeholder { color: rgba(31,59,54,0.4); }
+.news-form button { background: var(--forest); color: var(--cream); border: none; border-radius: 100px; padding: 11px 20px; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 6px; transition: background .2s, transform .15s; flex-shrink: 0; }
+.news-form button:hover { background: #2c5048; transform: translateX(2px); }
+.news-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; gap: 14px; font-size: 11px; color: var(--muted); }
+.news-meta .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--leaf); margin-right: 6px; animation: pulse 2.5s infinite; }
+.news-meta-right { font-family:'Instrument Serif', serif; font-style: italic; color: var(--clay); }
+.news-thanks { display: none; margin-top: 18px; padding: 14px 18px; background: rgba(107,138,78,0.14); border-radius: 14px; font-size: 13px; color: var(--forest); font-weight: 500; }
+.news-thanks.show { display: block; animation: fadeUp .4s; }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--forest); border-top:1px solid rgba(255,255,255,0.07);
+  padding: 64px 48px 32px;
+}
+.foot-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;
+  padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.foot-brand .foot-logo { color: var(--cream); font-size: 18px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.foot-brand p { font-size: 14px; font-weight: 300; color: rgba(246,239,227,.55); margin-top: 16px; line-height: 1.7; max-width: 280px; }
+.foot-tagline-italic { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--honey); }
+.foot-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mango); margin-bottom: 18px; }
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.foot-col a { color: rgba(246,239,227,.65); font-size: 14px; text-decoration: none; transition: color .2s; }
+.foot-col a:hover { color: var(--honey); }
+.foot-bar { max-width: 1200px; margin: 0 auto; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(246,239,227,.35); }
+.foot-bar a { color: rgba(246,239,227,.35); text-decoration: none; }
+.foot-bar a:hover { color: var(--honey); }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  nav { padding:16px 24px; }
+  .nav-links a:not(.nav-cta) { display:none; }
+  section { padding:80px 24px; }
+  .page-header { padding: 120px 24px 60px; }
+  .faq-cols { grid-template-columns:1fr; }
+  .faq-sticky { position:static; }
+  .contact-grid { grid-template-columns:1fr; gap:48px; }
+  .field-row { grid-template-columns:1fr; }
+  .news-inner { grid-template-columns: 1fr; gap: 40px; }
+  .news-card { transform: rotate(0deg); }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .foot-bar { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+<style>
+.svc-detail { padding: 80px 48px; }
+.svc-detail .svc-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.svc-detail .svc-num-big { font-family:'Instrument Serif',serif; font-style: italic; font-size: 96px; color: var(--mango); line-height: 1; }
+.svc-detail h2 { font-size: clamp(38px, 4.5vw, 56px); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; margin-top: 8px; }
+.svc-detail h2 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.svc-detail .svc-desc { font-size: 17px; color: var(--muted); font-weight: 300; line-height: 1.8; margin-top: 20px; }
+.svc-includes { background: white; border: 1.5px solid rgba(31,59,54,0.08); border-radius: 22px; padding: 36px; }
+.svc-includes h3 { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+.svc-includes ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.svc-includes li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--forest); padding-bottom: 14px; border-bottom: 1px solid rgba(31,59,54,0.06); }
+.svc-includes li:last-child { border: none; padding-bottom: 0; }
+.svc-includes li::before { content:'◐'; color: var(--mango); flex-shrink: 0; margin-top: 2px; }
+.svc-includes .price { font-family:'Instrument Serif',serif; font-style: italic; font-size: 44px; color: var(--forest); margin-top: 24px; padding-top: 24px; border-top: 1.5px solid rgba(31,59,54,0.08); }
+.svc-includes .price-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.svc-detail.forest { background: var(--forest); color: var(--cream); }
+.svc-detail.forest h2 { color: var(--cream); }
+.svc-detail.forest h2 em { color: var(--honey); }
+.svc-detail.forest .svc-desc { color: rgba(246,239,227,.65); }
+.svc-detail.forest .svc-includes { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--cream); }
+.svc-detail.forest .svc-includes h3 { color: rgba(246,239,227,.45); }
+.svc-detail.forest .svc-includes li { color: var(--cream); border-color: rgba(255,255,255,0.08); }
+.svc-detail.forest .svc-includes .price { color: var(--honey); border-color: rgba(255,255,255,0.08); }
+.svc-detail.forest .svc-includes .price-sub { color: rgba(246,239,227,.45); }
+.svc-detail .svc-cta { display: inline-flex; margin-top: 28px; }
+
+.compare { padding: 108px 48px; background: rgba(31,59,54,0.04); }
+.cmp-table { max-width: 1100px; margin: 56px auto 0; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; background: white; border-radius: 22px; overflow: hidden; border: 1.5px solid rgba(31,59,54,0.08); font-size: 14px; }
+.cmp-table > div { padding: 18px 22px; border-bottom: 1px solid rgba(31,59,54,0.06); }
+.cmp-head { background: var(--forest); color: var(--cream); font-weight: 700; letter-spacing: -0.01em; }
+.cmp-head.first { color: var(--mango); font-family:'Instrument Serif',serif; font-style: italic; font-size: 16px; font-weight: 400; }
+.cmp-row-label { font-weight: 600; color: var(--forest); }
+.cmp-yes { color: var(--leaf); font-weight: 700; }
+.cmp-no { color: rgba(31,59,54,0.3); }
+
+@media (max-width:900px) {
+  .svc-detail .svc-inner { grid-template-columns: 1fr; gap: 32px; }
+  .cmp-table { grid-template-columns: 1fr; }
+  .cmp-table > div { border-right: none; }
+}
+</style>
+
 </head>
 <body>
-<div id="root"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="spotlight" id="spotlight"></div>
+<div class="now-widget" id="nowWidget"><div class="now-disc"></div><div><div class="now-label">Currently · ☕</div><div class="now-line" id="nowLine">—</div></div><button class="now-close" onclick="document.getElementById('nowWidget').classList.remove('up')" aria-label="close">×</button></div>
 
-<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
-<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
-<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+<nav>
+  <a href="index.html" class="logo"><span class="logo-pip"></span>digitalmango</a>
+  <div class="nav-links">
+    <a href="services.html" class="active">Services</a>
+    <a href="about.html">About</a>
+    <a href="process.html">Process</a>
+    <a href="journal.html">Journal</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="nav-cta">Start a project →</a>
+  </div>
+</nav>
 
-<script type="text/babel" data-presets="react">
-  const S = window.SHARED;
-  const StickerC = window.Sticker, ChunkyBtnC = window.ChunkyBtn;
+<header class="page-header">
+  <div class="hero-blob blob-1"></div>
+  <div class="hero-blob blob-2"></div>
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Services</span></div>
+    <h1>Three flavors,<br><em>same orchard.</em></h1>
+    <p class="lead">Every project is hand-built, end-to-end — one designer who sweats every detail. Pick the shape that fits where you are, and we'll talk through it in your first chat.</p>
+  </div>
+</header>
 
-  const Hero = () => (
-    <div style={{ padding: "80px 56px 60px", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", top: 100, right: 100 }}>
-        <StickerC bg={S.honey} rotate={-6}>★ booking jul–sep 2026</StickerC>
-      </div>
-      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Services</span>
-      <h1 style={{ fontSize: 156, lineHeight: 0.88, letterSpacing: "-0.05em", fontWeight: 800, margin: "16px 0 0" }}>
-        Three flavors,<br/>
-        <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>same</span> orchard.
-      </h1>
-      <p style={{ marginTop: 32, fontSize: 22, lineHeight: 1.5, color: S.ink2, maxWidth: "60ch", fontWeight: 500 }}>
-        Hand-built websites, refreshes, and ongoing care — for small &amp; medium brands who want their site to feel as warm as the work behind it.
-      </p>
+<section class="svc-detail forest">
+  <div class="svc-inner">
+    <div>
+      <div class="svc-num-big">01</div>
+      <h2>New <em>websites.</em></h2>
+      <p class="svc-desc">Strategy, design, and build for brands launching a fresh site. Bilingual EN / TH from day one, responsive on every device, considered down to the smallest spacing. This is the work I love most.</p>
+      <a href="contact.html" class="btn-mango svc-cta">Start a project →</a>
     </div>
-  );
-
-  const Detail = ({ id, num, t, sub, body, price, time, deliverables, perfect, notFor, bg, color, accent }) => {
-    const ink = S.ink, cream = S.cream;
-    const isDark = color === cream;
-    return (
-      <div id={id} style={{ background: bg, color: color || ink, padding: "100px 56px", borderTop: `4px solid ${ink}` }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 56 }}>
-          <div>
-            <span style={{ background: cream, color: ink, padding: "8px 14px", borderRadius: 999, border: `2px solid ${ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", fontWeight: 700, display: "inline-block" }}>NO. {num}</span>
-            <h2 style={{ fontWeight: 800, fontSize: 88, lineHeight: 0.95, letterSpacing: "-0.04em", marginTop: 22 }}>{t}</h2>
-            <p style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 28, lineHeight: 1.3, marginTop: 18, opacity: .85, maxWidth: "26ch" }}>{sub}</p>
-
-            <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <div style={{ background: cream, color: ink, border: `2.5px solid ${ink}`, borderRadius: 18, padding: "16px 22px", boxShadow: `0 6px 0 ${ink}` }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, opacity: .55 }}>STARTS AT</div>
-                <div style={{ fontWeight: 800, fontSize: 30, letterSpacing: "-0.02em", marginTop: 4 }}>{price}</div>
-              </div>
-              <div style={{ background: accent, color: ink, border: `2.5px solid ${ink}`, borderRadius: 18, padding: "16px 22px", boxShadow: `0 6px 0 ${ink}` }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, opacity: .65 }}>TIMELINE</div>
-                <div style={{ fontWeight: 800, fontSize: 30, letterSpacing: "-0.02em", marginTop: 4 }}>{time}</div>
-              </div>
-            </div>
-            <div style={{ marginTop: 28 }}>
-              <ChunkyBtnC bg={S.mango} color={ink}>Book {t.split(" ")[0].toLowerCase()} →</ChunkyBtnC>
-            </div>
-          </div>
-
-          <div>
-            <p style={{ fontSize: 18, lineHeight: 1.65, opacity: isDark ? .9 : .85, maxWidth: "56ch" }}>{body}</p>
-
-            <h3 style={{ marginTop: 36, fontSize: 14, fontFamily: "'JetBrains Mono', monospace", letterSpacing: ".18em", textTransform: "uppercase", fontWeight: 700, opacity: .7 }}>What's included</h3>
-            <ul style={{ marginTop: 16, listStyle: "none", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-              {deliverables.map((d, i) => (
-                <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 15, fontWeight: 600 }}>
-                  <span style={{ flexShrink: 0, marginTop: 2, width: 20, height: 20, borderRadius: "50%", background: S.mango, color: ink, border: `1.5px solid ${ink}`, display: "grid", placeItems: "center", fontSize: 11, fontWeight: 800 }}>✓</span>
-                  {d}
-                </li>
-              ))}
-            </ul>
-
-            <div style={{ marginTop: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-              <div style={{ background: cream, color: ink, border: `2.5px solid ${ink}`, borderRadius: 18, padding: 20 }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, color: S.leaf }}>PERFECT FOR</div>
-                <div style={{ marginTop: 8, fontSize: 14.5, lineHeight: 1.55, fontWeight: 500 }}>{perfect}</div>
-              </div>
-              <div style={{ background: cream, color: ink, border: `2.5px solid ${ink}`, borderRadius: 18, padding: 20 }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, color: S.clay }}>NOT FOR</div>
-                <div style={{ marginTop: 8, fontSize: 14.5, lineHeight: 1.55, fontWeight: 500 }}>{notFor}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const Compare = () => (
-    <div style={{ padding: "100px 56px", background: S.cream2, borderTop: `4px solid ${S.ink}` }}>
-      <div style={{ textAlign: "center", marginBottom: 48 }}>
-        <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>04 — At a glance</span>
-        <h2 style={{ fontWeight: 800, fontSize: 64, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
-          Side by <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>side.</span>
-        </h2>
-      </div>
-      <div style={{ background: S.cream, border: `3px solid ${S.ink}`, borderRadius: 24, boxShadow: `0 8px 0 ${S.ink}`, overflow: "hidden" }}>
-        {[
-          ["", "New website", "Refresh", "Care"],
-          ["Custom design", "✓", "—", "—"],
-          ["Page-by-page polish", "✓", "✓", "—"],
-          ["Bilingual EN / TH", "✓", "✓", "—"],
-          ["Speed & SEO pass", "✓", "✓", "✓"],
-          ["Monthly updates", "1 mo free", "—", "✓"],
-          ["Priority replies", "—", "—", "✓"],
-          ["Starting price", "฿35,000", "฿18,000", "฿6,000/mo"],
-        ].map((row, i) => (
-          <div key={i} style={{
-            display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr",
-            padding: "16px 24px",
-            background: i === 0 ? S.ink : "transparent",
-            color: i === 0 ? S.cream : S.ink,
-            fontWeight: i === 0 || row[0] === "Starting price" ? 700 : 500,
-            fontSize: i === 0 ? 13 : 15,
-            fontFamily: i === 0 ? "'JetBrains Mono', monospace" : "inherit",
-            letterSpacing: i === 0 ? ".18em" : "0",
-            textTransform: i === 0 ? "uppercase" : "none",
-            borderTop: i > 0 ? `1.5px solid ${S.ink}1a` : "none"
-          }}>
-            {row.map((c, j) => (
-              <div key={j} style={{ textAlign: j === 0 ? "left" : "center" }}>{c}</div>
-            ))}
-          </div>
-        ))}
-      </div>
+    <div class="svc-includes">
+      <h3>What's included</h3>
+      <ul>
+        <li>Discovery + strategy session</li>
+        <li>Custom design (no templates)</li>
+        <li>Up to 6 pages, fully responsive</li>
+        <li>Bilingual EN / TH</li>
+        <li>Light CMS so you can edit yourself</li>
+        <li>SEO basics + analytics setup</li>
+        <li>Handover call + 30 days post-launch support</li>
+      </ul>
+      <div class="price">From ฿35,000</div>
+      <div class="price-sub">Fixed price · 3–5 weeks · 50% to start</div>
     </div>
-  );
+  </div>
+</section>
 
-  const AddOns = () => {
-    const items = [
-      { t: "Extra page", price: "฿4,500/page", body: "Need a Careers, Press, or Menu page on top of the base scope?" },
-      { t: "Copywriting pass", price: "฿8,000+", body: "I write or polish your copy in plain, friendly English." },
-      { t: "Photo direction", price: "฿6,000", body: "I'll brief a photographer or curate stock that fits the brand." },
-      { t: "Booking integration", price: "฿4,000", body: "Calendly, Cal.com, or a custom Line booking flow." },
-      { t: "E-commerce light", price: "฿12,000+", body: "A small Shopify or Snipcart store, up to 30 products." },
-      { t: "Animation polish", price: "฿5,000", body: "Custom scroll, hover, and micro-interactions where they matter." },
-    ];
-    return (
-      <div style={{ padding: "100px 56px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2.2fr", gap: 56, alignItems: "start", marginBottom: 40 }}>
-          <div>
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>05 — Add-ons</span>
-            <h2 style={{ fontWeight: 800, fontSize: 56, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
-              Pick a la <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.mango }}>carte.</span>
-            </h2>
-          </div>
-          <p style={{ fontSize: 18, lineHeight: 1.6, color: S.ink2, maxWidth: "60ch" }}>
-            Bolt these onto any package, or get a quote for them on their own. Quoted up-front, fixed price.
-          </p>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
-          {items.map((a, i) => (
-            <div key={i} style={{ background: S.cream2, border: `2.5px solid ${S.ink}`, borderRadius: 22, padding: 24, boxShadow: `0 6px 0 ${S.ink}` }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em" }}>{a.t}</h3>
-                <span style={{ background: S.mango, color: S.ink, padding: "4px 10px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".08em" }}>{a.price}</span>
-              </div>
-              <p style={{ marginTop: 12, fontSize: 14, lineHeight: 1.55, color: S.ink2, fontWeight: 500 }}>{a.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
-  const ProcessMini = () => {
-    const steps = [
-      { n: "01", t: "Free chat", body: "30-min call, no pitch." },
-      { n: "02", t: "Tasting menu", body: "Written proposal, fixed price." },
-      { n: "03", t: "Sketch & taste", body: "Two design directions, you pick." },
-      { n: "04", t: "Build & ship", body: "Hand-coded, polished, live." },
-    ];
-    return (
-      <div style={{ padding: "100px 56px", background: S.leaf, color: S.cream, borderTop: `4px solid ${S.ink}` }}>
-        <div style={{ textAlign: "center", marginBottom: 48 }}>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .7 }}>06 — How we work</span>
-          <h2 style={{ fontWeight: 800, fontSize: 64, lineHeight: 1, letterSpacing: "-0.035em", marginTop: 14 }}>
-            Same process,<br/><span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.honey }}>every project.</span>
-          </h2>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 18 }}>
-          {steps.map((s, i) => (
-            <div key={i} style={{ background: S.cream, color: S.ink, border: `3px solid ${S.ink}`, borderRadius: 22, padding: 24, boxShadow: `0 6px 0 ${S.ink}` }}>
-              <span style={{ background: S.mango, color: S.ink, padding: "5px 11px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".14em" }}>STEP {s.n}</span>
-              <h3 style={{ marginTop: 18, fontSize: 24, fontWeight: 700, letterSpacing: "-0.02em" }}>{s.t}</h3>
-              <p style={{ marginTop: 8, fontSize: 14, color: S.ink2, fontWeight: 500 }}>{s.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
-  const App = () => (
-    <div data-screen-label="Services">
-      <window.Nav />
-      <Hero />
-      <Detail
-        id="new" num="01" t="New websites" sub='"From a blank page to a live, breathing site."'
-        body="Strategy, design, and build for brands launching fresh — or replacing a site that no longer fits. We start with a free 30-min call, then I send a written proposal with scope, timeline, and a fixed price. You'll see two design directions in Figma before we commit. Built end-to-end by one person who actually answers your messages."
-        price="฿35,000+" time="4–6 weeks" bg={S.cream} accent={S.honey}
-        deliverables={["Strategy & sitemap", "Custom Figma design (2 directions)", "Hand-coded build (Webflow / Framer / custom)", "Bilingual EN / TH ready", "Speed & SEO pass", "Mobile + tablet polish", "1 month free care", "Founder handover call"]}
-        perfect="Brands that have outgrown a Wix template, founders launching a new shop or studio, teams who want a custom site without a 6-month engagement."
-        notFor="Marketplaces, complex SaaS dashboards, or anything needing a back-end team. Refer you to a friend if so."
-      />
-      <Detail
-        id="refresh" num="02" t="Refreshes" sub='"Same content, new posture."'
-        body="For sites that work but feel tired. A focused 2–3 week sprint that gives your existing site a fresh face — without rebuilding from zero. Same pages, same copy (mostly), better posture. We pick the 5 biggest visual issues, fix them, and you ship a site that finally matches your brand."
-        price="฿18,000+" time="2–3 weeks" bg={S.cream2} accent={S.mango}
-        deliverables={["Visual audit (top 5 issues)", "New design system (color, type, spacing)", "Page-by-page polish", "New hero & key sections", "Speed pass", "Mobile cleanup", "Before/after handover", "2 weeks of free tweaks"]}
-        perfect="Sites built 2–4 years ago that still convert but look dated. Brands that just rebranded and need the site to catch up."
-        notFor="Sites that need a full re-architecture or new pages — that's a New Website project."
-      />
-      <Detail
-        id="care" num="03" t="Care & iteration" sub='"A friendly hand on your site, every month."'
-        body="A monthly retainer where I'm in your inbox — fixing, tweaking, growing your site every month so it never goes stale. Updates, content additions, new sections, A/B copy tweaks, monthly speed checks. You get priority replies (within 4 working hours) and a short monthly report on what changed and why."
-        price="฿6,000/mo" time="Monthly · 3-month minimum" bg={S.ink} color={S.cream} accent={S.honey}
-        deliverables={["Up to 4 hours of changes/month", "Content & copy updates", "New sections & small pages", "Monthly speed & SEO check", "Priority replies (< 4h)", "Monthly written report", "Pause anytime after month 3", "Hours roll over 1 month"]}
-        perfect="Founders who launched with me (or someone else) and want a hand on the site without hiring in-house."
-        notFor="Daily-content blogs, complex e-commerce ops, or 24/7 support. I'm a small studio, not an agency."
-      />
-      <Compare />
-      <AddOns />
-      <ProcessMini />
-      <window.FAQ />
-      <window.Contact />
-      <window.Footer />
+<section class="svc-detail">
+  <div class="svc-inner">
+    <div>
+      <div class="svc-num-big">02</div>
+      <h2>Site <em>refreshes.</em></h2>
+      <p class="svc-desc">For sites that work but feel tired — same content, new posture. Design-only or full rebuild, depending on the bones. Great for brands a few years in who've outgrown their first attempt.</p>
+      <a href="contact.html" class="btn-primary svc-cta">Start a refresh →</a>
     </div>
-  );
+    <div class="svc-includes">
+      <h3>What's included</h3>
+      <ul>
+        <li>Audit of current site</li>
+        <li>Visual + layout redesign</li>
+        <li>Copy polish (if you'd like)</li>
+        <li>Mobile + tablet review</li>
+        <li>Re-implementation or design-only</li>
+        <li>2 rounds of revisions</li>
+      </ul>
+      <div class="price">From ฿18,000</div>
+      <div class="price-sub">Fixed price · 2–3 weeks</div>
+    </div>
+  </div>
+</section>
 
-  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-</script>
-</body>
-</html>
+<section class="svc-detail forest">
+  <div class="svc-inner">
+    <div>
+      <div class="svc-num-big">03</div>
+      <h2>Care &amp; <em>iteration.</em></h2>
+      <p class="svc-desc">Monthly retainers for brands that want a friendly hand on their site every month. Updates, new pages, small tweaks, and the occasional "is this even working?" conversation.</p>
+      <a href="contact.html" class="btn-mango svc-cta">Start care →</a>
+    </div>
+    <div class="svc-includes">
+      <h3>What's included</h3>
+      <ul>
+        <li>Up to 4 hours of work / month</li>
+        <li>Priority email response</li>
+        <li>Monthly check-in call</li>
+        <li>Small page edits + new sections</li>
+        <li>Quarterly content review</li>
+        <li>No lock-in — cancel anytime</li>
+      </ul>
+      <div class="price">฿6,000<span style="font-size:18px;font-style:normal"> / month</span></div>
+      <div class="price-sub">Month-to-month · No setup fee</div>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div style="text-align:center">
+    <div class="eyebrow">A quick comparison</div>
+    <h2 class="section-title">Which one is<br><em>ripe for you?</em></h2>
+  </div>
+  <div class="cmp-table">
+    <div class="cmp-head first">Looking for…</div>
+    <div class="cmp-head">New</div>
+    <div class="cmp-head">Refresh</div>
+    <div class="cmp-head">Care</div>
+
+    <div class="cmp-row-label">A site from scratch</div>
+    <div class="cmp-yes">●</div><div class="cmp-no">○</div><div class="cmp-no">○</div>
+
+    <div class="cmp-row-label">My current site, but better</div>
+    <div class="cmp-no">○</div><div class="cmp-yes">●</div><div class="cmp-no">○</div>
+
+    <div class="cmp-row-label">Ongoing monthly help</div>
+    <div class="cmp-no">○</div><div class="cmp-no">○</div><div class="cmp-yes">●</div>
+
+    <div class="cmp-row-label">Bilingual EN / TH</div>
+    <div class="cmp-yes">●</div><div class="cmp-yes">●</div><div class="cmp-yes">●</div>
+
+    <div class="cmp-row-label">Fixed price, no surprises</div>
+    <div class="cmp-yes">●</div><div class="cmp-yes">●</div><div class="cmp-yes">●</div>
+
+    <div class="cmp-row-label">Typical timeline</div>
+    <div>3–5 weeks</div><div>2–3 weeks</div><div>Ongoing</div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="news-inner">
+    <div class="news-left">
+      <div class="eyebrow">A monthly letter</div>
+      <h2 class="news-headline">Not ready <em>yet?</em><br>Get the ripe list.</h2>
+      <p class="news-sub">One short email a month: a recent build, a design lesson, a Bangkok café worth visiting. No pitch.</p>
+    </div>
+    <div class="news-card">
+      <div class="news-card-label">Issue ·11 · May 2026</div>
+      <div class="news-card-title">"Why your homepage<br>doesn't need a hero video."</div>
+      <form class="news-form" onsubmit="return subscribeRipe(event)"><input type="email" required="" placeholder="your@email.com"><button>Subscribe →</button></form>
+      <div class="news-meta"><span><span class="dot"></span>340+ small-business owners reading</span><span class="news-meta-right">free, always</span></div>
+      <div class="news-thanks" id="newsThanks">◐ You're in.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand"><a href="index.html" class="foot-logo"><span class="logo-pip"></span>digitalmango</a><p>A one-person web studio in Bangkok building <span class="foot-tagline-italic">ripe little websites</span>.</p></div>
+    <div class="foot-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="work.html">Work</a></li><li><a href="process.html">Process</a></li></ul></div>
+    <div class="foot-col"><h4>Helpful</h4><ul><li><a href="journal.html">Journal</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="foot-col"><h4>Elsewhere</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Read.cv</a></li></ul></div>
+  </div>
+  <div class="foot-bar"><span>© DigitalMango 2026 · Bangkok, TH</span><span class="foot-tagline-italic">ripe ideas, shipped with care.</span></div>
+</footer>
+<script src="app.js"></script>
+
+
+</body></html>
