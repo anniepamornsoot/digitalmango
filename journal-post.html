@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — DigitalMango</title>
+<title>Why your homepage doesn't need a hero video — DigitalMango</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* latin-ext */
 @font-face {
@@ -633,50 +633,46 @@ footer {
 }
 </style>
 <style>
-.about-hero { position: relative; padding: 160px 48px 80px; overflow: hidden; }
-.about-hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end; position: relative; z-index: 1; }
-.about-hero h1 { font-size: clamp(56px, 8vw, 110px); font-weight: 700; line-height: 0.95; letter-spacing: -0.04em; }
-.about-hero h1 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
-.about-hero .lead { font-size: 19px; color: var(--muted); line-height: 1.7; font-weight: 300; }
-.about-hero .lead strong { color: var(--forest); font-weight: 600; }
-.about-photo-big { aspect-ratio: 4/5; background: var(--forest); border-radius: 28px; max-width: 460px; margin: 80px auto 0; position: relative; transform: rotate(-2deg); display: grid; place-items: center; color: rgba(246,239,227,.3); font-family:'Instrument Serif',serif; font-style: italic; }
-.about-photo-big::before { content: 'BANGKOK · 2026'; position: absolute; top: -16px; left: 32px; background: var(--mango); color: var(--forest); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; padding: 6px 14px; border-radius: 4px; transform: rotate(-3deg); }
-.about-photo-big::after { content:''; position: absolute; top: -24px; right: 48px; width: 96px; height: 26px; background: rgba(232,160,42,0.45); transform: rotate(-8deg); border: 1px dashed rgba(255,255,255,0.2); }
+.post-header { padding: 140px 48px 60px; max-width: 800px; margin: 0 auto; }
+.post-header .j-tag { display: inline-block; background: var(--mango); color: var(--forest); padding: 5px 12px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 24px; }
+.post-header h1 { font-size: clamp(40px, 5.5vw, 72px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; }
+.post-header h1 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.post-meta { display: flex; align-items: center; gap: 16px; margin-top: 28px; font-size: 14px; color: var(--muted); padding-bottom: 28px; border-bottom: 1.5px solid rgba(31,59,54,0.08); }
+.post-meta .author { display: flex; align-items: center; gap: 10px; }
+.post-meta .author .av { width: 36px; height: 36px; border-radius: 50%; background: var(--mango); position: relative; }
+.post-meta .author .av::after { content:''; position:absolute; top:-2px; right:-2px; width: 12px; height: 12px; border-radius: 50%; background: var(--leaf); }
 
-.values { background: var(--forest); color: var(--cream); }
-.values .section-title { color: var(--cream); }
-.values .section-title em { color: var(--honey); }
-.values .eyebrow { color: rgba(246,239,227,.4); }
-.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
-.value-card { padding: 36px 30px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 22px; transition: transform .25s, background .25s; }
-.value-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.04); }
-.value-num { font-family:'Instrument Serif',serif; font-style: italic; font-size: 48px; color: var(--mango); line-height: 1; }
-.value-card h3 { font-size: 22px; font-weight: 700; margin: 18px 0 10px; }
-.value-card h3 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--honey); }
-.value-card p { color: rgba(246,239,227,.65); font-size: 14px; font-weight: 300; line-height: 1.7; }
+.post-hero-img { max-width: 1100px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 24px; background: linear-gradient(135deg, var(--forest), #2d5b53); position: relative; overflow: hidden; }
+.post-hero-img::after { content:'◐'; position: absolute; inset: 0; display: grid; place-items: center; font-size: 220px; color: var(--mango); opacity: .15; font-family:'Instrument Serif',serif; }
 
-.timeline { background: var(--cream); }
-.timeline-grid { margin-top: 64px; max-width: 900px; }
-.tl-row { display: grid; grid-template-columns: 140px 1fr; gap: 48px; padding: 32px 0; border-top: 1.5px solid rgba(31,59,54,0.1); position: relative; }
-.tl-row:last-child { border-bottom: 1.5px solid rgba(31,59,54,0.1); }
-.tl-year { font-family:'Instrument Serif',serif; font-style: italic; font-size: 44px; color: var(--mango); line-height: 1; }
-.tl-content h3 { font-size: 20px; font-weight: 700; }
-.tl-content p { color: var(--muted); font-size: 15px; font-weight: 300; line-height: 1.7; margin-top: 8px; max-width: 520px; }
+.post-body { max-width: 720px; margin: 0 auto; padding: 64px 48px 80px; }
+.post-body p { font-size: 18px; color: var(--forest); line-height: 1.85; font-weight: 300; margin-top: 20px; }
+.post-body p:first-of-type::first-letter { font-family:'Instrument Serif',serif; font-style: italic; font-size: 72px; float: left; line-height: 0.85; color: var(--mango); padding: 6px 10px 0 0; }
+.post-body p strong { font-weight: 600; }
+.post-body h2 { font-size: 30px; font-weight: 700; margin-top: 56px; letter-spacing: -0.02em; }
+.post-body h2 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.post-body blockquote { font-family:'Instrument Serif',serif; font-style: italic; font-size: 30px; color: var(--forest); line-height: 1.3; margin: 48px 0; padding-left: 28px; border-left: 3px solid var(--mango); }
+.post-body blockquote em { color: var(--mango); font-style: normal; }
+.post-body ul { margin-top: 20px; padding-left: 24px; }
+.post-body ul li { font-size: 17px; color: var(--forest); line-height: 1.8; font-weight: 300; margin-bottom: 8px; }
 
-.kitchen { background: rgba(31,59,54,0.04); }
-.kitchen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
-.k-card { background: white; border-radius: 18px; padding: 24px; border: 1.5px solid rgba(31,59,54,0.08); transition: transform .25s; }
-.k-card:hover { transform: translateY(-4px); }
-.k-card .k-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.k-card .k-list { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
-.k-card .k-list li { list-style: none; font-size: 14px; color: var(--forest); display: flex; align-items: center; gap: 8px; }
-.k-card .k-list li::before { content:'◐'; color: var(--mango); font-size: 9px; }
+.author-card { max-width: 720px; margin: 0 auto; padding: 36px; border: 1.5px solid rgba(31,59,54,0.1); border-radius: 22px; display: flex; gap: 24px; align-items: center; }
+.author-card .av-big { width: 72px; height: 72px; border-radius: 50%; background: var(--mango); position: relative; flex-shrink: 0; }
+.author-card .av-big::after { content:''; position:absolute; top:-3px; right:-3px; width: 20px; height: 20px; border-radius: 50%; background: var(--leaf); }
+.author-card h3 { font-size: 18px; font-weight: 700; }
+.author-card h3 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.author-card p { font-size: 14px; color: var(--muted); margin-top: 4px; }
 
-@media (max-width: 900px) {
-  .about-hero-inner { grid-template-columns: 1fr; }
-  .value-grid, .kitchen-grid { grid-template-columns: 1fr 1fr; }
-  .tl-row { grid-template-columns: 1fr; gap: 12px; }
-}
+.related { max-width: 1100px; margin: 80px auto 0; padding: 0 48px 80px; }
+.related h3 { font-family:'Instrument Serif',serif; font-style: italic; font-size: 28px; margin-bottom: 24px; }
+.rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.rel-card { background: white; border: 1.5px solid rgba(31,59,54,0.08); border-radius: 18px; padding: 24px; text-decoration: none; color: inherit; transition: transform .25s, box-shadow .25s; }
+.rel-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(31,59,54,0.08); }
+.rel-num { font-family:'Instrument Serif',serif; font-style: italic; color: var(--mango); font-size: 22px; }
+.rel-card h4 { font-size: 17px; font-weight: 700; margin-top: 12px; letter-spacing: -0.015em; }
+.rel-card h4 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.rel-card p { font-size: 12px; color: var(--muted); margin-top: 8px; }
+@media (max-width:900px){ .rel-grid { grid-template-columns: 1fr; } .author-card { flex-direction: column; text-align: center; } }
 </style>
 
 </head>
@@ -689,72 +685,68 @@ footer {
   <a href="index.html" class="logo"><span class="logo-pip"></span>digitalmango</a>
   <div class="nav-links">
     <a href="services.html">Services</a>
-    <a href="about.html" class="active">About</a>
+    <a href="about.html">About</a>
     <a href="process.html">Process</a>
-    <a href="journal.html">Journal</a>
+    <a href="journal.html" class="active">Journal</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html" class="nav-cta">Start a project →</a>
   </div>
 </nav>
 
-<section class="about-hero">
-  <div class="hero-blob blob-1"></div>
-  <div class="hero-blob blob-2"></div>
-  <div class="about-hero-inner">
-    <div>
-      <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>About</span></div>
-      <h1>Hello, I'm<br><em>DigitalMango.</em></h1>
-      <p class="lead" style="margin-top:28px">A one-person web studio in <strong>Bangkok</strong>, building hand-built, warm, on-purpose websites for small &amp; medium brands across Thailand and beyond. No middlemen, no template-stuffing — just careful work, shipped with care.</p>
-    </div>
-    <div class="about-photo-big">Your photo<br>goes here</div>
+<header class="post-header">
+  <div class="crumbs" style="margin-bottom:24px"><a href="index.html">Home</a><span class="sep">/</span><a href="journal.html">Journal</a><span class="sep">/</span><span>Issue 11</span></div>
+  <span class="j-tag">Issue 11 · Opinion</span>
+  <h1>Why your homepage<br><em>doesn't need a hero video.</em></h1>
+  <div class="post-meta">
+    <div class="author"><div class="av"></div><span>By <strong style="color:var(--forest)">Nook · DigitalMango</strong></span></div>
+    <span>·</span><span>May 6, 2026</span><span>·</span><span>6 min read</span>
   </div>
-</section>
+</header>
 
-<div class="marquee-strip" aria-hidden="true"><div class="marquee-inner">
-  <span>est. 2022</span><span class="accent">◐</span><span>Bangkok, TH</span><span class="accent">◐</span><span>Solo studio</span><span class="accent">◐</span><span>Bilingual EN / TH</span><span class="accent">◐</span><span>20+ projects shipped</span><span class="accent">◐</span><span>est. 2022</span><span class="accent">◐</span><span>Bangkok, TH</span><span class="accent">◐</span><span>Solo studio</span><span class="accent">◐</span><span>Bilingual EN / TH</span><span class="accent">◐</span><span>20+ projects shipped</span><span class="accent">◐</span>
-</div></div>
+<div class="post-hero-img"></div>
 
-<section class="values">
-  <div class="eyebrow">What I believe</div>
-  <div class="section-title">Six things I<br><em>can't shake.</em></div>
-  <div class="value-grid">
-    <div class="value-card"><div class="value-num">01</div><h3>Small brands<br><em>deserve great sites.</em></h3><p>Quality shouldn't be reserved for big budgets. Every project gets the same care.</p></div>
-    <div class="value-card"><div class="value-num">02</div><h3>Slow is<br><em>fast.</em></h3><p>Two thoughtful weeks beats six rushed ones. Considered design ships fewer fixes.</p></div>
-    <div class="value-card"><div class="value-num">03</div><h3>The work<br><em>does the selling.</em></h3><p>No sales calls. Just careful work and an honest conversation about whether we fit.</p></div>
-    <div class="value-card"><div class="value-num">04</div><h3>Templates are<br><em>a starting point.</em></h3><p>Never a finish line. If your brand has a soul, your site should too.</p></div>
-    <div class="value-card"><div class="value-num">05</div><h3>Bilingual<br><em>from day one.</em></h3><p>EN / TH isn't a translation pass at the end — it shapes layout, type, and tone throughout.</p></div>
-    <div class="value-card"><div class="value-num">06</div><h3>You'll always<br><em>know what's next.</em></h3><p>No disappearing between milestones. A weekly Friday update, every project, no exceptions.</p></div>
+<article class="post-body">
+  <p>Every homepage in 2026 wants to open with a hero video. Twelve megabytes of slow-motion baristas and drone footage of mountains, autoplaying behind a headline you can barely read. I see it on cafés, on real-estate sites, on small clinics that have no business hosting a Vimeo embed before the user has typed their name.</p>
+  <p>I'm going to argue that <strong>most small brands shouldn't open with a video at all</strong>, and that the alternative — a quiet, well-composed text block — is louder than every drone shot you've ever seen.</p>
+
+  <h2>What a hero <em>is for.</em></h2>
+  <p>A hero section has exactly one job: tell the visitor, within three seconds, what kind of place they've walked into. That's it. Everything else — the proof, the navigation, the offer — comes after.</p>
+  <p>Three seconds is not enough time to play a video. It's barely enough to read fifteen words. So the question becomes: what fifteen words will you choose?</p>
+
+  <blockquote>The right opening line does more <em>than any drone shot.</em></blockquote>
+
+  <h2>What videos <em>actually do.</em></h2>
+  <p>Videos do three things in a hero, almost always:</p>
+  <ul>
+    <li>They delay the content the user came for.</li>
+    <li>They shift attention away from your words, which are the actual product.</li>
+    <li>They make the page heavier, slower, and worse on a phone.</li>
+  </ul>
+  <p>None of those are reasons to use a video. They're reasons to <strong>not</strong> use one. The exception, which is real but rare, is when the motion <em>is</em> the product — a dance studio, a restaurant whose flame-on-flame is the dish, an animator's portfolio. Outside those cases, you're paying a performance tax for atmosphere.</p>
+
+  <h2>What to do <em>instead.</em></h2>
+  <p>Open with a sentence that says, plainly, what your business is and who it's for. Set it in a generous size — something that looks like you mean it. Pick a single image, or no image at all, and use the space the video would have taken to <strong>say something specific</strong>.</p>
+  <p>"Cozy little websites, made by hand" tells you more about this studio than any thirty-second sizzle reel could. It commits. It picks a side. It says: this is for you, or it isn't.</p>
+
+  <h2>A small <em>permission slip.</em></h2>
+  <p>You are allowed to make a small, fast, mostly-text website in 2026. You are allowed to skip the hero video. You are allowed to let your words do the heavy lifting. The web was made for this, and most of your visitors will quietly thank you.</p>
+</article>
+
+<div class="author-card">
+  <div class="av-big"></div>
+  <div>
+    <h3>Written by <em>Nook</em></h3>
+    <p>I'm DigitalMango — a one-person web studio in Bangkok. I write one of these a month. <a href="journal.html" style="color:var(--mango);text-decoration:none;font-weight:600">See all issues →</a></p>
   </div>
-</section>
+</div>
 
-<section class="timeline">
-  <div class="eyebrow">A short timeline</div>
-  <div class="section-title">How we<br><em>got here.</em></div>
-  <div class="timeline-grid">
-    <div class="tl-row"><div class="tl-year">2022</div><div class="tl-content"><h3>The studio is planted.</h3><p>I left a Bangkok agency to freelance. First three clients were friends-of-friends — a café, a yoga studio, and a small architecture firm.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2023</div><div class="tl-content"><h3>The name takes shape.</h3><p>"DigitalMango" sticks after a client said the work was "sweet and a little messy in the best way." Brand &amp; pricing model lock in.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2024</div><div class="tl-content"><h3>Booked solid, all year.</h3><p>Twelve projects, mostly cafés and tour operators. Started bilingual-first as the default rather than the add-on.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2025</div><div class="tl-content"><h3>Care plans go live.</h3><p>Monthly retainers for past clients. The Ripe List newsletter ships its first issue.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2026</div><div class="tl-content"><h3>You, hopefully.</h3><p>Taking on two new projects in July. The orchard is still small, and that's exactly how I like it.</p></div></div>
+<section class="related">
+  <h3>Keep reading</h3>
+  <div class="rel-grid">
+    <a href="journal-post.html" class="rel-card"><div class="rel-num">10</div><h4>The bilingual <em>layout shift.</em></h4><p>Apr 2026 · 5 min</p></a>
+    <a href="journal-post.html" class="rel-card"><div class="rel-num">05</div><h4>When to <em>not</em> use a template.</h4><p>Nov 2025 · 5 min</p></a>
+    <a href="journal-post.html" class="rel-card"><div class="rel-num">08</div><h4>Pricing pages that <em>don't lie.</em></h4><p>Feb 2026 · 8 min</p></a>
   </div>
-</section>
-
-<section class="kitchen">
-  <div class="eyebrow">The kitchen</div>
-  <div class="section-title">Tools I keep<br><em>on the counter.</em></div>
-  <div class="kitchen-grid">
-    <div class="k-card"><div class="k-label">Design</div><ul class="k-list"><li>Figma</li><li>Procreate (sketching)</li><li>Glyphs Mini</li></ul></div>
-    <div class="k-card"><div class="k-label">Build</div><ul class="k-list"><li>Webflow</li><li>Astro · HTML / CSS</li><li>Sanity (small CMS)</li></ul></div>
-    <div class="k-card"><div class="k-label">Words</div><ul class="k-list"><li>iA Writer</li><li>Linguee EN / TH</li><li>Plain notebook</li></ul></div>
-    <div class="k-card"><div class="k-label">Studio</div><ul class="k-list"><li>Notion (clients)</li><li>Cron / Mail</li><li>Spotify, very loud</li></ul></div>
-  </div>
-</section>
-
-<section style="text-align:center;padding:120px 48px">
-  <div class="eyebrow" style="text-align:center">Still curious?</div>
-  <h2 class="section-title">Let's have a<br><em>30-minute chat.</em></h2>
-  <p style="font-size:17px;color:var(--muted);max-width:520px;margin:24px auto 32px;line-height:1.75;font-weight:300">No pitch, no pressure — just a quick conversation to see if we're a fit.</p>
-  <a href="contact.html" class="btn-primary">Start a project →</a>
 </section>
 
 <footer>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — DigitalMango</title>
+<title>Sundara Bakery — DigitalMango</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* latin-ext */
 @font-face {
@@ -633,50 +633,32 @@ footer {
 }
 </style>
 <style>
-.about-hero { position: relative; padding: 160px 48px 80px; overflow: hidden; }
-.about-hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end; position: relative; z-index: 1; }
-.about-hero h1 { font-size: clamp(56px, 8vw, 110px); font-weight: 700; line-height: 0.95; letter-spacing: -0.04em; }
-.about-hero h1 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
-.about-hero .lead { font-size: 19px; color: var(--muted); line-height: 1.7; font-weight: 300; }
-.about-hero .lead strong { color: var(--forest); font-weight: 600; }
-.about-photo-big { aspect-ratio: 4/5; background: var(--forest); border-radius: 28px; max-width: 460px; margin: 80px auto 0; position: relative; transform: rotate(-2deg); display: grid; place-items: center; color: rgba(246,239,227,.3); font-family:'Instrument Serif',serif; font-style: italic; }
-.about-photo-big::before { content: 'BANGKOK · 2026'; position: absolute; top: -16px; left: 32px; background: var(--mango); color: var(--forest); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; padding: 6px 14px; border-radius: 4px; transform: rotate(-3deg); }
-.about-photo-big::after { content:''; position: absolute; top: -24px; right: 48px; width: 96px; height: 26px; background: rgba(232,160,42,0.45); transform: rotate(-8deg); border: 1px dashed rgba(255,255,255,0.2); }
-
-.values { background: var(--forest); color: var(--cream); }
-.values .section-title { color: var(--cream); }
-.values .section-title em { color: var(--honey); }
-.values .eyebrow { color: rgba(246,239,227,.4); }
-.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
-.value-card { padding: 36px 30px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 22px; transition: transform .25s, background .25s; }
-.value-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.04); }
-.value-num { font-family:'Instrument Serif',serif; font-style: italic; font-size: 48px; color: var(--mango); line-height: 1; }
-.value-card h3 { font-size: 22px; font-weight: 700; margin: 18px 0 10px; }
-.value-card h3 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--honey); }
-.value-card p { color: rgba(246,239,227,.65); font-size: 14px; font-weight: 300; line-height: 1.7; }
-
-.timeline { background: var(--cream); }
-.timeline-grid { margin-top: 64px; max-width: 900px; }
-.tl-row { display: grid; grid-template-columns: 140px 1fr; gap: 48px; padding: 32px 0; border-top: 1.5px solid rgba(31,59,54,0.1); position: relative; }
-.tl-row:last-child { border-bottom: 1.5px solid rgba(31,59,54,0.1); }
-.tl-year { font-family:'Instrument Serif',serif; font-style: italic; font-size: 44px; color: var(--mango); line-height: 1; }
-.tl-content h3 { font-size: 20px; font-weight: 700; }
-.tl-content p { color: var(--muted); font-size: 15px; font-weight: 300; line-height: 1.7; margin-top: 8px; max-width: 520px; }
-
-.kitchen { background: rgba(31,59,54,0.04); }
-.kitchen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
-.k-card { background: white; border-radius: 18px; padding: 24px; border: 1.5px solid rgba(31,59,54,0.08); transition: transform .25s; }
-.k-card:hover { transform: translateY(-4px); }
-.k-card .k-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.k-card .k-list { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
-.k-card .k-list li { list-style: none; font-size: 14px; color: var(--forest); display: flex; align-items: center; gap: 8px; }
-.k-card .k-list li::before { content:'◐'; color: var(--mango); font-size: 9px; }
-
-@media (max-width: 900px) {
-  .about-hero-inner { grid-template-columns: 1fr; }
-  .value-grid, .kitchen-grid { grid-template-columns: 1fr 1fr; }
-  .tl-row { grid-template-columns: 1fr; gap: 12px; }
-}
+.cs-hero-thumb { max-width: 1200px; margin: 24px auto 0; aspect-ratio: 16/9; border-radius: 28px; background: linear-gradient(135deg, var(--honey), var(--mango)); position: relative; overflow: hidden; }
+.cs-hero-thumb::before { content:''; position: absolute; width: 64%; aspect-ratio: 4/3; bottom: -10%; left: 50%; transform: translateX(-50%); background: white; border-radius: 14px 14px 0 0; box-shadow: 0 -20px 60px rgba(0,0,0,0.15); }
+.cs-hero-thumb::after { content:''; position: absolute; bottom: 14%; left: 50%; transform: translateX(-50%); width: 36%; height: 4%; background: var(--forest); border-radius: 100px; opacity: .7; }
+.cs-meta-bar { max-width: 1100px; margin: 56px auto 0; padding: 32px 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; border-top: 1.5px solid rgba(31,59,54,0.1); border-bottom: 1.5px solid rgba(31,59,54,0.1); }
+.cs-meta-bar div .label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.cs-meta-bar div .val { font-family:'Instrument Serif',serif; font-style: italic; font-size: 24px; color: var(--forest); margin-top: 6px; }
+.cs-body { max-width: 760px; margin: 0 auto; padding: 80px 48px; }
+.cs-body h2 { font-size: 32px; font-weight: 700; margin-top: 56px; letter-spacing: -0.02em; }
+.cs-body h2 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.cs-body p { font-size: 17px; color: var(--forest); line-height: 1.8; font-weight: 300; margin-top: 16px; }
+.cs-body p strong { font-weight: 600; }
+.cs-pull { font-family:'Instrument Serif',serif; font-style: italic; font-size: 32px; color: var(--forest); line-height: 1.3; margin: 56px 0; padding-left: 28px; border-left: 3px solid var(--mango); }
+.cs-pull em { color: var(--mango); font-style: normal; }
+.cs-shot { max-width: 1100px; margin: 0 auto 80px; aspect-ratio: 16/9; border-radius: 22px; }
+.cs-shot.a { background: linear-gradient(135deg, var(--forest), #2d5b53); }
+.cs-shot.b { background: linear-gradient(135deg, var(--cream), var(--honey)); border: 1.5px solid rgba(31,59,54,0.08); }
+.cs-results { background: var(--forest); color: var(--cream); }
+.cs-results .section-title { color: var(--cream); }
+.cs-results .section-title em { color: var(--honey); }
+.cs-results .eyebrow { color: rgba(246,239,227,.4); }
+.cs-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.cs-result { padding: 36px 32px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 22px; }
+.cs-result .big { font-family:'Instrument Serif',serif; font-style: italic; font-size: 72px; color: var(--mango); line-height: 0.95; }
+.cs-result .small { color: rgba(246,239,227,.6); font-size: 14px; font-weight: 300; margin-top: 12px; }
+.cs-next { padding: 100px 48px; text-align: center; }
+@media (max-width:900px){ .cs-meta-bar { grid-template-columns: 1fr 1fr; } .cs-result-grid { grid-template-columns: 1fr; } }
 </style>
 
 </head>
@@ -689,7 +671,7 @@ footer {
   <a href="index.html" class="logo"><span class="logo-pip"></span>digitalmango</a>
   <div class="nav-links">
     <a href="services.html">Services</a>
-    <a href="about.html" class="active">About</a>
+    <a href="about.html">About</a>
     <a href="process.html">Process</a>
     <a href="journal.html">Journal</a>
     <a href="faq.html">FAQ</a>
@@ -697,63 +679,62 @@ footer {
   </div>
 </nav>
 
-<section class="about-hero">
+<header class="page-header">
   <div class="hero-blob blob-1"></div>
-  <div class="hero-blob blob-2"></div>
-  <div class="about-hero-inner">
-    <div>
-      <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>About</span></div>
-      <h1>Hello, I'm<br><em>DigitalMango.</em></h1>
-      <p class="lead" style="margin-top:28px">A one-person web studio in <strong>Bangkok</strong>, building hand-built, warm, on-purpose websites for small &amp; medium brands across Thailand and beyond. No middlemen, no template-stuffing — just careful work, shipped with care.</p>
-    </div>
-    <div class="about-photo-big">Your photo<br>goes here</div>
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><a href="work.html">Work</a><span class="sep">/</span><span>Sundara Bakery</span></div>
+    <h1>Sundara<br><em>Bakery.</em></h1>
+    <p class="lead">A bilingual site for a small Ari-neighborhood bakery — story, menu, and order-ahead, built around the warm tone the owners had been hand-typing into their Instagram captions for years.</p>
+  </div>
+</header>
+
+<div class="cs-hero-thumb"></div>
+
+<div class="cs-meta-bar" style="padding-left:48px;padding-right:48px">
+  <div><div class="label">Client</div><div class="val">Sundara Bakery</div></div>
+  <div><div class="label">Industry</div><div class="val">Café · Bakery</div></div>
+  <div><div class="label">Timeline</div><div class="val">4 weeks</div></div>
+  <div><div class="label">Year</div><div class="val">2026</div></div>
+</div>
+
+<div class="cs-body">
+  <h2>The <em>brief.</em></h2>
+  <p>Sundara had been open for three years on a quiet soi in Ari. The bakery had built a loyal following through Instagram and word of mouth, but the website was a one-page stack of links from 2022. The owners wanted something that felt like the shop — warm, slightly handwritten, bilingual, and friendly to phones since 80% of their traffic was mobile.</p>
+  <p>They had one constraint: <strong>they wanted to keep editing it themselves</strong>, the way they edit their Instagram. No agency lock-in, no "submit a ticket to change a price."</p>
+
+  <h2>What we <em>did.</em></h2>
+  <p>I spent the first week in the shop — three mornings, coffee, listening to how the owners talked about their bread. The voice was already there; the site just needed to get out of the way. We landed on a three-page structure: <strong>Story</strong>, <strong>Menu</strong>, <strong>Visit</strong>. Order-ahead lives on Menu.</p>
+  <p>Visual direction came from the bakery's existing palette — a warm beige and a deep raisin red — extended with a single playful display serif for headings. Body type stayed quiet so the photography could do the heavy lifting.</p>
+
+  <p class="cs-pull">"It feels like our shop. <em>That's all I wanted.</em>"<br><span style="font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;color:var(--muted);letter-spacing:0.06em;font-style:normal">— Ploy, co-owner, Sundara Bakery</span></p>
+</div>
+
+<div class="cs-shot a"></div>
+
+<div class="cs-body">
+  <h2>The <em>bilingual question.</em></h2>
+  <p>Thai and English don't sit at the same density or rhythm. A line of Thai is usually 20–30% shorter than the same line in English, and Thai readers prefer slightly tighter line height. We designed the layout twice — once for each language — and the site auto-tunes spacing based on the selected language. Small touch, big difference in how the site feels to native readers.</p>
+
+  <h2>How they <em>edit it.</em></h2>
+  <p>I built it in Webflow with a lightweight CMS for menu items and Story posts. The owners can change a croissant price in 8 seconds. They've added 40+ new items since launch without touching me.</p>
+</div>
+
+<div class="cs-shot b"></div>
+
+<section class="cs-results">
+  <div class="eyebrow">Six months in</div>
+  <h2 class="section-title">A few <em>ripe numbers.</em></h2>
+  <div class="cs-result-grid">
+    <div class="cs-result"><div class="big">3.4×</div><div class="small">Order-ahead conversion vs. the old "DM us on Instagram" flow.</div></div>
+    <div class="cs-result"><div class="big">42%</div><div class="small">Mobile time-on-page increase after the bilingual layout pass.</div></div>
+    <div class="cs-result"><div class="big">0</div><div class="small">Support tickets in six months. They edit it themselves.</div></div>
   </div>
 </section>
 
-<div class="marquee-strip" aria-hidden="true"><div class="marquee-inner">
-  <span>est. 2022</span><span class="accent">◐</span><span>Bangkok, TH</span><span class="accent">◐</span><span>Solo studio</span><span class="accent">◐</span><span>Bilingual EN / TH</span><span class="accent">◐</span><span>20+ projects shipped</span><span class="accent">◐</span><span>est. 2022</span><span class="accent">◐</span><span>Bangkok, TH</span><span class="accent">◐</span><span>Solo studio</span><span class="accent">◐</span><span>Bilingual EN / TH</span><span class="accent">◐</span><span>20+ projects shipped</span><span class="accent">◐</span>
-</div></div>
-
-<section class="values">
-  <div class="eyebrow">What I believe</div>
-  <div class="section-title">Six things I<br><em>can't shake.</em></div>
-  <div class="value-grid">
-    <div class="value-card"><div class="value-num">01</div><h3>Small brands<br><em>deserve great sites.</em></h3><p>Quality shouldn't be reserved for big budgets. Every project gets the same care.</p></div>
-    <div class="value-card"><div class="value-num">02</div><h3>Slow is<br><em>fast.</em></h3><p>Two thoughtful weeks beats six rushed ones. Considered design ships fewer fixes.</p></div>
-    <div class="value-card"><div class="value-num">03</div><h3>The work<br><em>does the selling.</em></h3><p>No sales calls. Just careful work and an honest conversation about whether we fit.</p></div>
-    <div class="value-card"><div class="value-num">04</div><h3>Templates are<br><em>a starting point.</em></h3><p>Never a finish line. If your brand has a soul, your site should too.</p></div>
-    <div class="value-card"><div class="value-num">05</div><h3>Bilingual<br><em>from day one.</em></h3><p>EN / TH isn't a translation pass at the end — it shapes layout, type, and tone throughout.</p></div>
-    <div class="value-card"><div class="value-num">06</div><h3>You'll always<br><em>know what's next.</em></h3><p>No disappearing between milestones. A weekly Friday update, every project, no exceptions.</p></div>
-  </div>
-</section>
-
-<section class="timeline">
-  <div class="eyebrow">A short timeline</div>
-  <div class="section-title">How we<br><em>got here.</em></div>
-  <div class="timeline-grid">
-    <div class="tl-row"><div class="tl-year">2022</div><div class="tl-content"><h3>The studio is planted.</h3><p>I left a Bangkok agency to freelance. First three clients were friends-of-friends — a café, a yoga studio, and a small architecture firm.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2023</div><div class="tl-content"><h3>The name takes shape.</h3><p>"DigitalMango" sticks after a client said the work was "sweet and a little messy in the best way." Brand &amp; pricing model lock in.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2024</div><div class="tl-content"><h3>Booked solid, all year.</h3><p>Twelve projects, mostly cafés and tour operators. Started bilingual-first as the default rather than the add-on.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2025</div><div class="tl-content"><h3>Care plans go live.</h3><p>Monthly retainers for past clients. The Ripe List newsletter ships its first issue.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2026</div><div class="tl-content"><h3>You, hopefully.</h3><p>Taking on two new projects in July. The orchard is still small, and that's exactly how I like it.</p></div></div>
-  </div>
-</section>
-
-<section class="kitchen">
-  <div class="eyebrow">The kitchen</div>
-  <div class="section-title">Tools I keep<br><em>on the counter.</em></div>
-  <div class="kitchen-grid">
-    <div class="k-card"><div class="k-label">Design</div><ul class="k-list"><li>Figma</li><li>Procreate (sketching)</li><li>Glyphs Mini</li></ul></div>
-    <div class="k-card"><div class="k-label">Build</div><ul class="k-list"><li>Webflow</li><li>Astro · HTML / CSS</li><li>Sanity (small CMS)</li></ul></div>
-    <div class="k-card"><div class="k-label">Words</div><ul class="k-list"><li>iA Writer</li><li>Linguee EN / TH</li><li>Plain notebook</li></ul></div>
-    <div class="k-card"><div class="k-label">Studio</div><ul class="k-list"><li>Notion (clients)</li><li>Cron / Mail</li><li>Spotify, very loud</li></ul></div>
-  </div>
-</section>
-
-<section style="text-align:center;padding:120px 48px">
-  <div class="eyebrow" style="text-align:center">Still curious?</div>
-  <h2 class="section-title">Let's have a<br><em>30-minute chat.</em></h2>
-  <p style="font-size:17px;color:var(--muted);max-width:520px;margin:24px auto 32px;line-height:1.75;font-weight:300">No pitch, no pressure — just a quick conversation to see if we're a fit.</p>
+<section class="cs-next">
+  <div class="eyebrow" style="text-align:center">Want a site like this?</div>
+  <h2 class="section-title">Let's bake<br><em>yours next.</em></h2>
+  <p style="font-size:17px;color:var(--muted);max-width:520px;margin:24px auto 32px;line-height:1.75;font-weight:300">Two slots open for July 2026.</p>
   <a href="contact.html" class="btn-primary">Start a project →</a>
 </section>
 

@@ -1,191 +1,743 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>DigitalMango — Work</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: #F6EFE3; color: #1F3B36; }
-  ul { padding: 0; margin: 0; }
-  a { color: inherit; }
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — DigitalMango</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/a04fc7ed18a8.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/6ee678c33f38.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/a8c4bd7cd707.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/60c06664b5a9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/a16f29d7d2a2.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/5c913fc1b1f8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/0303e02b53b0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/cd8db90cd950.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 </style>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>/* ───────────────────────────────────────────
+   DigitalMango — shared site styles
+   ─────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:  #F6EFE3;
+  --forest: #1F3B36;
+  --mango:  #E8A02A;
+  --honey:  #F2C56B;
+  --leaf:   #6B8A4E;
+  --clay:   #C8643D;
+  --muted:  #7a7060;
+  --ink:    #1a1a18;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--forest);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: linear-gradient(90deg, var(--mango), var(--clay), var(--leaf));
+  width: 0%; z-index: 200; transition: width .08s linear;
+  box-shadow: 0 0 12px rgba(232,160,42,0.6);
+}
+
+/* ── CURSOR SPOTLIGHT ── */
+.spotlight {
+  position: fixed; pointer-events: none; z-index: 5;
+  width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,160,42,0.18) 0%, rgba(232,160,42,0) 65%);
+  transform: translate(-50%,-50%);
+  transition: opacity .4s; opacity: 0;
+  mix-blend-mode: multiply;
+}
+.spotlight.on { opacity: 1; }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .hero-badge, .hero-headline, .hero-bottom, .hero-right { opacity: 1 !important; animation: none !important; }
+  .now-widget { transform: none !important; opacity: 1 !important; }
+}
+
+/* ── NOW WIDGET ── */
+.now-widget {
+  position: fixed; bottom: 22px; left: 22px; z-index: 90;
+  background: var(--forest); color: var(--cream);
+  border-radius: 18px; padding: 12px 16px 12px 14px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 12px 40px rgba(31,59,54,0.25);
+  font-size: 12px; max-width: 280px;
+  transform: translateY(140%); opacity: 0;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.now-widget.up { transform: translateY(0); opacity: 1; }
+.now-disc {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--mango);
+  display: grid; place-items: center;
+  position: relative; flex-shrink: 0;
+  animation: spin 8s linear infinite;
+}
+.now-disc::before { content:''; width: 8px; height: 8px; border-radius: 50%; background: var(--forest); }
+.now-disc::after { content:''; position:absolute; inset: 4px; border-radius: 50%; border: 1px dashed rgba(31,59,54,0.35); }
+@keyframes spin { to { transform: rotate(360deg); } }
+.now-label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,239,227,0.45); margin-bottom: 2px; }
+.now-line { font-family:'Instrument Serif', serif; font-style: italic; font-size: 14px; color: var(--honey); line-height: 1.25; }
+.now-close { background:none; border:none; color: rgba(246,239,227,0.4); cursor:pointer; font-size: 14px; padding: 0 0 0 4px; }
+.now-close:hover { color: var(--honey); }
+
+/* ── FLOATING PIPS ── */
+.pip-float {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; z-index: 0;
+  animation: bob 7s ease-in-out infinite;
+}
+@keyframes bob {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-22px) rotate(8deg); }
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 48px;
+  background: rgba(246,239,227,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(31,59,54,0.07);
+}
+.logo {
+  font-size: 15px; font-weight: 700; letter-spacing: -0.4px;
+  color: var(--forest); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.logo-pip {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--mango);
+  position: relative; flex-shrink: 0;
+}
+.logo-pip::after {
+  content: ''; position: absolute; top: -1px; right: -1px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--leaf);
+}
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: 13px; font-weight: 500;
+  color: var(--muted); text-decoration: none; transition: color .2s;
+  position: relative;
+}
+.nav-links a:hover { color: var(--forest); }
+.nav-links a.active { color: var(--forest); }
+.nav-links a.active::after {
+  content:''; position:absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: var(--mango);
+}
+.nav-cta {
+  background: var(--forest) !important; color: var(--cream) !important;
+  padding: 10px 22px; border-radius: 100px;
+  font-weight: 600 !important; letter-spacing: -0.2px;
+  transition: transform .15s, background .2s !important;
+}
+.nav-cta:hover { transform: translateY(-1px); background: #2c5048 !important; }
+.nav-cta.active::after { display: none; }
+
+/* ── BUTTONS ── */
+.btn-primary {
+  background: var(--forest); color: var(--cream);
+  padding: 15px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform .2s, background .2s; white-space: nowrap;
+  border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-primary:hover { transform: translateY(-2px); background: #2c5048; }
+.btn-ghost {
+  color: var(--forest); padding: 15px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  border: 2px solid rgba(31,59,54,0.18);
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform .2s, border-color .2s; white-space: nowrap;
+}
+.btn-ghost:hover { transform: translateY(-2px); border-color: var(--forest); }
+.btn-mango {
+  background: var(--mango); color: var(--forest);
+  padding: 15px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform .2s, background .2s; white-space: nowrap;
+  border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-mango:hover { transform: translateY(-2px); background: var(--honey); }
+
+/* ── MARQUEE ── */
+.marquee-strip {
+  background: var(--forest); padding: 13px 0;
+  overflow: hidden; white-space: nowrap; position: relative;
+}
+.marquee-strip + .marquee-strip {
+  background: var(--mango); border-top: 1px solid rgba(31,59,54,0.15);
+  padding: 10px 0;
+}
+.marquee-strip.reverse .marquee-inner { animation: marquee-rev 28s linear infinite; }
+.marquee-strip.reverse .marquee-inner span { color: rgba(31,59,54,0.65); font-size: 10.5px; }
+.marquee-strip.reverse .marquee-inner .accent { color: var(--forest); }
+@keyframes marquee-rev { from{transform:translateX(-50%)} to{transform:translateX(0)} }
+.marquee-inner { display: inline-flex; gap: 40px; animation: marquee 24s linear infinite; }
+.marquee-inner span {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(246,239,227,0.55); flex-shrink: 0;
+}
+.marquee-inner .accent { color: var(--mango); opacity: 1; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ── SECTIONS ── */
+section { padding: 108px 48px; }
+.eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+}
+.section-title {
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 700; line-height: 1.08; letter-spacing: -0.03em;
+  color: var(--forest);
+}
+.section-title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400; color: var(--mango);
+}
+@keyframes fadeUp { from { opacity:0; transform:translateY(18px) } to { opacity:1; transform:translateY(0) } }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+
+/* ── PAGE HEADER (used on inner pages) ── */
+.page-header {
+  padding: 160px 48px 80px;
+  position: relative; overflow: hidden;
+  background: var(--cream);
+}
+.page-header .hero-blob { position: absolute; }
+.page-header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.page-header h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  font-weight: 700; line-height: 1; letter-spacing: -0.04em;
+  color: var(--forest); margin-top: 12px;
+}
+.page-header h1 em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400; color: var(--mango);
+}
+.page-header .lead {
+  margin-top: 28px; font-size: 18px; font-weight: 300;
+  color: var(--muted); max-width: 580px; line-height: 1.75;
+}
+.crumbs {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; color: var(--muted); letter-spacing: 0.08em;
+  text-transform: uppercase; font-weight: 600;
+}
+.crumbs a { color: var(--muted); text-decoration: none; transition: color .2s; }
+.crumbs a:hover { color: var(--forest); }
+.crumbs span.sep { opacity: .4; }
+
+/* ── HERO blobs (reusable) ── */
+.hero-blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); pointer-events: none; z-index: 0;
+}
+.blob-1 { width: 600px; height: 600px; right: -100px; top: -60px; background: rgba(232,160,42,0.18); }
+.blob-2 { width: 400px; height: 400px; right: 200px; bottom: 0px; background: rgba(107,138,78,0.12); }
+.blob-3 { width: 300px; height: 300px; left: -80px; bottom: 100px; background: rgba(242,197,107,0.15); }
+
+/* ── FAQ ── */
+.faq-cols { display: grid; grid-template-columns: 1fr 560px; gap: 80px; align-items: start; }
+.faq-sticky { position: sticky; top: 120px; }
+.faq-sticky .section-title { margin-bottom: 20px; }
+.faq-sticky p { font-size: 16px; font-weight: 300; color: var(--muted); line-height: 1.75; }
+.faq-sticky .btn-primary { margin-top: 32px; display: inline-flex; }
+
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid rgba(31,59,54,0.1); }
+.faq-q {
+  width:100%; background:none; border:none; cursor:pointer;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 22px 0; text-align:left; gap:20px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:16px; font-weight:600; color:var(--forest);
+  transition:color .2s;
+}
+.faq-q:hover { color: var(--mango); }
+.faq-chevron {
+  width:30px; height:30px; border-radius:50%;
+  background: rgba(31,59,54,0.07); border:none;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; transition: background .2s, transform .3s;
+  font-size:14px; color:var(--forest); cursor:pointer;
+}
+.faq-item.open .faq-chevron { background:var(--mango); transform:rotate(180deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.faq-item.open .faq-a { max-height:320px; }
+.faq-a p { padding-bottom:22px; font-size:15px; font-weight:300; color:var(--muted); line-height:1.75; }
+
+/* ── CONTACT ── */
+.contact-section { background: var(--forest); }
+.contact-section .eyebrow { color: rgba(246,239,227,.4); }
+.contact-section .section-title { color: var(--cream); }
+.contact-section .section-title em { color: var(--honey); }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-top:64px; }
+.contact-left p { font-size:17px; font-weight:300; color:rgba(246,239,227,.7); line-height:1.8; margin-bottom:32px; }
+.contact-link {
+  display:flex; align-items:center; gap:14px;
+  font-size:15px; font-weight:400; color:rgba(246,239,227,.6);
+  text-decoration:none; margin-bottom:16px; transition:color .2s;
+}
+.contact-link:hover { color:var(--honey); }
+.link-icon {
+  width:40px; height:40px; border-radius:12px;
+  background:rgba(255,255,255,0.07);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; flex-shrink:0;
+}
+.contact-form { display:flex; flex-direction:column; gap:14px; }
+.field-label { font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(246,239,227,.4); display:block; margin-bottom:6px; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.field { display:flex; flex-direction:column; }
+.f-input, .f-textarea {
+  background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.1);
+  border-radius:14px; padding:14px 18px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px; font-weight:300; color:var(--cream);
+  outline:none; transition:border-color .2s, background .2s; resize:none;
+}
+.f-input::placeholder, .f-textarea::placeholder { color:rgba(246,239,227,.2); }
+.f-input:focus, .f-textarea:focus { border-color:var(--mango); background:rgba(255,255,255,0.09); }
+.f-textarea { min-height:130px; }
+.budget-pills { display:flex; flex-wrap:wrap; gap:8px; }
+.pill {
+  padding:9px 18px; border-radius:100px; font-size:13px; font-weight:500;
+  border:1.5px solid rgba(255,255,255,0.12); color:rgba(246,239,227,.6);
+  cursor:pointer; transition:all .2s; background:transparent;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+.pill:hover, .pill.active { background:var(--mango); border-color:var(--mango); color:var(--forest); }
+.f-submit {
+  background:var(--mango); color:var(--forest);
+  border:none; border-radius:100px;
+  padding:17px 36px; font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px; font-weight:700; cursor:pointer;
+  transition:background .2s, transform .15s;
+  align-self:flex-start; margin-top:8px; letter-spacing:-0.01em;
+}
+.f-submit:hover { background:var(--honey); transform:translateY(-2px); }
+
+/* ── NEWSLETTER CTA (reused) ── */
+.newsletter { background: var(--forest); padding: 110px 48px; position: relative; overflow: hidden; }
+.newsletter::before {
+  content:''; position: absolute;
+  width: 380px; height: 380px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--mango), var(--clay));
+  left: -120px; top: -120px; opacity: .18; filter: blur(2px);
+  animation: blobDrift 16s ease-in-out infinite;
+}
+.newsletter::after {
+  content:''; position: absolute;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: var(--leaf);
+  right: -60px; bottom: -90px; opacity: .14; filter: blur(2px);
+  animation: blobDrift 20s ease-in-out infinite -6s;
+}
+@keyframes blobDrift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(30px,-20px) scale(1.05); }
+}
+.news-inner { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 72px; }
+.news-left .eyebrow { color: var(--mango); display: inline-flex; align-items: center; gap: 10px; }
+.news-left .eyebrow::before { content:''; width: 22px; height: 1.5px; background: var(--mango); }
+.news-headline { font-size: clamp(40px, 4.6vw, 64px); font-weight: 700; line-height: 1.04; letter-spacing: -0.03em; color: var(--cream); margin-top: 16px; }
+.news-headline em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--honey); }
+.news-sub { font-size: 16px; font-weight: 300; color: rgba(246,239,227,0.65); line-height: 1.75; margin-top: 24px; max-width: 460px; }
+.news-perks { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.news-perks li { list-style: none; display: flex; align-items: center; gap: 12px; font-size: 13px; color: rgba(246,239,227,0.7); }
+.news-perks li::before { content: '◐'; color: var(--mango); font-size: 13px; flex-shrink: 0; }
+.news-card { background: var(--cream); border-radius: 26px; padding: 36px 32px 32px; position: relative; box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35); transform: rotate(2deg); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.news-card:hover { transform: rotate(0deg) translateY(-4px); }
+.news-card::before { content: 'no spam'; position: absolute; top: -16px; left: 28px; background: var(--mango); color: var(--forest); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; padding: 6px 14px; border-radius: 4px; text-transform: uppercase; transform: rotate(-4deg); box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+.news-card::after { content:''; position: absolute; top: -22px; right: 40px; width: 78px; height: 22px; background: rgba(232,160,42,0.45); transform: rotate(8deg); border: 1px dashed rgba(31,59,54,0.25); }
+.news-card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.news-card-label::after { content:''; flex: 1; height: 1px; background: rgba(31,59,54,0.12); }
+.news-card-title { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 28px; color: var(--forest); margin-top: 14px; line-height: 1.1; }
+.news-form { margin-top: 22px; display: flex; gap: 8px; background: white; border: 1.5px solid rgba(31,59,54,0.12); border-radius: 100px; padding: 6px 6px 6px 18px; transition: border-color .2s, box-shadow .2s; }
+.news-form:focus-within { border-color: var(--mango); box-shadow: 0 0 0 4px rgba(232,160,42,0.18); }
+.news-form input { flex: 1; border: none; outline: none; background: transparent; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: var(--forest); min-width: 0; }
+.news-form input::placeholder { color: rgba(31,59,54,0.4); }
+.news-form button { background: var(--forest); color: var(--cream); border: none; border-radius: 100px; padding: 11px 20px; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 6px; transition: background .2s, transform .15s; flex-shrink: 0; }
+.news-form button:hover { background: #2c5048; transform: translateX(2px); }
+.news-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; gap: 14px; font-size: 11px; color: var(--muted); }
+.news-meta .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--leaf); margin-right: 6px; animation: pulse 2.5s infinite; }
+.news-meta-right { font-family:'Instrument Serif', serif; font-style: italic; color: var(--clay); }
+.news-thanks { display: none; margin-top: 18px; padding: 14px 18px; background: rgba(107,138,78,0.14); border-radius: 14px; font-size: 13px; color: var(--forest); font-weight: 500; }
+.news-thanks.show { display: block; animation: fadeUp .4s; }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--forest); border-top:1px solid rgba(255,255,255,0.07);
+  padding: 64px 48px 32px;
+}
+.foot-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;
+  padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.foot-brand .foot-logo { color: var(--cream); font-size: 18px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.foot-brand p { font-size: 14px; font-weight: 300; color: rgba(246,239,227,.55); margin-top: 16px; line-height: 1.7; max-width: 280px; }
+.foot-tagline-italic { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--honey); }
+.foot-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mango); margin-bottom: 18px; }
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.foot-col a { color: rgba(246,239,227,.65); font-size: 14px; text-decoration: none; transition: color .2s; }
+.foot-col a:hover { color: var(--honey); }
+.foot-bar { max-width: 1200px; margin: 0 auto; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(246,239,227,.35); }
+.foot-bar a { color: rgba(246,239,227,.35); text-decoration: none; }
+.foot-bar a:hover { color: var(--honey); }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  nav { padding:16px 24px; }
+  .nav-links a:not(.nav-cta) { display:none; }
+  section { padding:80px 24px; }
+  .page-header { padding: 120px 24px 60px; }
+  .faq-cols { grid-template-columns:1fr; }
+  .faq-sticky { position:static; }
+  .contact-grid { grid-template-columns:1fr; gap:48px; }
+  .field-row { grid-template-columns:1fr; }
+  .news-inner { grid-template-columns: 1fr; gap: 40px; }
+  .news-card { transform: rotate(0deg); }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .foot-bar { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+<style>
+.work-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 32px; }
+.work-chip { padding: 8px 16px; border-radius: 100px; background: white; border: 1.5px solid rgba(31,59,54,0.1); font-size: 13px; font-weight: 600; color: var(--forest); cursor: pointer; transition: all .2s; font-family:'Plus Jakarta Sans',sans-serif; }
+.work-chip:hover, .work-chip.active { background: var(--mango); border-color: var(--mango); }
+.work-list { padding: 60px 48px 80px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.work-card { display: block; text-decoration: none; color: inherit; transition: transform .3s; }
+.work-card:hover { transform: translateY(-6px); }
+.work-card:nth-child(odd) { transform: translateY(40px); }
+.work-card:nth-child(odd):hover { transform: translateY(34px); }
+.work-thumb { aspect-ratio: 4/3; border-radius: 22px; overflow: hidden; position: relative; }
+.work-thumb.t1 { background: linear-gradient(135deg, var(--honey), var(--mango)); }
+.work-thumb.t2 { background: linear-gradient(135deg, var(--forest), #2d5b53); }
+.work-thumb.t3 { background: linear-gradient(135deg, var(--clay), #d97b58); }
+.work-thumb.t4 { background: linear-gradient(135deg, var(--leaf), #92ad6f); }
+.work-thumb.t5 { background: linear-gradient(135deg, #c9a07a, var(--clay)); }
+.work-thumb.t6 { background: linear-gradient(135deg, var(--forest), var(--leaf)); }
+.work-thumb::before { content:''; position: absolute; width: 70%; aspect-ratio: 4/3; bottom: -8%; left: 50%; transform: translateX(-50%); background: white; border-radius: 10px 10px 0 0; box-shadow: 0 -8px 30px rgba(0,0,0,0.12); }
+.work-thumb::after { content:''; position: absolute; bottom: 12%; left: 50%; transform: translateX(-50%); width: 38%; height: 4%; background: var(--forest); border-radius: 100px; opacity: .7; }
+.wk-tag { position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.92); padding: 6px 12px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.work-meta { padding: 22px 4px 0; display: flex; justify-content: space-between; gap: 16px; }
+.work-meta h3 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+.work-meta h3 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.work-meta .wk-year { font-family:'Instrument Serif',serif; font-style: italic; color: var(--muted); font-size: 22px; }
+.work-meta p { color: var(--muted); font-size: 14px; margin-top: 6px; }
+@media (max-width:900px){ .work-list { grid-template-columns: 1fr; } .work-card:nth-child(odd) { transform: none; } .work-card:nth-child(odd):hover { transform: translateY(-6px); } }
+</style>
+
 </head>
 <body>
-<div id="root"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="spotlight" id="spotlight"></div>
+<div class="now-widget" id="nowWidget"><div class="now-disc"></div><div><div class="now-label">Currently · ☕</div><div class="now-line" id="nowLine">—</div></div><button class="now-close" onclick="document.getElementById('nowWidget').classList.remove('up')" aria-label="close">×</button></div>
 
-<script type="text/babel" data-presets="react" src="home/shared.jsx"></script>
-<script type="text/babel" data-presets="react" src="home/nav-only.jsx"></script>
-<script type="text/babel" data-presets="react" src="home/faq-contact.jsx"></script>
+<nav>
+  <a href="index.html" class="logo"><span class="logo-pip"></span>digitalmango</a>
+  <div class="nav-links">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="process.html">Process</a>
+    <a href="journal.html">Journal</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="nav-cta">Start a project →</a>
+  </div>
+</nav>
 
-<script type="text/babel" data-presets="react">
-  const S = window.SHARED;
-  const { useState } = React;
-
-  const HeroWork = () => (
-    <div style={{ padding: "80px 56px 40px", position: "relative" }}>
-      <div style={{ position: "absolute", top: 100, right: 80 }}>
-        <div style={{ background: S.honey, color: S.ink, border: `2.5px solid ${S.ink}`, borderRadius: 999, padding: "10px 16px", fontWeight: 700, fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", boxShadow: `0 4px 0 ${S.ink}`, transform: "rotate(-6deg)" }}>★ early projects</div>
-      </div>
-      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .55 }}>Work</span>
-      <h1 style={{ fontSize: 156, lineHeight: 0.86, letterSpacing: "-0.05em", fontWeight: 800, margin: "16px 0 0" }}>
-        A small,<br/>
-        <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>growing</span><br/>
-        orchard.
-      </h1>
-      <p style={{ marginTop: 32, fontSize: 22, lineHeight: 1.5, color: S.ink2, maxWidth: "60ch", fontWeight: 500 }}>
-        A handful of early projects, a few in-progress, and room for a few more. Click any tile for the full story — or scroll for the in-progress notes.
-      </p>
+<header class="page-header">
+  <div class="hero-blob blob-1"></div>
+  <div class="hero-blob blob-2"></div>
+  <div class="page-header-inner">
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Work</span></div>
+    <h1>A small orchard.<br><em>Picked carefully.</em></h1>
+    <p class="lead">A selection of recent work — cafés, restaurants, real-estate brands, tour operators. Hand-built, bilingual where useful, made to feel like the businesses they're for.</p>
+    <div class="work-filter">
+      <button class="work-chip active">All work</button>
+      <button class="work-chip">Cafés</button>
+      <button class="work-chip">Restaurants</button>
+      <button class="work-chip">Real estate</button>
+      <button class="work-chip">Tours</button>
     </div>
-  );
+  </div>
+</header>
 
-  const Filters = ({ active, setActive, all }) => (
-    <div style={{ padding: "0 56px 24px", display: "flex", gap: 10, flexWrap: "wrap" }}>
-      {all.map((t) => (
-        <button key={t} type="button" onClick={() => setActive(t)} style={{
-          background: active === t ? S.ink : S.cream2, color: active === t ? S.cream : S.ink,
-          border: `2px solid ${S.ink}`, borderRadius: 999,
-          padding: "10px 18px", fontSize: 13, fontWeight: 700, cursor: "pointer",
-          boxShadow: active === t ? `0 4px 0 ${S.mango}` : "none",
-          fontFamily: "inherit", textTransform: "lowercase"
-        }}>{t}</button>
-      ))}
-    </div>
-  );
+<div class="work-list">
+  <a href="case-study.html" class="work-card">
+    <div class="work-thumb t1"><span class="wk-tag">Café</span></div>
+    <div class="work-meta"><div><h3>Sundara <em>Bakery</em></h3><p>Bilingual site, ordering &amp; story</p></div><div class="wk-year">2026</div></div>
+  </a>
+  <a href="case-study.html" class="work-card">
+    <div class="work-thumb t2"><span class="wk-tag">Tours</span></div>
+    <div class="work-meta"><div><h3>Phang Nga <em>Slow Tours</em></h3><p>Booking flow + lookbook</p></div><div class="wk-year">2025</div></div>
+  </a>
+  <a href="case-study.html" class="work-card">
+    <div class="work-thumb t3"><span class="wk-tag">Real estate</span></div>
+    <div class="work-meta"><div><h3>Lanna <em>Living</em></h3><p>Listings + lifestyle CMS</p></div><div class="wk-year">2025</div></div>
+  </a>
+  <a href="case-study.html" class="work-card">
+    <div class="work-thumb t4"><span class="wk-tag">Restaurant</span></div>
+    <div class="work-meta"><div><h3>Maya <em>Kitchen</em></h3><p>Menu &amp; reservation site</p></div><div class="wk-year">2025</div></div>
+  </a>
+  <a href="case-study.html" class="work-card">
+    <div class="work-thumb t5"><span class="wk-tag">Café</span></div>
+    <div class="work-meta"><div><h3>Hom <em>Coffee</em></h3><p>Brand refresh + site rebuild</p></div><div class="wk-year">2024</div></div>
+  </a>
+  <a href="case-study.html" class="work-card">
+    <div class="work-thumb t6"><span class="wk-tag">Tours</span></div>
+    <div class="work-meta"><div><h3>Salt &amp; <em>Stone</em></h3><p>Island retreats marketing site</p></div><div class="wk-year">2024</div></div>
+  </a>
+</div>
 
-  const Card = ({ p }) => {
-    const Wrapper = p.href ? "a" : "div";
-    const cur = p.status === "in progress";
-    return (
-      <Wrapper href={p.href || "#"} style={{
-        textDecoration: "none", color: "inherit",
-        display: "block",
-        background: S.cream, border: `3px solid ${S.ink}`, borderRadius: 22,
-        boxShadow: `0 8px 0 ${S.ink}`, overflow: "hidden",
-        transform: `rotate(${p.tilt}deg)`,
-        transition: "transform .18s ease, box-shadow .18s ease",
-        cursor: p.href ? "pointer" : "default"
-      }}
-      onMouseEnter={(e) => { if (p.href) { e.currentTarget.style.transform = `rotate(${p.tilt}deg) translateY(-4px)`; e.currentTarget.style.boxShadow = `0 12px 0 ${S.ink}`; } }}
-      onMouseLeave={(e) => { if (p.href) { e.currentTarget.style.transform = `rotate(${p.tilt}deg)`; e.currentTarget.style.boxShadow = `0 8px 0 ${S.ink}`; } }}>
-        <div style={{
-          aspectRatio: "5/3.4",
-          background: p.bg,
-          position: "relative",
-          borderBottom: `3px solid ${S.ink}`,
-        }}>
-          <div style={{ position: "absolute", inset: 16, borderRadius: 8, background: p.inner, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 18 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".18em", fontWeight: 700, color: p.fg, opacity: .7, textTransform: "uppercase" }}>
-              <span>{p.label}</span>
-              <span>{p.year}</span>
-            </div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: 56, lineHeight: 0.95, color: p.fg, maxWidth: "8ch", whiteSpace: "pre-line" }}>{p.bigText}</div>
-          </div>
-          {cur && (
-            <div style={{ position: "absolute", top: 12, right: 12, background: S.honey, color: S.ink, padding: "5px 12px", borderRadius: 999, border: `2px solid ${S.ink}`, fontSize: 10, fontWeight: 700, letterSpacing: ".14em", fontFamily: "'JetBrains Mono', monospace", boxShadow: `0 3px 0 ${S.ink}` }}>★ IN PROGRESS</div>
-          )}
-        </div>
-        <div style={{ padding: 22 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <h3 style={{ fontSize: 24, fontWeight: 700, letterSpacing: "-0.025em" }}>{p.t}</h3>
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: ".14em", fontWeight: 700, opacity: .55, textTransform: "uppercase" }}>{p.tag}</span>
-          </div>
-          <p style={{ marginTop: 8, fontSize: 14.5, lineHeight: 1.55, color: S.ink2, fontWeight: 500 }}>{p.body}</p>
-          {p.href ? (
-            <div style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", fontWeight: 700, color: S.ink }}>READ THE STORY →</div>
-          ) : (
-            <div style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".14em", fontWeight: 700, color: S.ink2 }}>CASE STUDY · COMING SOON</div>
-          )}
-        </div>
-      </Wrapper>
-    );
-  };
+<section style="text-align:center;padding:120px 48px;background:rgba(31,59,54,0.04)">
+  <div class="eyebrow" style="text-align:center">Could be yours next</div>
+  <h2 class="section-title">Ready to be on<br><em>this page?</em></h2>
+  <p style="font-size:17px;color:var(--muted);max-width:520px;margin:24px auto 32px;line-height:1.75;font-weight:300">Two slots open for July 2026. First chat is free.</p>
+  <a href="contact.html" class="btn-primary">Start a project →</a>
+</section>
 
-  const Grid = () => {
-    const [active, setActive] = useState("all");
-    const projects = [
-      { id: 1, t: "Sundara Bakery", tag: "F&B", status: "shipped", year: "2025", label: "BAKERY · BANGKOK", bigText: '"ripe."', body: "A 6-page bilingual site for a Sukhumvit bakery. Same warmth as the shop, online — built in 12 days.", bg: `radial-gradient(circle at 30% 25%, ${S.honey}, transparent 55%), linear-gradient(160deg, ${S.mango} 0%, #D9892A 70%)`, inner: S.cream + "00", fg: S.ink, tilt: -1.2, href: "case-sundara.html" },
-      { id: 2, t: "Mai Wellness", tag: "Wellness", status: "in progress", year: "2026", label: "STUDIO · CHIANG MAI", bigText: 'quiet.', body: "Single-page site for a slow-living wellness studio. Bookable classes, gentle gradients, and copy that breathes.", bg: `linear-gradient(160deg, ${S.leaf} 0%, ${S.honey} 130%)`, inner: S.cream + "1a", fg: S.cream, tilt: 0.8 },
-      { id: 3, t: "Baan Somtam", tag: "F&B", status: "in progress", year: "2026", label: "RESTAURANT · NONTHABURI", bigText: 'spicy.\nhot.', body: "A neighborhood Isan kitchen wanted a site that smells like grilled lime. Bilingual menu, photo-led, no fluff.", bg: `linear-gradient(160deg, ${S.clay} 0%, ${S.honey} 100%)`, inner: S.cream + "12", fg: S.cream, tilt: -0.6 },
-      { id: 4, t: "Krua Yaai", tag: "F&B", status: "shipped", year: "2025", label: "CATERING · BANGKOK", bigText: 'family\nstyle.', body: "Catering site for a beloved family kitchen — order forms, gallery, and a story page that made the founder cry (good way).", bg: `linear-gradient(160deg, ${S.mango} 0%, ${S.clay} 100%)`, inner: S.cream + "10", fg: S.cream, tilt: 1.4 },
-      { id: 5, t: "Studio Lamphu", tag: "Studio", status: "shipped", year: "2024", label: "DESIGN · BANGKOK", bigText: 'made\nslow.', body: "Portfolio site for a 2-person ceramics studio. Earthy palette, tactile photo grid, monthly journal.", bg: `linear-gradient(160deg, ${S.cream2} 0%, ${S.honey} 100%)`, inner: S.cream + "00", fg: S.ink, tilt: -1.5 },
-      { id: 6, t: "Sano Tea Bar", tag: "F&B", status: "in progress", year: "2026", label: "CAFÉ · PHUKET", bigText: 'pour\nover.', body: "A specialty matcha bar wanted their site to feel as quiet as the shop. Calm grid, slow scroll, real photography.", bg: `linear-gradient(160deg, ${S.leaf} 0%, ${S.cream2} 100%)`, inner: S.cream + "30", fg: S.ink, tilt: 0.4 },
-    ];
-    const filtered = active === "all" ? projects : projects.filter((p) => p.tag.toLowerCase() === active || p.status === active);
-    const filters = ["all", "shipped", "in progress", "F&B", "Wellness", "Studio"];
-    return (
-      <>
-        <Filters active={active} setActive={setActive} all={filters} />
-        <div style={{ padding: "12px 56px 100px", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 28 }}>
-          {filtered.map((p) => <Card key={p.id} p={p} />)}
-        </div>
-      </>
-    );
-  };
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand"><a href="index.html" class="foot-logo"><span class="logo-pip"></span>digitalmango</a><p>A one-person web studio in Bangkok building <span class="foot-tagline-italic">ripe little websites</span>.</p></div>
+    <div class="foot-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="work.html">Work</a></li><li><a href="process.html">Process</a></li></ul></div>
+    <div class="foot-col"><h4>Helpful</h4><ul><li><a href="journal.html">Journal</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="foot-col"><h4>Elsewhere</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Read.cv</a></li></ul></div>
+  </div>
+  <div class="foot-bar"><span>© DigitalMango 2026 · Bangkok, TH</span><span class="foot-tagline-italic">ripe ideas, shipped with care.</span></div>
+</footer>
+<script src="app.js"></script>
 
-  const ProcessStrip = () => (
-    <div style={{ padding: "100px 56px", background: S.leaf, color: S.cream, borderTop: `4px solid ${S.ink}` }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: 56, alignItems: "start" }}>
-        <div>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", opacity: .7 }}>How I work</span>
-          <h2 style={{ fontWeight: 800, fontSize: 64, lineHeight: 1, letterSpacing: "-0.04em", marginTop: 14 }}>
-            A small, kind <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, color: S.honey }}>process.</span>
-          </h2>
-          <p style={{ marginTop: 24, fontSize: 17, lineHeight: 1.6, opacity: .85, maxWidth: "44ch" }}>
-            Most of my projects ship in 4–6 weeks. Same shape every time — fixed price, two design directions, you pick, I build.
-          </p>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
-          {[
-            { n: "01", t: "Free chat" },
-            { n: "02", t: "Tasting menu" },
-            { n: "03", t: "Sketch & taste" },
-            { n: "04", t: "Build & ship" },
-          ].map((s, i) => (
-            <div key={i} style={{ background: S.cream, color: S.ink, border: `3px solid ${S.ink}`, borderRadius: 22, padding: 20, boxShadow: `0 6px 0 ${S.ink}` }}>
-              <span style={{ background: S.mango, color: S.ink, padding: "5px 11px", borderRadius: 999, border: `1.5px solid ${S.ink}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".14em" }}>STEP {s.n}</span>
-              <h3 style={{ marginTop: 18, fontSize: 20, fontWeight: 700, letterSpacing: "-0.02em" }}>{s.t}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
 
-  const CTA = () => (
-    <div style={{ padding: "120px 56px", textAlign: "center", borderTop: `4px solid ${S.ink}` }}>
-      <div style={{ display: "inline-block", background: S.honey, color: S.ink, border: `2.5px solid ${S.ink}`, padding: "8px 16px", borderRadius: 999, fontWeight: 700, fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", boxShadow: `0 4px 0 ${S.ink}`, transform: "rotate(-3deg)", marginBottom: 24 }}>★ 2 spots open · jul</div>
-      <h2 style={{ fontWeight: 800, fontSize: 88, lineHeight: 1, letterSpacing: "-0.04em", margin: 0 }}>
-        Want to be the<br/>next <span style={{ background: S.mango, color: S.ink, padding: "0 22px", borderRadius: 24, border: `4px solid ${S.ink}`, display: "inline-block", boxShadow: `0 8px 0 ${S.ink}`, fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontWeight: 400, transform: "rotate(-1.5deg)" }}>tile</span>?
-      </h2>
-      <div style={{ marginTop: 40 }}>
-        <a href="contact.html" style={{
-          display: "inline-block", background: S.ink, color: S.cream, padding: "18px 30px",
-          borderRadius: 999, fontWeight: 800, fontSize: 16, textDecoration: "none",
-          boxShadow: `0 6px 0 ${S.mango}`, border: `2px solid ${S.ink}`
-        }}>Start a project →</a>
-      </div>
-    </div>
-  );
-
-  const App = () => (
-    <div data-screen-label="Work">
-      <window.Nav />
-      <HeroWork />
-      <Grid />
-      <ProcessStrip />
-      <CTA />
-      <window.Footer />
-    </div>
-  );
-
-  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-</script>
-</body>
-</html>
+</body></html>
