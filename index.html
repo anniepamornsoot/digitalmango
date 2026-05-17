@@ -726,9 +726,10 @@ footer {
 .about-grid { display: grid; grid-template-columns: 400px 1fr; gap: 72px; align-items: start; margin-top: 64px; }
 .about-photo { border-radius: 28px; overflow: visible; aspect-ratio: 3/4; position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; transform: rotate(-2deg); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
 .about-photo:hover { transform: rotate(0deg) scale(1.02); }
-.about-photo::before { content: 'BANGKOK · 2026'; position: absolute; top: -14px; left: 24px; background: var(--mango); color: var(--forest); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; padding: 5px 12px; border-radius: 4px; transform: rotate(-3deg); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+.about-photo::before { content: 'PHUKET · 2026'; position: absolute; top: -14px; left: 24px; background: var(--mango); color: var(--forest); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; padding: 5px 12px; border-radius: 4px; transform: rotate(-3deg); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
 .about-photo::after { content:''; position: absolute; top: -18px; right: 36px; width: 80px; height: 22px; background: rgba(232,160,42,0.45); transform: rotate(-8deg); border: 1px dashed rgba(255,255,255,0.2); }
 .photo-placeholder { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 15px; color: rgba(246,239,227,.3); text-align: center; padding: 24px; }
+.about-photo-img { width: 100%; height: 100%; object-fit: cover; border-radius: 28px; display: block; }
 .photo-sticker { position: absolute; bottom: 24px; right: -16px; background: var(--mango); border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', serif; font-size: 13px; font-style: italic; color: var(--forest); text-align: center; line-height: 1.3; border: 4px solid var(--forest); transform: rotate(12deg); }
 .about-text { padding-top: 8px; }
 .about-text p { font-size: 17px; font-weight: 300; line-height: 1.8; color: rgba(246,239,227,.75); margin-bottom: 20px; }
@@ -860,7 +861,7 @@ footer {
     </div>
     <h1 class="hero-headline">Cozy <em class="italic-word">little</em><br><span class="underline-word">websites</span>,<br>made by hand.</h1>
     <div class="hero-bottom">
-      <p class="hero-sub">I'm DigitalMango — a one-person web studio in Bangkok, building warm, fun, on-purpose websites for small &amp; medium brands.</p>
+      <p class="hero-sub">Hi, I'm Annie — a Bangkok-based web designer building warm, considered websites for cafés, restaurants, and small hospitality brands in Thailand. One project at a time. Always direct.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn-primary">Start a project →</a>
         <a href="services.html" class="btn-ghost">See services</a>
@@ -949,27 +950,28 @@ footer {
 <!-- ABOUT -->
 <section class="about">
   <div class="eyebrow">01 — Hello</div>
-  <div class="section-title">I'm DigitalMango.<br><em>Nice to meet you.</em></div>
+  <div class="section-title">I'm Annie.<br><em>Nice to meet you.</em></div>
   <div class="about-grid">
     <div class="about-photo">
-      <p class="photo-placeholder">Your photo<br>goes here</p>
+      <img src="images/annie-about.jpg" alt="Annie — DigitalMango" class="about-photo-img">
       <div class="photo-sticker">ripe<br>ideas.</div>
     </div>
     <div class="about-text">
-      <p>I'm a freelance web designer based in <strong>Bangkok</strong>, building websites for small &amp; medium brands in Thailand and beyond. Every project is hand-built, considered, and ships with the care of a one-person studio.</p>
-      <p>The brand is named after the fruit I think about way too often — sweet, sunny, and a little messy in the best way. That's the energy I bring to every site: <strong>warm, easy-going, and uncomplicated</strong>, with the polish you'd expect from a serious studio.</p>
-      <p>I work with <strong>cafés, restaurants, real estate brands, and tour operators</strong> — businesses that have been running for a few years and are ready for a site that actually represents them.</p>
+      <p class="foot-tagline-italic">ripe ideas, by hand.</p>
+      <p>I run <strong>DigitalMango</strong> — a one-person web studio in Bangkok. Every project is hand-built, considered, and ships with the care that only comes from a designer who actually does the work herself.</p>
+      <p>The studio is named after the fruit I think about way too often — sweet, sunny, and a little messy in the best way. That's the energy I bring to every site: <strong>warm, easy-going, and uncomplicated</strong>, with the polish you'd expect from a serious studio.</p>
+      <p>I work with <strong>cafés, restaurants, and small hospitality brands</strong> — businesses that have been quietly running for a few years, and are ready for a website that finally feels like them. Bilingual EN / TH, end-to-end, fixed price.</p>
+      <p class="foot-tagline-italic">p.s. — yes, you're hiring me, not a team. that's the whole point.</p>
       <div class="about-tags">
         <span class="tag mango">Bangkok based</span>
         <span class="tag">Bilingual EN / TH</span>
         <span class="tag">Solo studio</span>
         <span class="tag">Fixed price</span>
-        <span class="tag">4+ years exp.</span>
       </div>
       <div class="about-stats">
-        <div><div class="stat-num">20+</div><div class="stat-label">Projects</div></div>
-        <div><div class="stat-num">4+</div><div class="stat-label">Years exp.</div></div>
-        <div><div class="stat-num">1</div><div class="stat-label">Designer</div></div>
+        <div><div class="stat-num">A handful of projects.</div></div>
+        <div><div class="stat-num">A small list of happy clients.</div></div>
+        <div><div class="stat-num">One designer, every time.</div></div>
       </div>
     </div>
   </div>
