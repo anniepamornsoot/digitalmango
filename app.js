@@ -56,20 +56,6 @@ document.querySelectorAll('section, .quote-band').forEach(el => {
   el.classList.add('reveal'); io.observe(el);
 });
 
-/* Now widget */
-const nowLines = [
-  'redesigning a café in Ari',
-  'sketching a tour-operator site',
-  'picking type for a bakery brand',
-  'drinking iced cocoa, mostly',
-  'rebuilding a real-estate site',
-  'plotting next month’s slots'
-];
-const nl = document.getElementById('nowLine');
-if (nl) nl.textContent = nowLines[Math.floor(Math.random()*nowLines.length)];
-const nw = document.getElementById('nowWidget');
-if (nw) setTimeout(() => nw.classList.add('up'), 1800);
-
 /* Easter egg */
 let pipTaps = 0;
 document.querySelectorAll('.logo-pip').forEach(p => p.addEventListener('click', (e) => {
