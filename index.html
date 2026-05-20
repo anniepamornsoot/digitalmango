@@ -733,7 +733,7 @@ footer {
 .deliverables-footer-icon { width: 28px; height: 28px; background: var(--forest); color: var(--mango); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
 
 /* ── PROCESS — recipe cards (SVG line icons) ── */
-.process-shell { background: var(--cream-light); border-radius: 32px; padding: 72px 56px; border: 1px solid var(--border); }
+.process-band { background: var(--cream-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .process-header { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; margin-bottom: 56px; }
 .process-header .lead { color: var(--ink-soft); font-size: 15px; font-weight: 300; line-height: 1.6; }
 .process-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
@@ -801,7 +801,7 @@ footer {
   .work-peek { padding: 80px 24px; }
   .peek-grid { grid-template-columns: 1fr; }
   /* redesigned sections */
-  .about-shell, .process-shell { padding: 40px 24px; border-radius: 24px; }
+  .about-shell { padding: 40px 24px; border-radius: 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card, .deliverables { padding: 28px; }
@@ -1062,10 +1062,9 @@ footer {
 </section>
 
 <!-- PROCESS -->
-<section>
+<section class="process-band">
   <div class="section-inner">
-    <div class="process-shell">
-      <div class="process-header">
+    <div class="process-header">
         <div>
           <div class="eyebrow">03 — How it works</div>
           <div class="section-title">From "hello" <em>to "it's live."</em></div>
@@ -1123,7 +1122,6 @@ footer {
           <div class="process-deliverable">You get: a live site</div>
         </div>
       </div>
-    </div>
   </div>
 </section>
 
