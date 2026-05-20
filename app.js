@@ -8,6 +8,15 @@ function toggleFaq(btn) {
 }
 function togglePill(btn) { btn.classList.toggle('active'); }
 
+/* Home FAQ accordion ("The honest answers") — scoped so it won't touch faq.html */
+document.querySelectorAll('.faq-honest .faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-honest .faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
 function subscribeRipe(e) {
   e.preventDefault();
   const form = e.target;
