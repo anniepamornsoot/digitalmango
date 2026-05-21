@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — DigitalMango</title>
+<!-- Primary SEO -->
+<title>About Annie — Web Designer in Phuket | Digital Mango</title>
+<meta name="description" content="Meet Annie, the web designer behind Digital Mango — a one-person studio in Phuket. I understand your business first, then design clean, modern websites that work. One person, start to finish.">
+<link rel="canonical" href="https://anniepamornsoot.github.io/digitalmango/about.html">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="About Annie — Web Designer in Phuket | Digital Mango">
+<meta property="og:description" content="A one-person web studio in Phuket. I understand your business first, then build clean, modern websites that work — start to finish.">
+<meta property="og:url" content="https://anniepamornsoot.github.io/digitalmango/about.html">
+<meta property="og:image" content="https://anniepamornsoot.github.io/digitalmango/og-image.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Digital Mango">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Annie — Web Designer in Phuket | Digital Mango">
+<meta name="twitter:description" content="A one-person web studio in Phuket. I understand your business first, then build clean, modern websites that work.">
+<meta name="twitter:image" content="https://anniepamornsoot.github.io/digitalmango/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<!-- IBM Plex Sans Thai only — Plus Jakarta Sans + Instrument Serif are already self-hosted below -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured data (carried from about-new.html; domain set to GitHub Pages) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","name":"About Digital Mango","url":"https://anniepamornsoot.github.io/digitalmango/about.html","mainEntity":{"@type":"Person","name":"Annie","jobTitle":"Web Designer","worksFor":{"@type":"ProfessionalService","name":"Digital Mango","areaServed":{"@type":"Place","name":"Phuket, Thailand"},"url":"https://anniepamornsoot.github.io/digitalmango"},"knowsAbout":["web design","website strategy","UX design","small business websites"],"description":"Annie is the web designer and founder behind Digital Mango, a one-person studio in Phuket building clean, modern websites for small businesses."}}
+</script>
 <style>/* latin-ext */
 @font-face {
   font-family: 'Instrument Serif';
@@ -605,56 +632,169 @@ footer {
 }
 </style>
 <style>
-.about-hero { position: relative; padding: 160px 48px 80px; overflow: hidden; }
-.about-hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end; position: relative; z-index: 1; }
-.about-hero h1 { font-size: clamp(56px, 8vw, 110px); font-weight: 700; line-height: 0.95; letter-spacing: -0.04em; }
-.about-hero h1 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
-.about-hero .lead { font-size: 19px; color: var(--muted); line-height: 1.7; font-weight: 300; }
-.about-hero .lead strong { color: var(--forest); font-weight: 600; }
-.about-photo-big { aspect-ratio: 4/5; background: var(--forest); border-radius: 28px; max-width: 460px; margin: 80px auto 0; position: relative; transform: rotate(-2deg); display: grid; place-items: center; color: rgba(246,239,227,.3); font-family:'Instrument Serif',serif; font-style: italic; }
-.about-photo-big::before { content: 'PHUKET · 2026'; position: absolute; top: -16px; left: 32px; background: var(--mango); color: var(--forest); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; padding: 6px 14px; border-radius: 4px; transform: rotate(-3deg); }
-.about-photo-big::after { content:''; position: absolute; top: -24px; right: 48px; width: 96px; height: 26px; background: rgba(232,160,42,0.45); transform: rotate(-8deg); border: 1px dashed rgba(255,255,255,0.2); }
+    /* ───────────────────────────────────────────
+       ABOUT PAGE — design from about-new.html
+       Nav + footer rules removed (using site's shared nav/footer).
+       Collisions renamed with abt- prefix:
+         .eyebrow→.abt-eyebrow, .btn-primary→.abt-btn-primary,
+         .btn-ghost→.abt-btn-ghost, .reveal→.abt-reveal,
+         .blob-1/2/3→.abt-blob-1/2/3, @keyframes pulse→abtPulse
+       :root trimmed to avoid duplicating shared brand tokens.
+       ─────────────────────────────────────────── */
+    :root{
+      --cream-deep:#EFE6D5; --cream-warm:#F2E8D6;
+      --forest-soft:#2A4A44;
+      --ink-on-dark:#F6EFE3; --muted-dark:#A9B8AC;
+      --line:rgba(31,59,54,.12); --line-dark:rgba(246,239,227,.14);
+      --font-sans:'Plus Jakarta Sans','IBM Plex Sans Thai',-apple-system,sans-serif;
+      --font-serif:'Instrument Serif',Georgia,serif;
+      --maxw:1180px; --radius:26px; --radius-sm:16px;
+      --ease:cubic-bezier(.22,.61,.36,1);
+      --bounce:cubic-bezier(.34,1.56,.64,1);
+    }
+    .serif{font-family:var(--font-serif);font-style:italic;font-weight:400}
+    ::selection{background:var(--mango);color:var(--forest)}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-.values { background: var(--forest); color: var(--cream); }
-.values .section-title { color: var(--cream); }
-.values .section-title em { color: var(--honey); }
-.values .eyebrow { color: rgba(246,239,227,.4); }
-.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
-.value-card { padding: 36px 30px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 22px; transition: transform .25s, background .25s; }
-.value-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.04); }
-.value-num { font-family:'Instrument Serif',serif; font-style: italic; font-size: 48px; color: var(--mango); line-height: 1; }
-.value-card h3 { font-size: 22px; font-weight: 700; margin: 18px 0 10px; }
-.value-card h3 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--honey); }
-.value-card p { color: rgba(246,239,227,.65); font-size: 14px; font-weight: 300; line-height: 1.7; }
+    .progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:10000;background:linear-gradient(90deg,var(--leaf),var(--mango),var(--honey));transition:width .1s linear}
 
-.timeline { background: var(--cream); }
-.timeline-grid { margin-top: 64px; max-width: 900px; }
-.tl-row { display: grid; grid-template-columns: 140px 1fr; gap: 48px; padding: 32px 0; border-top: 1.5px solid rgba(31,59,54,0.1); position: relative; }
-.tl-row:last-child { border-bottom: 1.5px solid rgba(31,59,54,0.1); }
-.tl-year { font-family:'Instrument Serif',serif; font-style: italic; font-size: 44px; color: var(--mango); line-height: 1; }
-.tl-content h3 { font-size: 20px; font-weight: 700; }
-.tl-content p { color: var(--muted); font-size: 15px; font-weight: 300; line-height: 1.7; margin-top: 8px; max-width: 520px; }
+    .abt-eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf);display:inline-flex;align-items:center;gap:8px}
+    .abt-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--mango);display:inline-block;animation:abtPulse 2.4s var(--ease) infinite}
+    @keyframes abtPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.5}}
 
-.kitchen { background: rgba(31,59,54,0.04); }
-.kitchen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
-.k-card { background: white; border-radius: 18px; padding: 24px; border: 1.5px solid rgba(31,59,54,0.08); transition: transform .25s; }
-.k-card:hover { transform: translateY(-4px); }
-.k-card .k-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.k-card .k-list { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
-.k-card .k-list li { list-style: none; font-size: 14px; color: var(--forest); display: flex; align-items: center; gap: 8px; }
-.k-card .k-list li::before { content:'◐'; color: var(--mango); font-size: 9px; }
+    .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:15px;font-weight:700;padding:16px 30px;border-radius:100px;cursor:pointer;border:none;transition:transform .3s var(--bounce),box-shadow .3s,background .25s;position:relative;overflow:hidden}
+    .abt-btn-primary{background:var(--mango);color:var(--forest);box-shadow:0 6px 22px rgba(232,160,42,.3)}
+    .abt-btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 34px rgba(232,160,42,.45)}
+    .abt-btn-primary .arrow{transition:transform .3s var(--bounce)}
+    .abt-btn-primary:hover .arrow{transform:translateX(5px)}
+    .abt-btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transition:left .6s var(--ease)}
+    .abt-btn-primary:hover::before{left:140%}
+    .abt-btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--line)}
+    .abt-btn-ghost:hover{border-color:var(--forest);transform:translateY(-3px)}
 
-@media (max-width: 900px) {
-  .about-hero-inner { grid-template-columns: 1fr; }
-  .value-grid, .kitchen-grid { grid-template-columns: 1fr 1fr; }
-  .tl-row { grid-template-columns: 1fr; gap: 12px; }
-}
+    section{position:relative}
+    .pad{padding:90px 0}.pad-lg{padding:110px 0}
+    h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.06;letter-spacing:-.03em;font-weight:800}
+    h2 .serif{font-weight:400}
+    .section-head{max-width:54ch;margin-bottom:54px}
+    .section-head .abt-eyebrow{margin-bottom:18px}
+    .section-head p{margin-top:16px;opacity:.72;font-size:1.08rem}
+
+    /* ---------- hero (photo + text) ---------- */
+    .hero{position:relative;padding:96px 0 84px;overflow:hidden}
+    .blob{position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px)}
+    .abt-blob-1{top:-10%;right:6%;width:300px;height:300px;background:radial-gradient(circle at 35% 35%,var(--honey),var(--mango));opacity:.42;animation:float1 14s var(--ease) infinite}
+    .abt-blob-2{bottom:6%;right:30%;width:120px;height:120px;background:var(--leaf);opacity:.16;animation:float2 11s var(--ease) infinite}
+    .abt-blob-3{bottom:10%;left:4%;width:180px;height:180px;background:radial-gradient(circle,var(--clay),transparent 78%);opacity:.15;animation:float1 17s var(--ease) infinite reverse}
+    @keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-24px,28px) scale(1.07)}}
+    @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(22px,-26px)}}
+    .hero .wrap{position:relative;z-index:2}
+    .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:34px}
+    .breadcrumb a{transition:color .2s}.breadcrumb a:hover{color:var(--forest)}
+    .breadcrumb span{margin:0 8px;opacity:.5}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+    @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:44px}}
+    h1{font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:24px}
+    h1 .serif{font-weight:400;color:var(--mango);letter-spacing:-.01em}
+    .hero-sub{font-size:clamp(1.05rem,1.8vw,1.28rem);max-width:46ch;opacity:.82;line-height:1.6;font-weight:400}
+    .hw{display:inline-block;overflow:hidden;vertical-align:top}
+    .hw>span{display:inline-block;transform:translateY(108%);animation:rise .85s var(--ease) forwards}
+    @keyframes rise{to{transform:translateY(0)}}
+
+    /* photo */
+    .photo-wrap{position:relative;justify-self:center}
+    .photo{width:330px;height:400px;max-width:78vw;border-radius:170px 170px 22px 22px;background:linear-gradient(160deg,var(--cream-deep),var(--cream-warm));border:1.5px solid var(--line);display:grid;place-items:center;overflow:hidden;position:relative;box-shadow:0 30px 60px -28px rgba(31,59,54,.3);transition:transform .5s var(--ease)}
+    .photo:hover{transform:translateY(-6px) rotate(1deg)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo .ph-inner{text-align:center;color:var(--muted);padding:24px}
+    .photo .ph-mark{width:60px;height:60px;border-radius:50%;background:conic-gradient(from 0deg,var(--forest) 0 50%,var(--mango) 50% 100%);margin:0 auto 16px;animation:spin 12s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .photo .ph-inner p{font-size:13px;font-weight:600;letter-spacing:.04em;line-height:1.5}
+    .photo .ph-inner small{font-size:11px;opacity:.7;display:block;margin-top:6px}
+    .photo-badge{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%) rotate(-2deg);background:var(--honey);color:var(--forest);font-size:12px;font-weight:700;letter-spacing:.06em;padding:9px 18px;border-radius:100px;box-shadow:0 6px 18px rgba(0,0,0,.14);white-space:nowrap}
+    .photo-dot{position:absolute;border-radius:50%}
+    .pd-1{top:-12px;right:-6px;width:34px;height:34px;background:var(--leaf);opacity:.85;animation:float2 9s var(--ease) infinite}
+    .pd-2{bottom:40px;left:-18px;width:20px;height:20px;background:var(--clay);opacity:.8;animation:float1 12s var(--ease) infinite}
+
+    /* ---------- origin (forest band) ---------- */
+    .band-forest{background:var(--forest);color:var(--cream)}
+    .band-forest .abt-eyebrow{color:var(--honey)}
+    .band-forest h2{color:var(--cream)}
+    .origin-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+    @media(max-width:880px){.origin-grid{grid-template-columns:1fr;gap:32px}}
+    .origin-head h2{position:sticky;top:110px}
+    .origin-body p{font-size:1.12rem;line-height:1.75;opacity:.84;margin-bottom:24px;max-width:54ch}
+    .origin-body p:last-child{margin-bottom:0;opacity:1;font-weight:500}
+    .origin-body p .serif{color:var(--honey);font-size:1.2rem}
+    .origin-body .lead-in{display:inline-block;width:34px;height:2px;background:var(--mango);vertical-align:middle;margin-right:14px}
+
+    /* ---------- process timeline ---------- */
+    .timeline{position:relative;max-width:760px;margin:0 auto;padding-left:8px}
+    .timeline::before{content:'';position:absolute;left:30px;top:18px;bottom:30px;width:2px;background:linear-gradient(180deg,var(--mango),var(--leaf));opacity:.4}
+    @media(max-width:560px){.timeline::before{left:22px}}
+    .t-step{position:relative;padding:0 0 46px 84px;}
+    .t-step:last-child{padding-bottom:0}
+    @media(max-width:560px){.t-step{padding-left:64px}}
+    .t-num{position:absolute;left:0;top:-6px;width:62px;height:62px;border-radius:50%;background:var(--cream);border:2px solid var(--line);display:grid;place-items:center;font-family:var(--font-serif);font-style:italic;font-size:1.7rem;color:var(--mango);z-index:1;transition:transform .4s var(--bounce),border-color .35s,background .35s}
+    @media(max-width:560px){.t-num{width:46px;height:46px;font-size:1.3rem}}
+    .t-step:hover .t-num{transform:scale(1.1) rotate(-4deg);border-color:var(--mango);background:#fff}
+    .t-tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);margin-bottom:8px}
+    .t-step h3{font-size:1.4rem;font-weight:800;margin-bottom:10px;letter-spacing:-.02em}
+    .t-step p{font-size:1.02rem;opacity:.74;line-height:1.65;max-width:50ch}
+
+    /* ---------- what I bring (leaf band) ---------- */
+    .band-leaf{background:var(--leaf);color:var(--cream);padding:110px 0}
+    .band-leaf .abt-eyebrow{color:#fff}.band-leaf .abt-eyebrow .dot{background:var(--honey)}
+    .band-leaf .section-head{text-align:center;margin:0 auto 54px}
+    .band-leaf h2{color:#fff}.band-leaf h2 .serif{color:var(--honey)}
+    .bring-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:920px;margin:0 auto}
+    @media(max-width:760px){.bring-grid{grid-template-columns:1fr}}
+    .bring-card{background:rgba(31,59,54,.2);border:1px solid rgba(246,239,227,.18);border-radius:var(--radius);padding:40px;transition:transform .4s var(--ease),background .35s}
+    .bring-card:hover{transform:translateY(-6px);background:rgba(31,59,54,.3)}
+    .bring-card .ic{width:46px;height:46px;border-radius:13px;background:var(--honey);color:var(--forest);display:grid;place-items:center;font-size:22px;margin-bottom:22px;transition:transform .4s var(--bounce)}
+    .bring-card:hover .ic{transform:rotate(-8deg) scale(1.08)}
+    .bring-card h3{font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em}
+    .bring-card p{font-size:1rem;opacity:.86;line-height:1.65}
+
+    /* ---------- about me (cream, image + text) ---------- */
+    .me-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+    @media(max-width:880px){.me-grid{grid-template-columns:1fr;gap:40px}}
+    .me-visual{position:relative;justify-self:center;width:300px;height:300px;max-width:74vw;border-radius:30px;background:radial-gradient(circle at 30% 30%,var(--honey),var(--mango) 55%,var(--clay));display:grid;place-items:center;overflow:hidden;box-shadow:0 26px 54px -26px rgba(200,100,61,.5);transition:transform .5s var(--ease)}
+    .me-visual:hover{transform:rotate(-2deg) scale(1.02)}
+    .me-visual .pin{font-size:64px;filter:drop-shadow(0 6px 12px rgba(0,0,0,.18))}
+    .me-visual .island{position:absolute;bottom:0;left:0;right:0;height:38%;background:var(--forest);opacity:.16;border-radius:50% 50% 0 0/100% 100% 0 0}
+    .me-text .abt-eyebrow{margin-bottom:18px}
+    .me-text h2{margin-bottom:24px}
+    .me-text p{font-size:1.1rem;line-height:1.75;opacity:.8;margin-bottom:20px;max-width:50ch}
+    .me-text p:last-child{margin-bottom:0}
+
+    /* ---------- final CTA ---------- */
+    .final{text-align:center;padding:120px 0;position:relative;overflow:hidden}
+    .final .blob-c{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(232,160,42,.16),transparent 62%);pointer-events:none;animation:breathe 7s var(--ease) infinite}
+    @keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12)}}
+    .final .wrap{position:relative;z-index:1}
+    .final .abt-eyebrow{margin-bottom:22px}
+    .final h2{max-width:18ch;margin:0 auto 22px}
+    .final h2 .serif{color:var(--mango)}
+    .final p{max-width:48ch;margin:0 auto 38px;font-size:1.12rem;opacity:.76;line-height:1.6}
+    .final .btn{margin:0 6px 14px}
+    .final .alt{font-size:14px;color:var(--muted);margin-top:8px}
+    .final .alt a{color:var(--forest);border-bottom:1px solid var(--line);transition:color .2s}
+    .final .alt a:hover{color:var(--mango)}
+
+    .abt-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .abt-reveal.in{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important}
+      .abt-reveal{opacity:1;transform:none;transition:none}
+      .hw>span{transform:none;animation:none}
+      html{scroll-behavior:auto}
+    }
 </style>
 
 </head>
 <body>
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="spotlight" id="spotlight"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <nav>
   <a href="index.html" class="logo"><span class="logo-pip"></span>digitalmango</a>
@@ -668,76 +808,187 @@ footer {
   </div>
 </nav>
 
-<section class="about-hero">
-  <div class="hero-blob blob-1"></div>
-  <div class="hero-blob blob-2"></div>
-  <div class="about-hero-inner">
-    <div>
-      <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>About</span></div>
-      <h1>Hello, I'm<br><em>DigitalMango.</em></h1>
-      <p class="lead" style="margin-top:28px">A one-person web studio in <strong>Phuket</strong>, building hand-built, warm, on-purpose websites for small &amp; medium brands across Thailand and beyond. No middlemen, no template-stuffing — just careful work, shipped with care.</p>
-    </div>
-    <div class="about-photo-big">Your photo<br>goes here</div>
-  </div>
-</section>
+<main>
 
-<div class="marquee-strip" aria-hidden="true"><div class="marquee-inner">
-  <span>est. 2022</span><span class="accent">◐</span><span>Phuket, TH</span><span class="accent">◐</span><span>Solo studio</span><span class="accent">◐</span><span>Bilingual EN / TH</span><span class="accent">◐</span><span>20+ projects shipped</span><span class="accent">◐</span><span>est. 2022</span><span class="accent">◐</span><span>Phuket, TH</span><span class="accent">◐</span><span>Solo studio</span><span class="accent">◐</span><span>Bilingual EN / TH</span><span class="accent">◐</span><span>20+ projects shipped</span><span class="accent">◐</span>
-</div></div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob abt-blob-1" aria-hidden="true"></div>
+      <div class="blob abt-blob-2" aria-hidden="true"></div>
+      <div class="blob abt-blob-3" aria-hidden="true"></div>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>About</nav>
+        <div class="hero-grid">
+          <div>
+            <p class="abt-eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>Hello</p>
+            <h1>
+              <span class="hw"><span style="animation-delay:.05s">Hi,&nbsp;I'm&nbsp;Annie.</span></span><br>
+              <span class="hw"><span class="serif" style="animation-delay:.18s">Nice&nbsp;to&nbsp;meet&nbsp;you.</span></span>
+            </h1>
+            <p class="hero-sub abt-reveal">I'm a web designer in Phuket, and Digital Mango is my studio. I build websites for small businesses by hand — carefully, and with the kind of attention that only comes from doing the whole thing myself.</p>
+          </div>
+          <div class="photo-wrap abt-reveal">
+            <div class="photo">
+              <img src="annie.jpg" alt="Annie, web designer and founder of Digital Mango, smiling in front of the rainbow heart mural in Phuket Old Town">
+              <span class="photo-dot pd-1" aria-hidden="true"></span>
+              <span class="photo-dot pd-2" aria-hidden="true"></span>
+            </div>
+            <span class="photo-badge">◐ Phuket, Thailand</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="values">
-  <div class="eyebrow">What I believe</div>
-  <div class="section-title">Six things I<br><em>can't shake.</em></div>
-  <div class="value-grid">
-    <div class="value-card"><div class="value-num">01</div><h3>Small brands<br><em>deserve great sites.</em></h3><p>Quality shouldn't be reserved for big budgets. Every project gets the same care.</p></div>
-    <div class="value-card"><div class="value-num">02</div><h3>Slow is<br><em>fast.</em></h3><p>Two thoughtful weeks beats six rushed ones. Considered design ships fewer fixes.</p></div>
-    <div class="value-card"><div class="value-num">03</div><h3>The work<br><em>does the selling.</em></h3><p>No sales calls. Just careful work and an honest conversation about whether we fit.</p></div>
-    <div class="value-card"><div class="value-num">04</div><h3>Templates are<br><em>a starting point.</em></h3><p>Never a finish line. If your brand has a soul, your site should too.</p></div>
-    <div class="value-card"><div class="value-num">05</div><h3>Bilingual<br><em>from day one.</em></h3><p>EN / TH isn't a translation pass at the end — it shapes layout, type, and tone throughout.</p></div>
-    <div class="value-card"><div class="value-num">06</div><h3>You'll always<br><em>know what's next.</em></h3><p>No disappearing between milestones. A weekly Friday update, every project, no exceptions.</p></div>
-  </div>
-</section>
+    <!-- ORIGIN STORY (forest band) -->
+    <section class="pad-lg band-forest">
+      <div class="wrap">
+        <div class="origin-grid">
+          <div class="origin-head abt-reveal">
+            <p class="abt-eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>Why Digital Mango</p>
+            <h2>I kept seeing the same thing happen to good businesses.</h2>
+          </div>
+          <div class="origin-body abt-reveal">
+            <p><span class="lead-in" aria-hidden="true"></span>A café owner spends good money on a website. A year later the business grows — new menu, online bookings, a second location — and they're told they have to start over. Again.</p>
+            <p><span class="lead-in" aria-hidden="true"></span>A developer builds something custom, then disappears. No handover, no documentation. Just a site nobody else can touch.</p>
+            <p><span class="lead-in" aria-hidden="true"></span>A first-time owner, full of ideas and ready to launch, has no clue where to begin — and ends up with a template that looks like everyone else's.</p>
+            <p>Every time, the problem wasn't budget, and it wasn't the business. It was that nobody sat down with the owner <span class="serif">first</span> — before the design, before the build — to understand what the website actually needed to do.</p>
+            <p>That's the gap Digital Mango exists to close.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="timeline">
-  <div class="eyebrow">A short timeline</div>
-  <div class="section-title">How we<br><em>got here.</em></div>
-  <div class="timeline-grid">
-    <div class="tl-row"><div class="tl-year">2022</div><div class="tl-content"><h3>The studio is planted.</h3><p>I left a Phuket agency to freelance. First three clients were friends-of-friends — a café, a yoga studio, and a small architecture firm.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2023</div><div class="tl-content"><h3>The name takes shape.</h3><p>"DigitalMango" sticks after a client said the work was "sweet and a little messy in the best way." Brand &amp; pricing model lock in.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2024</div><div class="tl-content"><h3>Booked solid, all year.</h3><p>Twelve projects, mostly cafés and tour operators. Started bilingual-first as the default rather than the add-on.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2025</div><div class="tl-content"><h3>Care plans go live.</h3><p>Monthly retainers for past clients. The Ripe List newsletter ships its first issue.</p></div></div>
-    <div class="tl-row"><div class="tl-year">2026</div><div class="tl-content"><h3>You, hopefully.</h3><p>Taking on two new projects in July. The orchard is still small, and that's exactly how I like it.</p></div></div>
-  </div>
-</section>
+    <!-- PROCESS TIMELINE -->
+    <section class="pad-lg">
+      <div class="wrap">
+        <div class="section-head abt-reveal" style="text-align:center;margin:0 auto 64px">
+          <p class="abt-eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>How I work</p>
+          <h2>Every site starts the same way — <span class="serif">with understanding.</span></h2>
+          <p>No guesswork, no jumping straight to design. Four steps, every time.</p>
+        </div>
+        <div class="timeline">
+          <div class="t-step abt-reveal">
+            <span class="t-num" aria-hidden="true">01</span>
+            <p class="t-tag">Understand</p>
+            <h3>I learn the business first.</h3>
+            <p>I research your market, ask the questions that matter, and study your competitors — what they do well, and where they fall short. Before anything is designed, I know what your customers actually need.</p>
+          </div>
+          <div class="t-step abt-reveal">
+            <span class="t-num" aria-hidden="true">02</span>
+            <p class="t-tag">Structure</p>
+            <h3>Structure before style.</h3>
+            <p>I map the structure and content layout first — what goes where, and why — built around your customer's real journey, not a template.</p>
+          </div>
+          <div class="t-step abt-reveal">
+            <span class="t-num" aria-hidden="true">03</span>
+            <p class="t-tag">Design</p>
+            <h3>Clean, modern, made for mobile.</h3>
+            <p>I design minimalist and modern on purpose. Most of your visitors are on a phone with limited patience, so I cut the noise and let them focus on the one thing they came to do.</p>
+          </div>
+          <div class="t-step abt-reveal">
+            <span class="t-num" aria-hidden="true">04</span>
+            <p class="t-tag">Build</p>
+            <h3>Built, tested, and handed over.</h3>
+            <p>I build it, test it, and hand it over — a site you own and can edit yourself. One person, from first question to launch day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="kitchen">
-  <div class="eyebrow">The kitchen</div>
-  <div class="section-title">Tools I keep<br><em>on the counter.</em></div>
-  <div class="kitchen-grid">
-    <div class="k-card"><div class="k-label">Design</div><ul class="k-list"><li>Figma</li><li>Procreate (sketching)</li><li>Glyphs Mini</li></ul></div>
-    <div class="k-card"><div class="k-label">Build</div><ul class="k-list"><li>Webflow</li><li>Astro · HTML / CSS</li><li>Sanity (small CMS)</li></ul></div>
-    <div class="k-card"><div class="k-label">Words</div><ul class="k-list"><li>iA Writer</li><li>Linguee EN / TH</li><li>Plain notebook</li></ul></div>
-    <div class="k-card"><div class="k-label">Studio</div><ul class="k-list"><li>Notion (clients)</li><li>Cron / Mail</li><li>Spotify, very loud</li></ul></div>
-  </div>
-</section>
+    <!-- WHAT I BRING (leaf band) -->
+    <section class="band-leaf">
+      <div class="wrap">
+        <div class="section-head abt-reveal">
+          <p class="abt-eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>What I bring</p>
+          <h2>What you can <span class="serif">count on.</span></h2>
+        </div>
+        <div class="bring-grid">
+          <div class="bring-card abt-reveal">
+            <span class="ic" aria-hidden="true">◎</span>
+            <h3>Design that works, not just design that looks good.</h3>
+            <p>A site can be beautiful and still fail to bring in customers. I build for both — pages that feel considered and do their job.</p>
+          </div>
+          <div class="bring-card abt-reveal">
+            <span class="ic" aria-hidden="true">⇄</span>
+            <h3>Built to be handed over.</h3>
+            <p>You get a site you actually own and can edit yourself — not one that holds you hostage to whoever built it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section style="text-align:center;padding:120px 48px">
-  <div class="eyebrow" style="text-align:center">Still curious?</div>
-  <h2 class="section-title">Let's have a<br><em>30-minute chat.</em></h2>
-  <p style="font-size:17px;color:var(--muted);max-width:520px;margin:24px auto 32px;line-height:1.75;font-weight:300">No pitch, no pressure — just a quick conversation to see if we're a fit.</p>
-  <a href="contact.html" class="btn-primary">Start a project →</a>
-</section>
+    <!-- ABOUT ME -->
+    <section class="pad-lg">
+      <div class="wrap">
+        <div class="me-grid">
+          <div class="me-visual abt-reveal" aria-hidden="true">
+            <span class="island"></span>
+            <span class="pin">📍</span>
+          </div>
+          <div class="me-text abt-reveal">
+            <p class="abt-eyebrow"><span class="dot" aria-hidden="true"></span>Off the clock</p>
+            <h2>A little <span class="serif">about me.</span></h2>
+            <p>I'm based in Phuket by choice. I love that it gives my family room to breathe while keeping me close to the small businesses I love working with — the cafés, guesthouses, and family-run places that give this island its character.</p>
+            <p>I think the best websites feel a little like the people behind them: warm, clear, and built with care. That's the standard I hold myself to on every project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="blob-c" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="abt-eyebrow"><span class="dot" aria-hidden="true"></span>Let's talk</p>
+        <h2>Want to <span class="serif">work together?</span></h2>
+        <p>The best way to find out if we're a fit is a quick conversation. No pitch, no pressure — I'll listen more than I talk.</p>
+        <div>
+          <a href="#BOOK-LINK#" class="btn abt-btn-primary">Book a 20-min intro <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="work.html" class="btn abt-btn-ghost">See recent work</a>
+        </div>
+        <p class="alt">Or email <a href="mailto:annie@digitalmango.biz">annie@digitalmango.biz</a></p>
+      </div>
+    </section>
+
+  </main>
 
 <footer>
   <div class="foot-grid">
-    <div class="foot-brand"><a href="index.html" class="foot-logo"><span class="logo-pip"></span>digitalmango</a><p>A one-person web studio in Phuket building <span class="foot-tagline-italic">ripe little websites</span>.</p></div>
-    <div class="foot-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="work.html">Work</a></li><li><a href="process.html">Process</a></li></ul></div>
-    <div class="foot-col"><h4>Helpful</h4><ul><li><a href="journal.html">Journal</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="foot-col"><h4>Elsewhere</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Read.cv</a></li></ul></div>
+    <div class="foot-brand">
+      <a href="index.html" class="foot-logo"><span class="logo-pip"></span>digitalmango</a>
+      <p>A one-person web studio in Phuket building <span class="foot-tagline-italic">careful websites</span> for small &amp; medium brands in Thailand.</p>
+    </div>
+    <div class="foot-col"><h4>Studio</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="process.html">Process</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>Helpful</h4><ul>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="mailto:annie@digitalmango.biz">annie@digitalmango.biz</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>Elsewhere</h4><ul>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Read.cv</a></li>
+    </ul></div>
   </div>
-  <div class="foot-bar"><span>© DigitalMango 2026 · Phuket, TH</span><span class="foot-tagline-italic">ripe ideas, shipped with care.</span></div>
+  <div class="foot-bar">
+    <span>© Digital Mango 2026 · Phuket, Thailand</span>
+    <span class="foot-tagline-italic">Built right. Built once.</span>
+  </div>
 </footer>
-<script src="app.js"></script>
+
+<script>
+  // Carried from about-new.html. Mobile-nav toggle removed: the site nav has no
+  // toggle button — it uses CSS-only responsive behaviour (shared stylesheet).
+  const prog=document.getElementById('progress');
+  addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100+'%'},{passive:true});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.abt-reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*80)+'ms';io.observe(el)});
+</script>
 
 
 </body></html>
