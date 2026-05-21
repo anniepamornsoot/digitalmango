@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>About Annie — Web Designer in Phuket | Digital Mango</title>
+  <meta name="description" content="Meet Annie, the web designer behind Digital Mango — a one-person studio in Phuket. I understand your business first, then design clean, modern websites that work. One person, start to finish.">
+  <link rel="canonical" href="https://digitalmango.studio/about.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About Annie — Web Designer in Phuket | Digital Mango">
+  <meta property="og:description" content="A one-person web studio in Phuket. I understand your business first, then build clean, modern websites that work — start to finish.">
+  <meta property="og:url" content="https://digitalmango.studio/about.html">
+  <meta property="og:image" content="https://digitalmango.studio/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Digital Mango">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Annie — Web Designer in Phuket | Digital Mango">
+  <meta name="twitter:description" content="A one-person web studio in Phuket. I understand your business first, then build clean, modern websites that work.">
+  <meta name="twitter:image" content="https://digitalmango.studio/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --cream:#F6EFE3; --cream-deep:#EFE6D5; --cream-warm:#F2E8D6;
+      --forest:#1F3B36; --forest-soft:#2A4A44;
+      --mango:#E8A02A; --honey:#F2C56B; --leaf:#6B8A4E; --clay:#C8643D;
+      --ink-on-dark:#F6EFE3; --muted:#7C8A80; --muted-dark:#A9B8AC;
+      --line:rgba(31,59,54,.12); --line-dark:rgba(246,239,227,.14);
+      --font-sans:'Plus Jakarta Sans','IBM Plex Sans Thai',-apple-system,sans-serif;
+      --font-serif:'Instrument Serif',Georgia,serif;
+      --maxw:1180px; --radius:26px; --radius-sm:16px;
+      --ease:cubic-bezier(.22,.61,.36,1);
+      --bounce:cubic-bezier(.34,1.56,.64,1);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-sans);background:var(--cream);color:var(--forest);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .serif{font-family:var(--font-serif);font-style:italic;font-weight:400}
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--mango);color:var(--forest)}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+    body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.03;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+    .progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:10000;background:linear-gradient(90deg,var(--leaf),var(--mango),var(--honey));transition:width .1s linear}
+
+    .eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf);display:inline-flex;align-items:center;gap:8px}
+    .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--mango);display:inline-block;animation:pulse 2.4s var(--ease) infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.5}}
+
+    /* nav */
+    header.nav{position:sticky;top:0;z-index:100;background:rgba(246,239,227,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+    .logo .mark{width:22px;height:22px;border-radius:50%;background:conic-gradient(from 0deg,var(--forest) 0 50%,var(--mango) 50% 100%);flex-shrink:0;transition:transform .6s var(--bounce)}
+    .logo:hover .mark{transform:rotate(180deg)}
+    .nav-links{display:flex;align-items:center;gap:30px}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--forest);opacity:.78;transition:opacity .2s;position:relative}
+    .nav-links a:not(.nav-cta)::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mango);transition:width .3s var(--ease)}
+    .nav-links a:not(.nav-cta):hover{opacity:1}
+    .nav-links a:not(.nav-cta):hover::after{width:100%}
+    .nav-cta{background:var(--forest);color:var(--cream)!important;padding:11px 20px;border-radius:100px;font-size:14px!important;opacity:1!important;transition:transform .3s var(--bounce),background .25s}
+    .nav-cta:hover{background:var(--forest-soft);transform:translateY(-2px) scale(1.03)}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--forest)}
+    @media(max-width:860px){.nav-links{display:none}.nav-toggle{display:block}}
+
+    .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:15px;font-weight:700;padding:16px 30px;border-radius:100px;cursor:pointer;border:none;transition:transform .3s var(--bounce),box-shadow .3s,background .25s;position:relative;overflow:hidden}
+    .btn-primary{background:var(--mango);color:var(--forest);box-shadow:0 6px 22px rgba(232,160,42,.3)}
+    .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 34px rgba(232,160,42,.45)}
+    .btn-primary .arrow{transition:transform .3s var(--bounce)}
+    .btn-primary:hover .arrow{transform:translateX(5px)}
+    .btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transition:left .6s var(--ease)}
+    .btn-primary:hover::before{left:140%}
+    .btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--forest);transform:translateY(-3px)}
+
+    section{position:relative}
+    .pad{padding:90px 0}.pad-lg{padding:110px 0}
+    h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.06;letter-spacing:-.03em;font-weight:800}
+    h2 .serif{font-weight:400}
+    .section-head{max-width:54ch;margin-bottom:54px}
+    .section-head .eyebrow{margin-bottom:18px}
+    .section-head p{margin-top:16px;opacity:.72;font-size:1.08rem}
+
+    /* ---------- hero (photo + text) ---------- */
+    .hero{position:relative;padding:96px 0 84px;overflow:hidden}
+    .blob{position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px)}
+    .blob-1{top:-10%;right:6%;width:300px;height:300px;background:radial-gradient(circle at 35% 35%,var(--honey),var(--mango));opacity:.42;animation:float1 14s var(--ease) infinite}
+    .blob-2{bottom:6%;right:30%;width:120px;height:120px;background:var(--leaf);opacity:.16;animation:float2 11s var(--ease) infinite}
+    .blob-3{bottom:10%;left:4%;width:180px;height:180px;background:radial-gradient(circle,var(--clay),transparent 78%);opacity:.15;animation:float1 17s var(--ease) infinite reverse}
+    @keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-24px,28px) scale(1.07)}}
+    @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(22px,-26px)}}
+    .hero .wrap{position:relative;z-index:2}
+    .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:34px}
+    .breadcrumb a{transition:color .2s}.breadcrumb a:hover{color:var(--forest)}
+    .breadcrumb span{margin:0 8px;opacity:.5}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+    @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:44px}}
+    h1{font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:24px}
+    h1 .serif{font-weight:400;color:var(--mango);letter-spacing:-.01em}
+    .hero-sub{font-size:clamp(1.05rem,1.8vw,1.28rem);max-width:46ch;opacity:.82;line-height:1.6;font-weight:400}
+    .hw{display:inline-block;overflow:hidden;vertical-align:top}
+    .hw>span{display:inline-block;transform:translateY(108%);animation:rise .85s var(--ease) forwards}
+    @keyframes rise{to{transform:translateY(0)}}
+
+    /* photo placeholder */
+    .photo-wrap{position:relative;justify-self:center}
+    .photo{width:330px;height:400px;max-width:78vw;border-radius:170px 170px 22px 22px;background:linear-gradient(160deg,var(--cream-deep),var(--cream-warm));border:1.5px solid var(--line);display:grid;place-items:center;overflow:hidden;position:relative;box-shadow:0 30px 60px -28px rgba(31,59,54,.3);transition:transform .5s var(--ease)}
+    .photo:hover{transform:translateY(-6px) rotate(1deg)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo .ph-inner{text-align:center;color:var(--muted);padding:24px}
+    .photo .ph-mark{width:60px;height:60px;border-radius:50%;background:conic-gradient(from 0deg,var(--forest) 0 50%,var(--mango) 50% 100%);margin:0 auto 16px;animation:spin 12s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .photo .ph-inner p{font-size:13px;font-weight:600;letter-spacing:.04em;line-height:1.5}
+    .photo .ph-inner small{font-size:11px;opacity:.7;display:block;margin-top:6px}
+    .photo-badge{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%) rotate(-2deg);background:var(--honey);color:var(--forest);font-size:12px;font-weight:700;letter-spacing:.06em;padding:9px 18px;border-radius:100px;box-shadow:0 6px 18px rgba(0,0,0,.14);white-space:nowrap}
+    .photo-dot{position:absolute;border-radius:50%}
+    .pd-1{top:-12px;right:-6px;width:34px;height:34px;background:var(--leaf);opacity:.85;animation:float2 9s var(--ease) infinite}
+    .pd-2{bottom:40px;left:-18px;width:20px;height:20px;background:var(--clay);opacity:.8;animation:float1 12s var(--ease) infinite}
+
+    /* ---------- origin (forest band) ---------- */
+    .band-forest{background:var(--forest);color:var(--cream)}
+    .band-forest .eyebrow{color:var(--honey)}
+    .band-forest h2{color:var(--cream)}
+    .origin-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+    @media(max-width:880px){.origin-grid{grid-template-columns:1fr;gap:32px}}
+    .origin-head h2{position:sticky;top:110px}
+    .origin-body p{font-size:1.12rem;line-height:1.75;opacity:.84;margin-bottom:24px;max-width:54ch}
+    .origin-body p:last-child{margin-bottom:0;opacity:1;font-weight:500}
+    .origin-body p .serif{color:var(--honey);font-size:1.2rem}
+    .origin-body .lead-in{display:inline-block;width:34px;height:2px;background:var(--mango);vertical-align:middle;margin-right:14px}
+
+    /* ---------- process timeline ---------- */
+    .timeline{position:relative;max-width:760px;margin:0 auto;padding-left:8px}
+    .timeline::before{content:'';position:absolute;left:30px;top:18px;bottom:30px;width:2px;background:linear-gradient(180deg,var(--mango),var(--leaf));opacity:.4}
+    @media(max-width:560px){.timeline::before{left:22px}}
+    .t-step{position:relative;padding:0 0 46px 84px;}
+    .t-step:last-child{padding-bottom:0}
+    @media(max-width:560px){.t-step{padding-left:64px}}
+    .t-num{position:absolute;left:0;top:-6px;width:62px;height:62px;border-radius:50%;background:var(--cream);border:2px solid var(--line);display:grid;place-items:center;font-family:var(--font-serif);font-style:italic;font-size:1.7rem;color:var(--mango);z-index:1;transition:transform .4s var(--bounce),border-color .35s,background .35s}
+    @media(max-width:560px){.t-num{width:46px;height:46px;font-size:1.3rem}}
+    .t-step:hover .t-num{transform:scale(1.1) rotate(-4deg);border-color:var(--mango);background:#fff}
+    .t-tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);margin-bottom:8px}
+    .t-step h3{font-size:1.4rem;font-weight:800;margin-bottom:10px;letter-spacing:-.02em}
+    .t-step p{font-size:1.02rem;opacity:.74;line-height:1.65;max-width:50ch}
+
+    /* ---------- what I bring (leaf band) ---------- */
+    .band-leaf{background:var(--leaf);color:var(--cream);padding:110px 0}
+    .band-leaf .eyebrow{color:#fff}.band-leaf .eyebrow .dot{background:var(--honey)}
+    .band-leaf .section-head{text-align:center;margin:0 auto 54px}
+    .band-leaf h2{color:#fff}.band-leaf h2 .serif{color:var(--honey)}
+    .bring-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:920px;margin:0 auto}
+    @media(max-width:760px){.bring-grid{grid-template-columns:1fr}}
+    .bring-card{background:rgba(31,59,54,.2);border:1px solid rgba(246,239,227,.18);border-radius:var(--radius);padding:40px;transition:transform .4s var(--ease),background .35s}
+    .bring-card:hover{transform:translateY(-6px);background:rgba(31,59,54,.3)}
+    .bring-card .ic{width:46px;height:46px;border-radius:13px;background:var(--honey);color:var(--forest);display:grid;place-items:center;font-size:22px;margin-bottom:22px;transition:transform .4s var(--bounce)}
+    .bring-card:hover .ic{transform:rotate(-8deg) scale(1.08)}
+    .bring-card h3{font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em}
+    .bring-card p{font-size:1rem;opacity:.86;line-height:1.65}
+
+    /* ---------- about me (cream, image + text) ---------- */
+    .me-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+    @media(max-width:880px){.me-grid{grid-template-columns:1fr;gap:40px}}
+    .me-visual{position:relative;justify-self:center;width:300px;height:300px;max-width:74vw;border-radius:30px;background:radial-gradient(circle at 30% 30%,var(--honey),var(--mango) 55%,var(--clay));display:grid;place-items:center;overflow:hidden;box-shadow:0 26px 54px -26px rgba(200,100,61,.5);transition:transform .5s var(--ease)}
+    .me-visual:hover{transform:rotate(-2deg) scale(1.02)}
+    .me-visual .pin{font-size:64px;filter:drop-shadow(0 6px 12px rgba(0,0,0,.18))}
+    .me-visual .island{position:absolute;bottom:0;left:0;right:0;height:38%;background:var(--forest);opacity:.16;border-radius:50% 50% 0 0/100% 100% 0 0}
+    .me-text .eyebrow{margin-bottom:18px}
+    .me-text h2{margin-bottom:24px}
+    .me-text p{font-size:1.1rem;line-height:1.75;opacity:.8;margin-bottom:20px;max-width:50ch}
+    .me-text p:last-child{margin-bottom:0}
+
+    /* ---------- final CTA ---------- */
+    .final{text-align:center;padding:120px 0;position:relative;overflow:hidden}
+    .final .blob-c{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(232,160,42,.16),transparent 62%);pointer-events:none;animation:breathe 7s var(--ease) infinite}
+    @keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12)}}
+    .final .wrap{position:relative;z-index:1}
+    .final .eyebrow{margin-bottom:22px}
+    .final h2{max-width:18ch;margin:0 auto 22px}
+    .final h2 .serif{color:var(--mango)}
+    .final p{max-width:48ch;margin:0 auto 38px;font-size:1.12rem;opacity:.76;line-height:1.6}
+    .final .btn{margin:0 6px 14px}
+    .final .alt{font-size:14px;color:var(--muted);margin-top:8px}
+    .final .alt a{color:var(--forest);border-bottom:1px solid var(--line);transition:color .2s}
+    .final .alt a:hover{color:var(--mango)}
+
+    /* footer */
+    footer{background:var(--forest);color:var(--cream);padding:64px 0 40px}
+    .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+    @media(max-width:820px){.foot-top{grid-template-columns:1fr 1fr;gap:32px}}
+    .foot-brand .logo{color:var(--cream);margin-bottom:16px}
+    .foot-brand p{font-size:14.5px;opacity:.66;max-width:30ch;line-height:1.6}
+    .foot-col h4{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--honey);margin-bottom:18px}
+    .foot-col ul{list-style:none}.foot-col li{margin-bottom:11px}
+    .foot-col a{font-size:14.5px;opacity:.72;transition:opacity .2s,padding-left .25s}
+    .foot-col a:hover{opacity:1;padding-left:4px}
+    .foot-bottom{border-top:1px solid var(--line-dark);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13.5px;opacity:.7}
+    .foot-bottom .serif{font-size:1.1rem;opacity:1}
+
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important}
+      .reveal{opacity:1;transform:none;transition:none}
+      .hw>span{transform:none;animation:none}
+      html{scroll-behavior:auto}
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="logo"><span class="mark" aria-hidden="true"></span>digital mango</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+        <a href="work.html">Work</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#BOOK-LINK#" class="nav-cta">Book a 20-min intro →</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="blob blob-3" aria-hidden="true"></div>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>About</nav>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>Hello</p>
+            <h1>
+              <span class="hw"><span style="animation-delay:.05s">Hi,&nbsp;I'm&nbsp;Annie.</span></span><br>
+              <span class="hw"><span class="serif" style="animation-delay:.18s">Nice&nbsp;to&nbsp;meet&nbsp;you.</span></span>
+            </h1>
+            <p class="hero-sub reveal">I'm a web designer in Phuket, and Digital Mango is my studio. I build websites for small businesses by hand — carefully, and with the kind of attention that only comes from doing the whole thing myself.</p>
+          </div>
+          <div class="photo-wrap reveal">
+            <div class="photo">
+              <img src="annie.jpg" alt="Annie, web designer and founder of Digital Mango, smiling in front of the rainbow heart mural in Phuket Old Town">
+              <span class="photo-dot pd-1" aria-hidden="true"></span>
+              <span class="photo-dot pd-2" aria-hidden="true"></span>
+            </div>
+            <span class="photo-badge">◐ Phuket, Thailand</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN STORY (forest band) -->
+    <section class="pad-lg band-forest">
+      <div class="wrap">
+        <div class="origin-grid">
+          <div class="origin-head reveal">
+            <p class="eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>Why Digital Mango</p>
+            <h2>I kept seeing the same thing happen to good businesses.</h2>
+          </div>
+          <div class="origin-body reveal">
+            <p><span class="lead-in" aria-hidden="true"></span>A café owner spends good money on a website. A year later the business grows — new menu, online bookings, a second location — and they're told they have to start over. Again.</p>
+            <p><span class="lead-in" aria-hidden="true"></span>A developer builds something custom, then disappears. No handover, no documentation. Just a site nobody else can touch.</p>
+            <p><span class="lead-in" aria-hidden="true"></span>A first-time owner, full of ideas and ready to launch, has no clue where to begin — and ends up with a template that looks like everyone else's.</p>
+            <p>Every time, the problem wasn't budget, and it wasn't the business. It was that nobody sat down with the owner <span class="serif">first</span> — before the design, before the build — to understand what the website actually needed to do.</p>
+            <p>That's the gap Digital Mango exists to close.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS TIMELINE -->
+    <section class="pad-lg">
+      <div class="wrap">
+        <div class="section-head reveal" style="text-align:center;margin:0 auto 64px">
+          <p class="eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>How I work</p>
+          <h2>Every site starts the same way — <span class="serif">with understanding.</span></h2>
+          <p>No guesswork, no jumping straight to design. Four steps, every time.</p>
+        </div>
+        <div class="timeline">
+          <div class="t-step reveal">
+            <span class="t-num" aria-hidden="true">01</span>
+            <p class="t-tag">Understand</p>
+            <h3>I learn the business first.</h3>
+            <p>I research your market, ask the questions that matter, and study your competitors — what they do well, and where they fall short. Before anything is designed, I know what your customers actually need.</p>
+          </div>
+          <div class="t-step reveal">
+            <span class="t-num" aria-hidden="true">02</span>
+            <p class="t-tag">Structure</p>
+            <h3>Structure before style.</h3>
+            <p>I map the structure and content layout first — what goes where, and why — built around your customer's real journey, not a template.</p>
+          </div>
+          <div class="t-step reveal">
+            <span class="t-num" aria-hidden="true">03</span>
+            <p class="t-tag">Design</p>
+            <h3>Clean, modern, made for mobile.</h3>
+            <p>I design minimalist and modern on purpose. Most of your visitors are on a phone with limited patience, so I cut the noise and let them focus on the one thing they came to do.</p>
+          </div>
+          <div class="t-step reveal">
+            <span class="t-num" aria-hidden="true">04</span>
+            <p class="t-tag">Build</p>
+            <h3>Built, tested, and handed over.</h3>
+            <p>I build it, test it, and hand it over — a site you own and can edit yourself. One person, from first question to launch day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I BRING (leaf band) -->
+    <section class="band-leaf">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow" style="margin-bottom:18px"><span class="dot" aria-hidden="true"></span>What I bring</p>
+          <h2>What you can <span class="serif">count on.</span></h2>
+        </div>
+        <div class="bring-grid">
+          <div class="bring-card reveal">
+            <span class="ic" aria-hidden="true">◎</span>
+            <h3>Design that works, not just design that looks good.</h3>
+            <p>A site can be beautiful and still fail to bring in customers. I build for both — pages that feel considered and do their job.</p>
+          </div>
+          <div class="bring-card reveal">
+            <span class="ic" aria-hidden="true">⇄</span>
+            <h3>Built to be handed over.</h3>
+            <p>You get a site you actually own and can edit yourself — not one that holds you hostage to whoever built it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="pad-lg">
+      <div class="wrap">
+        <div class="me-grid">
+          <div class="me-visual reveal" aria-hidden="true">
+            <span class="island"></span>
+            <span class="pin">📍</span>
+          </div>
+          <div class="me-text reveal">
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Off the clock</p>
+            <h2>A little <span class="serif">about me.</span></h2>
+            <p>I'm based in Phuket by choice. I love that it gives my family room to breathe while keeping me close to the small businesses I love working with — the cafés, guesthouses, and family-run places that give this island its character.</p>
+            <p>I think the best websites feel a little like the people behind them: warm, clear, and built with care. That's the standard I hold myself to on every project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="blob-c" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Let's talk</p>
+        <h2>Want to <span class="serif">work together?</span></h2>
+        <p>The best way to find out if we're a fit is a quick conversation. No pitch, no pressure — I'll listen more than I talk.</p>
+        <div>
+          <a href="#BOOK-LINK#" class="btn btn-primary">Book a 20-min intro <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="work.html" class="btn btn-ghost">See recent work</a>
+        </div>
+        <p class="alt">Or email <a href="mailto:annie@digitalmango.biz">annie@digitalmango.biz</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <div class="logo"><span class="mark" aria-hidden="true"></span>digital mango</div>
+          <p>A one-person web studio in Phuket building careful websites for small &amp; medium brands in Thailand.</p>
+        </div>
+        <div class="foot-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="work.html">Work</a></li><li><a href="process.html">Process</a></li></ul></div>
+        <div class="foot-col"><h4>Helpful</h4><ul><li><a href="journal.html">Journal</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="foot-col"><h4>Elsewhere</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Read.cv</a></li></ul></div>
+      </div>
+      <div class="foot-bottom">
+        <span>© Digital Mango 2026 · Phuket, Thailand</span>
+        <span class="serif">Built right. Built once.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AboutPage","name":"About Digital Mango","url":"https://digitalmango.studio/about.html","mainEntity":{"@type":"Person","name":"Annie","jobTitle":"Web Designer","worksFor":{"@type":"ProfessionalService","name":"Digital Mango","areaServed":{"@type":"Place","name":"Phuket, Thailand"},"url":"https://digitalmango.studio"},"knowsAbout":["web design","website strategy","UX design","small business websites"],"description":"Annie is the web designer and founder behind Digital Mango, a one-person studio in Phuket building clean, modern websites for small businesses."}}
+  </script>
+
+  <script>
+    const prog=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100+'%'},{passive:true});
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*80)+'ms';io.observe(el)});
+    document.querySelector('.nav-toggle')?.addEventListener('click',()=>{const l=document.querySelector('.nav-links');if(l){const open=l.style.display==='flex';l.style.display=open?'none':'flex';if(!open)l.style.cssText+=';position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--cream);padding:20px 28px;border-bottom:1px solid var(--line);gap:18px'}});
+  </script>
+</body>
+</html>
