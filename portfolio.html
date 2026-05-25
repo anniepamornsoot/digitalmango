@@ -605,6 +605,10 @@ footer {
 }
 </style>
 <style>
+/* ── Let the hero blob fade smoothly into the next section instead of
+   being clipped at the page-header edge. Scoped to this page only. ── */
+.page-header { overflow: visible; }
+
 /* ── Hero title rise-in (same effect used on services / about) ── */
 .hw { display: inline-block; overflow: hidden; vertical-align: top; }
 .hw > span, .hw > em { display: inline-block; transform: translateY(108%); animation: hwRise .85s cubic-bezier(.22,.61,.36,1) forwards; }
