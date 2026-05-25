@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work — DigitalMango</title>
+<title>Portfolio — Digital Mango</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* latin-ext */
 @font-face {
@@ -605,14 +605,18 @@ footer {
 }
 </style>
 <style>
-.work-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 32px; }
-.work-chip { padding: 8px 16px; border-radius: 100px; background: white; border: 1.5px solid rgba(31,59,54,0.1); font-size: 13px; font-weight: 600; color: var(--forest); cursor: pointer; transition: all .2s; font-family:'Plus Jakarta Sans',sans-serif; }
-.work-chip:hover, .work-chip.active { background: var(--mango); border-color: var(--mango); }
-.work-list { padding: 60px 48px 80px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+/* ── Hero title rise-in (same effect used on services / about) ── */
+.hw { display: inline-block; overflow: hidden; vertical-align: top; }
+.hw > span, .hw > em { display: inline-block; transform: translateY(108%); animation: hwRise .85s cubic-bezier(.22,.61,.36,1) forwards; }
+@keyframes hwRise { to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .hw > span, .hw > em { transform: none; animation: none; }
+}
+
+/* ── Project grid (3 columns) ── */
+.work-list { padding: 60px 48px 80px; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .work-card { display: block; text-decoration: none; color: inherit; transition: transform .3s; }
 .work-card:hover { transform: translateY(-6px); }
-.work-card:nth-child(odd) { transform: translateY(40px); }
-.work-card:nth-child(odd):hover { transform: translateY(34px); }
 .work-thumb { aspect-ratio: 4/3; border-radius: 22px; overflow: hidden; position: relative; }
 .work-thumb.t1 { background: linear-gradient(135deg, var(--honey), var(--mango)); }
 .work-thumb.t2 { background: linear-gradient(135deg, var(--forest), #2d5b53); }
@@ -623,12 +627,14 @@ footer {
 .work-thumb::before { content:''; position: absolute; width: 70%; aspect-ratio: 4/3; bottom: -8%; left: 50%; transform: translateX(-50%); background: white; border-radius: 10px 10px 0 0; box-shadow: 0 -8px 30px rgba(0,0,0,0.12); }
 .work-thumb::after { content:''; position: absolute; bottom: 12%; left: 50%; transform: translateX(-50%); width: 38%; height: 4%; background: var(--forest); border-radius: 100px; opacity: .7; }
 .wk-tag { position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.92); padding: 6px 12px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-.work-meta { padding: 22px 4px 0; display: flex; justify-content: space-between; gap: 16px; }
-.work-meta h3 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+.work-meta { padding: 20px 4px 0; display: flex; justify-content: space-between; gap: 16px; }
+.work-meta h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
 .work-meta h3 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
-.work-meta .wk-year { font-family:'Instrument Serif',serif; font-style: italic; color: var(--muted); font-size: 22px; }
+.work-meta .wk-year { font-family:'Instrument Serif',serif; font-style: italic; color: var(--muted); font-size: 20px; }
 .work-meta p { color: var(--muted); font-size: 14px; margin-top: 6px; }
-@media (max-width:900px){ .work-list { grid-template-columns: 1fr; } .work-card:nth-child(odd) { transform: none; } .work-card:nth-child(odd):hover { transform: translateY(-6px); } }
+
+@media (max-width: 1100px) { .work-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px)  { .work-list { grid-template-columns: 1fr; padding: 40px 24px 60px; } }
 </style>
 
 </head>
@@ -652,16 +658,12 @@ footer {
   <div class="hero-blob blob-1"></div>
   <div class="hero-blob blob-2"></div>
   <div class="page-header-inner">
-    <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Work</span></div>
-    <h1>A small orchard.<br><em>Picked carefully.</em></h1>
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Portfolio</span></div>
+    <h1>
+      <span class="hw"><span style="animation-delay:.05s">A&nbsp;small&nbsp;orchard.</span></span><br>
+      <span class="hw"><em style="animation-delay:.18s">Picked&nbsp;carefully.</em></span>
+    </h1>
     <p class="lead">A selection of recent work — cafés, restaurants, real-estate brands, tour operators. Hand-built, bilingual where useful, made to feel like the businesses they're for.</p>
-    <div class="work-filter">
-      <button class="work-chip active">All work</button>
-      <button class="work-chip">Cafés</button>
-      <button class="work-chip">Restaurants</button>
-      <button class="work-chip">Real estate</button>
-      <button class="work-chip">Tours</button>
-    </div>
   </div>
 </header>
 
