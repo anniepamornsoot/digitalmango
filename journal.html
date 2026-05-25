@@ -605,28 +605,107 @@ footer {
 }
 </style>
 <style>
-.j-feature { max-width: 1100px; margin: 0 auto; padding: 40px 48px 80px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
-.j-feature-thumb { aspect-ratio: 4/3; border-radius: 24px; background: linear-gradient(135deg, var(--forest), #2d5b53); position: relative; overflow: hidden; }
-.j-feature-thumb::before { content:'◐'; position: absolute; inset: 0; display: grid; place-items: center; font-size: 200px; color: var(--mango); opacity: .15; font-family:'Instrument Serif',serif; }
-.j-feature .j-tag { display: inline-block; background: var(--mango); color: var(--forest); padding: 5px 12px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-.j-feature h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-top: 16px; }
-.j-feature h2 em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
-.j-feature p { font-size: 16px; color: var(--muted); font-weight: 300; line-height: 1.75; margin-top: 18px; }
-.j-feature .j-meta { display: flex; align-items: center; gap: 14px; margin-top: 22px; font-size: 13px; color: var(--muted); }
-.j-feature a.read { display: inline-flex; align-items: center; gap: 6px; color: var(--forest); font-weight: 700; text-decoration: none; margin-top: 22px; padding-bottom: 4px; border-bottom: 2px solid var(--mango); }
+/* ───────────────────────────────────────────
+   JOURNAL ARCHIVE — feed + sidebar layout
+   Uses shared brand tokens + .marquee-strip from block 2.
+   ─────────────────────────────────────────── */
 
-.j-list { max-width: 1100px; margin: 0 auto; padding: 0 48px 80px; }
-.j-list h3 { font-family:'Instrument Serif',serif; font-style: italic; font-size: 32px; color: var(--forest); margin-bottom: 32px; }
-.j-row { display: grid; grid-template-columns: 80px 1fr 1fr 100px; gap: 32px; padding: 28px 0; border-top: 1.5px solid rgba(31,59,54,0.08); align-items: center; text-decoration: none; color: inherit; transition: padding-left .3s, background .3s; }
-.j-row:last-of-type { border-bottom: 1.5px solid rgba(31,59,54,0.08); }
-.j-row:hover { padding-left: 16px; background: rgba(232,160,42,0.05); }
-.j-row:hover .j-arrow { transform: translateX(6px); color: var(--mango); }
-.j-num { font-family:'Instrument Serif',serif; font-style: italic; font-size: 40px; color: var(--mango); line-height: 1; }
-.j-title { font-size: 19px; font-weight: 700; color: var(--forest); letter-spacing: -0.015em; }
-.j-title em { font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; color: var(--mango); }
-.j-sub { font-size: 14px; color: var(--muted); font-weight: 300; }
-.j-arrow { justify-self: end; font-size: 20px; color: var(--muted); transition: transform .3s, color .3s; }
-@media (max-width:900px){ .j-feature { grid-template-columns: 1fr; } .j-row { grid-template-columns: 50px 1fr; gap: 16px; } .j-sub, .j-arrow { display: none; } }
+/* hero override: centered, no blob clipping */
+.page-header { text-align: center; padding-bottom: 56px; overflow: visible; }
+.page-header .page-header-inner { display: flex; flex-direction: column; align-items: center; max-width: 780px; }
+.page-header .crumbs { justify-content: center; margin-bottom: 18px; }
+.page-header h1 { text-align: center; }
+.page-header .lead { margin-left: auto; margin-right: auto; }
+
+/* hero title rise-in (same as services / about / portfolio) */
+.hw { display: inline-block; overflow: hidden; vertical-align: top; }
+.hw > span, .hw > em { display: inline-block; transform: translateY(108%); animation: hwRise .85s cubic-bezier(.22,.61,.36,1) forwards; }
+@keyframes hwRise { to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .hw > span, .hw > em { transform: none; animation: none; } }
+
+/* "Latest essays" section head — centered */
+.blog-head { text-align: center; padding: 72px 48px 36px; max-width: 1100px; margin: 0 auto; }
+.blog-head .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; color: var(--leaf); }
+.blog-head .eyebrow::before { content: '◐'; color: var(--mango); font-size: 13px; }
+.blog-head .eyebrow::after { content: '◐'; color: var(--mango); font-size: 13px; }
+.blog-head h2 { font-size: clamp(32px, 4vw, 50px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; color: var(--forest); }
+.blog-head h2 em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--mango); }
+
+/* Two-column layout: feed + sidebar */
+.blog-layout { max-width: 1240px; margin: 0 auto; padding: 0 48px 96px; display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.blog-feed { display: flex; flex-direction: column; gap: 40px; min-width: 0; }
+
+/* Article card */
+.blog-card { background: white; border: 1.5px solid rgba(31,59,54,0.08); border-radius: 22px; overflow: hidden; transition: transform .3s, box-shadow .3s; text-decoration: none; color: inherit; display: block; }
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px -20px rgba(31,59,54,0.15); }
+.blog-thumb { aspect-ratio: 16/9; position: relative; overflow: hidden; }
+.blog-thumb.t1 { background: linear-gradient(135deg, var(--honey), var(--mango)); }
+.blog-thumb.t2 { background: linear-gradient(135deg, var(--forest), #2d5b53); }
+.blog-thumb.t3 { background: linear-gradient(135deg, var(--clay), #d97b58); }
+.blog-thumb.t4 { background: linear-gradient(135deg, var(--leaf), #92ad6f); }
+.blog-thumb.t5 { background: linear-gradient(135deg, #c9a07a, var(--clay)); }
+.blog-thumb.t6 { background: linear-gradient(135deg, var(--forest), var(--leaf)); }
+.blog-thumb.t7 { background: linear-gradient(135deg, var(--honey), var(--leaf)); }
+.blog-thumb.t8 { background: linear-gradient(135deg, var(--mango), var(--clay)); }
+.blog-thumb.t9 { background: linear-gradient(135deg, var(--clay), var(--forest)); }
+.blog-thumb::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 28% 28%, rgba(255,255,255,0.22), transparent 55%); }
+.blog-thumb::after { content: '◐'; position: absolute; inset: 0; display: grid; place-items: center; font-family: 'Instrument Serif', serif; font-size: 140px; color: rgba(255,255,255,0.16); line-height: 1; }
+.blog-body { padding: 26px 30px 30px; }
+.blog-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+.blog-pill { background: var(--leaf); color: var(--cream); padding: 6px 14px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.blog-pill.mango { background: var(--mango); color: var(--forest); }
+.blog-pill.clay { background: var(--clay); color: var(--cream); }
+.blog-pill.forest { background: var(--forest); color: var(--honey); }
+.blog-date { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.04em; }
+.blog-card h3 { font-size: 22px; font-weight: 700; line-height: 1.25; letter-spacing: -0.015em; color: var(--forest); margin-bottom: 10px; }
+.blog-card h3 em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--mango); }
+.blog-excerpt { font-size: 14.5px; color: var(--muted); font-weight: 300; line-height: 1.7; margin-bottom: 16px; }
+.blog-read { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--forest); border-bottom: 2px solid var(--mango); padding-bottom: 3px; transition: gap .25s; }
+.blog-card:hover .blog-read { gap: 12px; }
+
+/* Sidebar */
+.blog-side { display: flex; flex-direction: column; gap: 28px; position: sticky; top: 100px; min-width: 0; }
+.side-widget { background: white; border: 1.5px solid rgba(31,59,54,0.08); border-radius: 18px; padding: 26px 24px; }
+.side-widget > h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid var(--mango); display: inline-block; }
+
+.side-search { display: flex; align-items: center; gap: 8px; background: var(--cream); border: 1.5px solid rgba(31,59,54,0.08); border-radius: 100px; padding: 10px 18px; transition: border-color .2s; }
+.side-search:focus-within { border-color: var(--mango); }
+.side-search input { flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: var(--forest); }
+.side-search input::placeholder { color: rgba(31,59,54,0.4); }
+.side-search button { background: none; border: none; cursor: pointer; color: var(--forest); font-size: 16px; padding: 0; opacity: 0.55; transition: opacity .2s; }
+.side-search button:hover { opacity: 1; }
+
+.side-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.side-tags a { display: inline-block; padding: 7px 14px; border-radius: 100px; background: var(--cream); border: 1px solid rgba(31,59,54,0.08); font-size: 12px; font-weight: 600; color: var(--forest); text-decoration: none; transition: all .2s; }
+.side-tags a:hover { background: var(--mango); border-color: var(--mango); }
+
+.side-recent { display: flex; flex-direction: column; gap: 16px; }
+.side-recent a { display: flex; gap: 14px; align-items: center; text-decoration: none; color: inherit; transition: opacity .2s; }
+.side-recent a:hover { opacity: 0.7; }
+.side-recent .thumb { width: 64px; height: 64px; border-radius: 12px; flex-shrink: 0; position: relative; }
+.side-recent .thumb::after { content: '◐'; position: absolute; inset: 0; display: grid; place-items: center; font-family: 'Instrument Serif', serif; font-size: 28px; color: rgba(255,255,255,0.25); line-height: 1; }
+.side-recent .thumb.t1 { background: linear-gradient(135deg, var(--honey), var(--mango)); }
+.side-recent .thumb.t2 { background: linear-gradient(135deg, var(--clay), #d97b58); }
+.side-recent .thumb.t3 { background: linear-gradient(135deg, var(--leaf), var(--forest)); }
+.side-recent .info h4 { font-size: 13.5px; font-weight: 700; color: var(--forest); line-height: 1.35; margin-bottom: 4px; letter-spacing: -0.005em; }
+.side-recent .info span { font-size: 11px; color: var(--muted); font-weight: 500; }
+
+/* Hire-us CTA card in sidebar */
+.side-hire { position: relative; border-radius: 18px; overflow: hidden; min-height: 280px; background: linear-gradient(160deg, var(--forest) 0%, #2d5b53 100%); color: var(--cream); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px 26px; }
+.side-hire::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 75% 20%, rgba(232,160,42,0.25), transparent 55%); z-index: 0; }
+.side-hire::after { content: '◐'; position: absolute; top: 22px; right: 22px; font-family: 'Instrument Serif', serif; font-size: 90px; color: rgba(232,160,42,0.25); z-index: 0; line-height: 1; }
+.side-hire > * { position: relative; z-index: 1; }
+.side-hire .h-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--honey); margin-bottom: 10px; }
+.side-hire h3 { font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--cream); margin-bottom: 18px; border: none; padding: 0; letter-spacing: -0.015em; }
+.side-hire h3 em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--honey); }
+.side-hire .h-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--mango); color: var(--forest); padding: 12px 22px; border-radius: 100px; font-size: 13px; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; align-self: flex-start; }
+.side-hire .h-btn:hover { background: var(--honey); transform: translateY(-2px); }
+
+@media (max-width: 1000px) {
+  .blog-layout { grid-template-columns: 1fr; gap: 48px; padding: 0 24px 60px; }
+  .blog-side { position: static; }
+  .blog-head { padding: 56px 24px 24px; }
+}
 </style>
 
 </head>
@@ -651,33 +730,210 @@ footer {
   <div class="hero-blob blob-3"></div>
   <div class="page-header-inner">
     <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Journal</span></div>
-    <h1>Field notes,<br><em>once a month.</em></h1>
-    <p class="lead">Short essays on building small-brand websites — lessons from real client work, design ideas, and the occasional opinion. Reading list for the curious.</p>
+    <h1>
+      <span class="hw"><span style="animation-delay:.05s">Field&nbsp;notes,</span></span><br>
+      <span class="hw"><em style="animation-delay:.18s">once&nbsp;a&nbsp;month.</em></span>
+    </h1>
+    <p class="lead">Short essays on building small-brand websites — lessons from real client work, design ideas, and the occasional opinion.</p>
   </div>
 </header>
 
-<section class="j-feature">
-  <div class="j-feature-thumb"></div>
-  <div>
-    <span class="j-tag">Latest · Issue 11</span>
-    <h2>Why your homepage<br><em>doesn't need a hero video.</em></h2>
-    <p>Every homepage in 2026 wants to open with a 12MB looping video. Most of them shouldn't. A short essay on what hero sections are actually for, why text on its own can be louder than motion, and how to find the right opening shot for a small brand.</p>
-    <div class="j-meta"><span>May 6, 2026</span><span>·</span><span>6 min read</span></div>
-    <a href="journal-post.html" class="read">Read the piece →</a>
-  </div>
+<div class="marquee-strip" aria-hidden="true"><div class="marquee-inner">
+  <span>Bilingual design</span><span class="accent">◐</span>
+  <span>Small studios</span><span class="accent">◐</span>
+  <span>Fixed pricing</span><span class="accent">◐</span>
+  <span>Hand-built websites</span><span class="accent">◐</span>
+  <span>Phuket, TH</span><span class="accent">◐</span>
+  <span>Honest design</span><span class="accent">◐</span>
+  <span>Bilingual design</span><span class="accent">◐</span>
+  <span>Small studios</span><span class="accent">◐</span>
+  <span>Fixed pricing</span><span class="accent">◐</span>
+  <span>Hand-built websites</span><span class="accent">◐</span>
+  <span>Phuket, TH</span><span class="accent">◐</span>
+  <span>Honest design</span><span class="accent">◐</span>
+</div></div>
+
+<section class="blog-head">
+  <div class="eyebrow">Journal &amp; essays</div>
+  <h2>Recent essays from <em>the studio.</em></h2>
 </section>
 
-<section class="j-list">
-  <h3>Earlier issues</h3>
-  <a href="journal-post.html" class="j-row"><div class="j-num">10</div><div><div class="j-title">The bilingual <em>layout shift.</em></div></div><div class="j-sub">Apr 2026 · 5 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">09</div><div><div class="j-title">A <em>kinder</em> 404 page.</div></div><div class="j-sub">Mar 2026 · 4 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">08</div><div><div class="j-title">Pricing pages that <em>don't lie.</em></div></div><div class="j-sub">Feb 2026 · 8 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">07</div><div><div class="j-title">What I learned <em>shipping 20 sites solo.</em></div></div><div class="j-sub">Jan 2026 · 7 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">06</div><div><div class="j-title">Type, but for <em>Thai readers.</em></div></div><div class="j-sub">Dec 2025 · 6 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">05</div><div><div class="j-title">When to <em>not</em> use a template.</div></div><div class="j-sub">Nov 2025 · 5 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">04</div><div><div class="j-title">Friday updates: <em>a small ritual.</em></div></div><div class="j-sub">Oct 2025 · 4 min</div><div class="j-arrow">→</div></a>
-  <a href="journal-post.html" class="j-row"><div class="j-num">03</div><div><div class="j-title">The cost of <em>"just one more revision."</em></div></div><div class="j-sub">Sep 2025 · 6 min</div><div class="j-arrow">→</div></a>
-</section>
+<div class="blog-layout">
+
+  <!-- MAIN FEED -->
+  <div class="blog-feed">
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t2"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill mango">Latest · Issue 11</span>
+          <span class="blog-date">6 May 2026 · 6 min read</span>
+        </div>
+        <h3>Why your homepage <em>doesn't need a hero video.</em></h3>
+        <p class="blog-excerpt">Every homepage in 2026 wants to open with a 12MB looping video. Most of them shouldn't. A short essay on what hero sections are actually for, why text can be louder than motion, and how to find the right opening shot for a small brand.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t1"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill">Layout</span>
+          <span class="blog-date">Apr 2026 · 5 min read</span>
+        </div>
+        <h3>The bilingual <em>layout shift.</em></h3>
+        <p class="blog-excerpt">When EN and TH share the same page, the safe move is to design for both at once — not translate at the end. A short essay on how a second language reshapes typography, spacing, and the visual hierarchy you thought was settled.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t3"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill clay">Craft</span>
+          <span class="blog-date">Mar 2026 · 4 min read</span>
+        </div>
+        <h3>A <em>kinder</em> 404 page.</h3>
+        <p class="blog-excerpt">The 404 isn't an error — it's a chance to be human. A small case study on what to put on a page nobody plans to visit, and why the boring version is a missed opportunity.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t4"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill">Pricing</span>
+          <span class="blog-date">Feb 2026 · 8 min read</span>
+        </div>
+        <h3>Pricing pages that <em>don't lie.</em></h3>
+        <p class="blog-excerpt">"From $X" hides more than it reveals. A look at how small studios can write pricing pages that earn trust instead of generating discovery calls full of polite disappointment.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t6"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill forest">Studio</span>
+          <span class="blog-date">Jan 2026 · 7 min read</span>
+        </div>
+        <h3>What I learned <em>shipping 20 sites solo.</em></h3>
+        <p class="blog-excerpt">Notes from four years of running a one-person studio: what scales, what doesn't, why I stopped doing free design pitches, and the moment I realised "small" was the feature, not the limitation.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t7"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill">Typography</span>
+          <span class="blog-date">Dec 2025 · 6 min read</span>
+        </div>
+        <h3>Type, but for <em>Thai readers.</em></h3>
+        <p class="blog-excerpt">EN-only type stacks fall apart in Thai. A short, opinionated guide to picking faces that read well in both languages — without making one feel like an afterthought.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t8"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill mango">Templates</span>
+          <span class="blog-date">Nov 2025 · 5 min read</span>
+        </div>
+        <h3>When to <em>not</em> use a template.</h3>
+        <p class="blog-excerpt">Templates are great for some things and a trap for others. A short heuristic for deciding when a starter saves you weeks vs. when it quietly costs you a year.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t9"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill clay">Process</span>
+          <span class="blog-date">Oct 2025 · 4 min read</span>
+        </div>
+        <h3>Friday updates: <em>a small ritual.</em></h3>
+        <p class="blog-excerpt">The single habit that's done the most to keep my clients calm and my projects honest: a short, written update sent every Friday — even when nothing dramatic happened.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+    <a href="journal-post.html" class="blog-card">
+      <div class="blog-thumb t5"></div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-pill">Scope</span>
+          <span class="blog-date">Sep 2025 · 6 min read</span>
+        </div>
+        <h3>The cost of <em>"just one more revision."</em></h3>
+        <p class="blog-excerpt">Where the polite no comes in. A few hard-won rules for protecting a fixed-price project from creeping out of shape — without making the client feel like a problem.</p>
+        <span class="blog-read">Read More →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-side">
+
+    <div class="side-widget">
+      <h3>Search</h3>
+      <div class="side-search">
+        <input type="text" placeholder="Search the journal…" aria-label="Search journal">
+        <button type="button" aria-label="Search">⌕</button>
+      </div>
+    </div>
+
+    <div class="side-widget">
+      <h3>Popular tags</h3>
+      <div class="side-tags">
+        <a href="#">Bilingual</a>
+        <a href="#">Layout</a>
+        <a href="#">Pricing</a>
+        <a href="#">Studio life</a>
+        <a href="#">Small clients</a>
+        <a href="#">Typography</a>
+        <a href="#">Hand-built</a>
+        <a href="#">Templates</a>
+      </div>
+    </div>
+
+    <div class="side-widget">
+      <h3>Recent posts</h3>
+      <div class="side-recent">
+        <a href="journal-post.html">
+          <div class="thumb t1"></div>
+          <div class="info"><h4>Why your homepage doesn't need a hero video.</h4><span>6 May 2026</span></div>
+        </a>
+        <a href="journal-post.html">
+          <div class="thumb t2"></div>
+          <div class="info"><h4>The bilingual layout shift.</h4><span>Apr 2026</span></div>
+        </a>
+        <a href="journal-post.html">
+          <div class="thumb t3"></div>
+          <div class="info"><h4>A kinder 404 page.</h4><span>Mar 2026</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="side-hire">
+      <div class="h-label">Hire us</div>
+      <h3>Looking to elevate <em>your digital presence?</em></h3>
+      <a href="contact.html" class="h-btn">Start a project →</a>
+    </div>
+
+  </aside>
+
+</div>
 
 <section class="newsletter">
   <div class="news-inner">
